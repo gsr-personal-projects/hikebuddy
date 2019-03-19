@@ -4,3 +4,6 @@
 [submodule "ESP32/xtensa-esp32-elf"]
 	path = ESP32/xtensa-esp32-elf
 	url = https://github.com/SHA2017-badge/xtensa-esp32-elf.git
+[submodule "ESP32/components/nmea"]
+	path = ESP32/components/nmea
+	url = https://github.com/igrr/libnmea-esp32.git

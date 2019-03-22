@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.4.0">
+<eagle version="9.3.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
@@ -116,7 +117,7 @@
 </layers>
 <library>
 <packages>
-<package name="MF-MICROSD">
+<package name="MF-MICROSD" urn="urn:adsk.eagle:footprint:9948142/1">
 <description>&lt;b&gt;Description:&lt;/b&gt; Package for Micro SD Card Slot connector. Based on 4uconnector 15882.&lt;br&gt;</description>
 <smd name="PIN1" x="-1.93875" y="3.15125" dx="0.8" dy="1.5" layer="1" rot="R180"/>
 <smd name="PIN2" x="-0.83875" y="2.95125" dx="0.8" dy="1.5" layer="1" rot="R180"/>
@@ -136,16 +137,6 @@
 <wire x1="7.025" y1="-7.625" x2="7.025" y2="4.67625" width="0.127" layer="21"/>
 <wire x1="7.025" y1="7.28875" x2="7.025" y2="7.625" width="0.127" layer="21"/>
 <wire x1="7.025" y1="7.625" x2="-5.65" y2="7.625" width="0.127" layer="21"/>
-<text x="7.50125" y="-7.625" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
-<polygon width="0.127" layer="21">
-<vertex x="1.79875" y="7.42625"/>
-<vertex x="2.07375" y="7.42625"/>
-<vertex x="2.07375" y="6.87625"/>
-<vertex x="2.34875" y="6.87625"/>
-<vertex x="1.93625" y="6.46375"/>
-<vertex x="1.52375" y="6.87625"/>
-<vertex x="1.79875" y="6.87625"/>
-</polygon>
 <wire x1="-2.32625" y1="7.625" x2="-2.32625" y2="8.225" width="0.127" layer="51"/>
 <wire x1="6.19875" y1="7.625" x2="6.19875" y2="8.225" width="0.127" layer="51"/>
 <wire x1="-2.32625" y1="8.225" x2="6.19875" y2="8.225" width="0.127" layer="51"/>
@@ -157,12 +148,22 @@
 <wire x1="-2.00875" y1="12.925" x2="5.88125" y2="12.925" width="0.127" layer="51"/>
 <wire x1="5.88125" y1="12.925" x2="6.19875" y2="12.6075" width="0.127" layer="51" curve="-90"/>
 <wire x1="6.19875" y1="12.6075" x2="6.19875" y2="9.225" width="0.127" layer="51"/>
+<wire x1="0.4" y1="-7.625" x2="3.72375" y2="-7.625" width="0.127" layer="21"/>
+<text x="7.50125" y="-7.625" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 <text x="6.47375" y="12.925" size="0.6096" layer="51" font="vector" ratio="16">Card Push Out</text>
 <text x="6.47375" y="9.225" size="0.6096" layer="51" font="vector" ratio="16">Card Lock Position</text>
 <text x="6.47375" y="8.225" size="0.6096" layer="51" font="vector" ratio="16">Card Push In</text>
-<wire x1="0.4" y1="-7.625" x2="3.72375" y2="-7.625" width="0.127" layer="21"/>
+<polygon width="0.127" layer="21">
+<vertex x="1.79875" y="7.42625"/>
+<vertex x="2.07375" y="7.42625"/>
+<vertex x="2.07375" y="6.87625"/>
+<vertex x="2.34875" y="6.87625"/>
+<vertex x="1.93625" y="6.46375"/>
+<vertex x="1.52375" y="6.87625"/>
+<vertex x="1.79875" y="6.87625"/>
+</polygon>
 </package>
-<package name="MICROUSB-RIGHT">
+<package name="MICROUSB-RIGHT" urn="urn:adsk.eagle:footprint:9948143/1">
 <description>&lt;b&gt;Description:&lt;/b&gt; Package for Micro USB Type B connector. Based on FCI 10118193-0001LF.&lt;br&gt;</description>
 <smd name="3" x="0" y="1.27" dx="0.4" dy="1.35" layer="1" rot="R180"/>
 <smd name="4" x="0.65" y="1.27" dx="0.4" dy="1.35" layer="1" rot="R180"/>
@@ -171,6 +172,12 @@
 <smd name="5" x="1.3" y="1.27" dx="0.4" dy="1.35" layer="1" rot="R180"/>
 <smd name="S3" x="-3.2" y="1.27" dx="1.4" dy="1.6" layer="1" rot="R90"/>
 <smd name="S4" x="3.2" y="1.27" dx="1.4" dy="1.6" layer="1" rot="R90"/>
+<smd name="S5" x="-1.2" y="-1.405" dx="1.9" dy="1.9" layer="1"/>
+<smd name="S6" x="1.2" y="-1.405" dx="1.9" dy="1.9" layer="1"/>
+<smd name="S1" x="-3.3" y="-1.4" dx="0.9" dy="1.6" layer="1" roundness="100" rot="R180"/>
+<smd name="S2" x="3.3" y="-1.4" dx="0.9" dy="1.6" layer="1" roundness="100" rot="R180"/>
+<smd name="S7" x="-3.3" y="-1.4" dx="0.9" dy="1.6" layer="16" roundness="100" rot="R180" cream="no"/>
+<smd name="S8" x="3.3" y="-1.4" dx="0.9" dy="1.6" layer="16" roundness="100" rot="R180" cream="no"/>
 <text x="-5.08" y="2.7" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 <wire x1="-5.08" y1="-2.855" x2="5.08" y2="-2.855" width="0.127" layer="21"/>
 <wire x1="-5.08" y1="-2.855" x2="-5.08" y2="1.3" width="0.127" layer="21"/>
@@ -190,12 +197,6 @@
 <wire x1="3.55" y1="-1.75" x2="3.55" y2="-1.05" width="0.01" layer="20"/>
 <wire x1="3.55" y1="-1.05" x2="3.3" y2="-0.8" width="0.01" layer="20" curve="90"/>
 <wire x1="3.3" y1="-0.8" x2="3.05" y2="-1.05" width="0.01" layer="20" curve="90"/>
-<smd name="S5" x="-1.2" y="-1.405" dx="1.9" dy="1.9" layer="1"/>
-<smd name="S6" x="1.2" y="-1.405" dx="1.9" dy="1.9" layer="1"/>
-<smd name="S1" x="-3.3" y="-1.4" dx="0.9" dy="1.6" layer="1" roundness="100" rot="R180"/>
-<smd name="S2" x="3.3" y="-1.4" dx="0.9" dy="1.6" layer="1" roundness="100" rot="R180"/>
-<smd name="S7" x="-3.3" y="-1.4" dx="0.9" dy="1.6" layer="16" roundness="100" rot="R180" cream="no"/>
-<smd name="S8" x="3.3" y="-1.4" dx="0.9" dy="1.6" layer="16" roundness="100" rot="R180" cream="no"/>
 </package>
 <package name="DC_PWR_JACK">
 <description>&lt;b&gt;Description:&lt;/b&gt; Package for DC Power Jack connector. Based on 4uconnector 18741.&lt;br&gt;</description>
@@ -2683,6 +2684,20 @@
 <text x="-2.54" y="3.81" size="1.016" layer="21" font="vector" ratio="16" rot="R90" align="center-left">&gt;LABEL10</text>
 </package>
 </packages>
+<packages3d>
+<package3d name="MICROUSB-RIGHT" urn="urn:adsk.eagle:package:9948223/2" type="model">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for Micro USB Type B connector. Based on FCI 10118193-0001LF.&lt;br&gt;</description>
+<packageinstances>
+<packageinstance name="MICROUSB-RIGHT"/>
+</packageinstances>
+</package3d>
+<package3d name="MF-MICROSD" urn="urn:adsk.eagle:package:9948224/2" type="model">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for Micro SD Card Slot connector. Based on 4uconnector 15882.&lt;br&gt;</description>
+<packageinstances>
+<packageinstance name="MF-MICROSD"/>
+</packageinstances>
+</package3d>
+</packages3d>
 <symbols>
 <symbol name="SD_CARD">
 <description>&lt;b&gt;Description:&lt;/b&gt; Symbol for SD Card Slot connector.&lt;br&gt;</description>
@@ -5776,6 +5791,9 @@
 <connect gate="G$1" pin="RW" pad="PIN1"/>
 <connect gate="G$1" pin="SCLK" pad="PIN5"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9948224/2"/>
+</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="HOUSEPART" value="YES" constant="no"/>
@@ -5804,6 +5822,9 @@
 <connect gate="G$1" pin="ID" pad="4"/>
 <connect gate="G$1" pin="SLD" pad="S1 S2 S3 S4 S5 S6"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9948223/2"/>
+</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="HOUSEPART" value="YES" constant="no"/>
@@ -5829,7 +5850,6 @@
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="http://www.4uconnector.com/online/object/4udrawing/20236.pdf" constant="no"/>
-
 </technology>
 </technologies>
 </device>
@@ -5897,7 +5917,6 @@
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="http://www.4uconnector.com/online/object/4udrawing/13366.pdf" constant="no"/>
-
 </technology>
 </technologies>
 </device>
@@ -8655,7 +8674,6 @@
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="http://www.avx.com/products/connectors/board-to-board/pogo-pin-single-contact-70-9150/f" constant="no"/>
-
 </technology>
 </technologies>
 </device>
@@ -8797,4 +8815,16 @@
 </devicesets>
 </library>
 </drawing>
+<compatibility>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports URNs for individual library
+assets (packages, symbols, and devices). The URNs of those assets
+will not be understood (or retained) with this version.
+</note>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports the association of 3D packages
+with devices in libraries, schematics, and board files. Those 3D
+packages will not be understood (or retained) with this version.
+</note>
+</compatibility>
 </eagle>

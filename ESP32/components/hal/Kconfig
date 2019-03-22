@@ -1,0 +1,44 @@
+menu "HikeBuddy Board"
+
+choice BOARD_REV
+    prompt "Board hardware version"
+    default HIKEBUDDY_V1
+    help
+        This option sets the HikeBuddy board revision.
+
+        - Rev1.0.0 Dev: Dhauladhar
+
+config HIKEBUDDY_V1
+    bool "Rev1.0.*"
+config HIKEBUDDY_NONE
+    bool "Plain ESP32"
+endchoice
+
+config HIKEBUDDY_INPUT_DEBUG
+    bool "Enable input debug messages"
+    default n
+    help
+        Debugging
+
+config HIKEBUDDY_PCA555D_DEBUG
+    bool "Enable PCA555D port-expander debug messages"
+    depends on HIKEBUDDY_V1
+    default n
+    help
+        Debugging
+
+config HIKEBUDDY_LCD_DEBUG
+    bool "Enable LCD debug messages"
+    depends on HIKEBUDDY_V1
+    default n
+    help
+        Debugging
+
+config HIKEBUDDY_POWER_DEBUG
+    bool "Enable power/charging debug messages"
+    depends on HIKEBUDDY_V1
+    default n
+    help
+        Debugging
+
+endmenu

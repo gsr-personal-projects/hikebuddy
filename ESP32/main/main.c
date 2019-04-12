@@ -12,6 +12,8 @@
 #include <pins.h>
 #include <button.h>
 
+#include "bme280.h"
+
 static const char *TAG = "main";
 
 struct menu_item {

@@ -6386,10 +6386,10 @@ Source: &lt;a href="https://www.hirose.com/product/en/download_file/key_name/FH1
 <attribute name="VALUE" x="91.44" y="51.054" size="1.778" layer="96" align="bottom-center"/>
 </instance>
 <instance part="FT231" gate="G$1" x="60.96" y="-40.64" smashed="yes">
-<attribute name="VALUE" x="48.514" y="-16.256" size="3.226640625" layer="96"/>
+<attribute name="VALUE" x="45.974" y="-67.056" size="3.226640625" layer="96"/>
 </instance>
-<instance part="GND4" gate="1" x="78.74" y="-63.5" smashed="yes">
-<attribute name="VALUE" x="78.74" y="-63.754" size="1.778" layer="96" align="top-center"/>
+<instance part="GND4" gate="1" x="88.9" y="-63.5" smashed="yes">
+<attribute name="VALUE" x="88.9" y="-63.754" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="R3" gate="G$1" x="33.02" y="-30.48" smashed="yes">
 <attribute name="NAME" x="33.02" y="-28.956" size="1.778" layer="95" font="vector" align="bottom-center"/>
@@ -7171,12 +7171,12 @@ Source: &lt;a href="https://www.hirose.com/product/en/download_file/key_name/FH1
 <pinref part="GND4" gate="1" pin="GND"/>
 <pinref part="C4" gate="G$1" pin="2"/>
 <wire x1="88.9" y1="-30.48" x2="88.9" y2="-60.96" width="0.1524" layer="91"/>
-<wire x1="88.9" y1="-60.96" x2="78.74" y2="-60.96" width="0.1524" layer="91"/>
-<junction x="78.74" y="-60.96"/>
+<junction x="88.9" y="-60.96"/>
 <pinref part="C7" gate="G$1" pin="2"/>
 <wire x1="81.28" y1="-25.4" x2="81.28" y2="-30.48" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="-30.48" x2="88.9" y2="-30.48" width="0.1524" layer="91"/>
 <junction x="88.9" y="-30.48"/>
+<wire x1="88.9" y1="-60.96" x2="78.74" y2="-60.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C6" gate="G$1" pin="2"/>

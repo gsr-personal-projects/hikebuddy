@@ -1,0 +1,126 @@
+Partlist
+
+Exported from base.brd at 4/9/19 11:59 AM
+
+EAGLE Version 9.3.1 Copyright (c) 1988-2019 Autodesk, Inc.
+
+Assembly variant: 
+
+Part          Value                           Package                  Library                   Position (inch)       Orientation
+
+ANT           PRO-OB-440                      PRO-OB-440_1             PRO-OB-440                (2.11417323 1.4488189) R90
+BATTERY                                       JST-2-SMD                SparkFun-Connectors       (0.27322835 1.35669291) R0
+BME280        BME280                          PSON65P250X250X100-8N    BME280                    (1.41712598 1.51)     R270
+C1            4.7pF                           C0603                    SparkFun-Capacitors       (2.13149606 1.02637795) R90
+C2            4.7pF                           C0603                    SparkFun-Capacitors       (2.16141732 1.12204724) R180
+C3            0.1uF                           C0603                    SparkFun-Capacitors       (2.03740157 0.98464567) R180
+C4            0.1uF                           C0603                    SparkFun-Capacitors       (0.40787402 0.23622047) R270
+C5            47pF                            C0603                    SparkFun-Capacitors       (0.27598425 0.29291339) R0
+C6            47pF                            C0603                    SparkFun-Capacitors       (0.27598425 0.11220472) R0
+C7            2.2uF                           C0603                    SparkFun-Capacitors       (0.46535433 0.23622047) R270
+C8            10uF                            C1206                    SparkFun-Capacitors       (2.37125984 0.75314961) R0
+C9            2.2uF                           C0603                    SparkFun-Capacitors       (0.25905512 0.43582677) R270
+C10           10uF                            C0603                    SparkFun-Capacitors       (0.31535433 0.70433071) R0
+C11           1.0uF                           C0603                    SparkFun-Capacitors       (0.34212598 1.01417323) R90
+C12           1.0uF                           C0603                    SparkFun-Capacitors       (0.13779528 1.09488189) R270
+C13           10nF                            C0603                    SparkFun-Capacitors       (0.07755906 1.09527559) R270
+C14           0.1uF                           C0603                    SparkFun-Capacitors       (3.05905512 0.55905512) R180
+C15           0.1uF                           C0603                    SparkFun-Capacitors       (2.37874016 0.83622047) R180
+C16           4.7uF                           C0603                    SparkFun-Capacitors       (2.37834646 0.89566929) R180
+C17           0.1uF                           C0603                    SparkFun-Capacitors       (3.05905512 0.66456693) R180
+C18           0.1uF                           C0603                    SparkFun-Capacitors       (2.27559055 0.98582677) R90
+C19           0.1uF                           C0603                    SparkFun-Capacitors       (3.05905512 0.72480315) R180
+C20           0.22uF                          C0603                    SparkFun-Capacitors       (1.40826772 1.32401575) R270
+C21           4.7uF                           C0603                    SparkFun-Capacitors       (1.30905512 1.0992126) R180
+C22           10uF                            C0603                    SparkFun-Capacitors       (1.46771654 1.32401575) R270
+C23           10uF                            C0603                    SparkFun-Capacitors       (1.51023622 1.45511811) R90
+C24           10uF                            C1206                    SparkFun-Capacitors       (0.49094488 1.10314961) R0
+C25           0.1uF                           C0603                    SparkFun-Capacitors       (1.01181102 1.31102362) R90
+C26           4.7uF                           C0603                    SparkFun-Capacitors       (0.95275591 1.31102362) R90
+C27           10nF                            C0603                    SparkFun-Capacitors       (1.61535433 1.2976378) R180
+C28           2.2uF                           C0603                    SparkFun-Capacitors       (1.50511811 1.10748031) R270
+C29           2.2uF                           C0603                    SparkFun-Capacitors       (1.7 1.10629921)      R90
+C30           1.0uF                           C0603                    SparkFun-Capacitors       (1.5980315 1.23661417) R0
+D1            1A/23V/620mV                    SOD323                   SparkFun-DiscreteSemi     (0.61732283 0.96574803) R270
+D2            1A/23V/620mV                    SOD323                   SparkFun-DiscreteSemi     (0.61732283 1.12401575) R90
+D4            MF-LED-3228-RGB                 PLCC4                    MF_LEDs                   (0.13385827 0.06299213) MR180
+ESP32-PICO-D4 ESP32-PICO-D4                   PQFN50P700X700X104-49N   ESP32-PICO-D4             (2.03937008 0.78740157) R270
+FLASH         MOMENTARY-SWITCH-SPST-SMD-5.2MM TACTILE_SWITCH_SMD_5.2MM SparkFun-Switches         (2.98661417 0.35669291) R0
+FT231         FT231XS-UTSSOP20                TSSOP20                  FT231XS-U                 (0.655 0.265)         R90
+J1            4P-SMD-2.0-90D                  HW4-SMD-2.0-90D          OPL_Connector             (2.52362205 0.36220472) R180
+J2            4P-2.0-90D                      HW4-2.0-90D              OPL_Connector             (2.52362205 0.29133858) R180
+J3            MF-CON-MICROUSB-RIGHT           MICROUSB-RIGHT           MF_Connectors             (0.105 0.28)          R270
+J4            FH12-10S-0.5SH(1)(98)           FH1210S05SH198           FH12-10S-0.5SH(1)(98)     (1.9 2.05)            R180
+L1            30?/1.8A                        L0603                    SparkFun-Coils            (2.19685039 1.02519685) R90
+LM2750        LM2750SD-5.0                    DFN300X300X80-11N        LM2750SD-5.0              (1.6019685 1.0988189) R90
+LSM303        LSM303DLHC                      ST_LGA14_3X5             LSM303DLHC                (1.30708661 1.23622047) R0
+MCP73831      MCP73831T-3ACI/OT               SOT95P270X145-5N         MCP73831T-3ACI_OT         (0.325 0.59)          R270
+MOTOR+                                        SMD1,27-2,54             wirepad                   (0.83464567 0.9015748) R180
+MOTOR-                                        SMD1,27-2,54             wirepad                   (0.91338583 0.9015748) R180
+PCA9555D      PCA9555                         SO24-2                   PCA9555                   (1.48818898 0.37007874) R90
+PIEZO+                                        SMD1,27-2,54             wirepad                   (0.83464567 0.54330709) R180
+PIEZO-                                        SMD1,27-2,54             wirepad                   (0.91338583 0.54330709) R180
+R1            10k                             R0603                    SparkFun-Resistors        (1.13385827 0.08385827) R90
+R2            10k                             R0603                    SparkFun-Resistors        (1.13385827 0.21574803) R270
+R3            27                              R0603                    SparkFun-Resistors        (0.27519685 0.23228346) R0
+R4            27                              R0603                    SparkFun-Resistors        (0.27598425 0.17165354) R0
+R5            10k                             R0603                    SparkFun-Resistors        (0.88425197 0.20433071) R0
+R6            10k                             R0603                    SparkFun-Resistors        (0.87716535 0.12716535) R0
+R7            1k                              R0603                    SparkFun-Resistors        (0.31771654 0.44330709) R90
+R8            1k                              R0603                    SparkFun-Resistors        (0.19724409 0.58543307) R0
+R9            1k                              R0603                    SparkFun-Resistors        (0.19724409 0.53267717) R0
+R10           1k                              R0603                    SparkFun-Resistors        (0.88976378 0.36338583) R90
+R11           1k                              R0603                    SparkFun-Resistors        (0.83031496 0.36496063) R90
+R12           10k                             R0603                    SparkFun-Resistors        (2.88976378 0.48818898) R0
+R13           10k                             R0603                    SparkFun-Resistors        (2.88976378 0.60629921) R0
+R14           10k                             R0603                    SparkFun-Resistors        (2.88976378 0.54724409) R0
+R15           22                              R0603                    SparkFun-Resistors        (0.83228346 0.78700787) R270
+R16           330k                            R0603                    SparkFun-Resistors        (2.47244094 0.93307087) R90
+R17           10k                             R0603                    SparkFun-Resistors        (2.27559055 1.14566929) R270
+R18           10k                             R0603                    SparkFun-Resistors        (2.3976378 1.24015748) R0
+R19           10k                             R0603                    SparkFun-Resistors        (0.89448819 1.31102362) R90
+R20           10k                             R0603                    SparkFun-Resistors        (1.12952756 1.31023622) R90
+R21           10k                             R0603                    SparkFun-Resistors        (1.07047244 1.31102362) R90
+R22           10k                             R0603                    SparkFun-Resistors        (0.67716535 1.12598425) R270
+R23           10k                             R0603                    SparkFun-Resistors        (0.68622047 1.28346457) R90
+R24           47k                             R0603                    SparkFun-Resistors        (0.62834646 1.28346457) R270
+R25           10k                             R0603                    SparkFun-Resistors        (0.49251969 0.2519685) MR270
+R26           10k                             R0603                    SparkFun-Resistors        (0.41811024 0.2519685) MR90
+R27           200k                            R0603                    SparkFun-Resistors        (1.61535433 1.42047244) R180
+R28           200k                            R0603                    SparkFun-Resistors        (1.61535433 1.35905512) R0
+R29           22                              R0603                    SparkFun-Resistors        (0.83228346 0.65866142) R90
+R30           10k                             R0603                    SparkFun-Resistors        (1.37795276 0.74409449) R0
+R31           10k                             R0603                    SparkFun-Resistors        (2.89055118 0.72519685) R0
+R32           10k                             R0603                    SparkFun-Resistors        (1.37795276 0.85433071) R0
+R33           1k                              R0603                    SparkFun-Resistors        (0.53937008 0.63779528) MR180
+R34           1k                              R0603                    SparkFun-Resistors        (0.53937008 0.57480315) MR180
+R35           1k                              R0603                    SparkFun-Resistors        (0.53937008 0.51181102) MR180
+R36           1k                              R0603                    SparkFun-Resistors        (0.53937008 0.7007874) MR180
+R37           1k                              R0603                    SparkFun-Resistors        (1.13976378 1.47244094) R180
+R38           1k                              R0603                    SparkFun-Resistors        (1.13897638 1.53582677) R180
+R39           1k                              R0603                    SparkFun-Resistors        (0.53937008 0.4488189) MR180
+R40           1k                              R0603                    SparkFun-Resistors        (0.2992126 0.19291339) MR0
+R41           1k                              R0603                    SparkFun-Resistors        (0.2992126 0.07480315) MR0
+R42           1k                              R0603                    SparkFun-Resistors        (0.2996063 0.13385827) MR0
+R43           10k                             R0603                    SparkFun-Resistors        (2.89055118 0.66535433) R0
+R44           1k                              R0603                    SparkFun-Resistors        (0.37716535 0.44330709) R270
+R45           1k                              R0603                    SparkFun-Resistors        (1.27086614 1.53582677) R0
+R46           1k                              R0603                    SparkFun-Resistors        (1.27165354 1.47165354) R0
+R47           10k                             R0603                    SparkFun-Resistors        (0.55511811 0.2519685) MR90
+R48           1k                              R0603                    SparkFun-Resistors        (1.75 0.14)           R90
+RESET         MOMENTARY-SWITCH-SPST-SMD-5.2MM TACTILE_SWITCH_SMD_5.2MM SparkFun-Switches         (2.98897638 0.12047244) R0
+SD-CARD       MF-MICROSD                      MF-MICROSD               MF_Connectors             (2.80314961 1.04724409) R270
+TPS79533      TPS79533DCQR                    SOT127P706X180-6N        TPS79533DCQR              (0.17322835 0.86220472) R270
+U$1           RYLED                           RYLED                    myLib                     (0.09409449 0.58740157) R90
+U$2           L80GPS                          L80GPS                   myLib                     (0.2992126 1.17716535) MR270
+U$3           SKRHAAE010                      ALPSSWITCH               HikeBuddy                 (0.32283465 0.5)      MR0
+U$4           GPSNEO7M                        GPSNEO7M                 HikeBuddy                 (1.01574803 1.50393701) R180
+U$5           FH12-10S-0.5SH                  FH12-10S-0.5SH           myLib                     (1.88976378 1.25984252) R180
+U3            MF-DSC-SOT233-MMBT3904          SOT-23-3                 MF_Discrete_Semiconductor (1.02874016 0.21929134) R0
+U4            MF-DSC-SOT233-MMBT3904          SOT-23-3                 MF_Discrete_Semiconductor (1.02834646 0.07755906) R0
+U8                                            SOT-23-3                 MF_Discrete_Semiconductor (2.37795276 1.13779528) R0
+U9            MF-DSC-SOT233-BSS84             SOT-23-3                 MF_Discrete_Semiconductor (2.37795276 0.99212598) R0
+U10                                           SOT-23-3                 MF_Discrete_Semiconductor (0.78346457 1.12204724) R0
+U11           MF-DSC-SOT233-BSS84             SOT-23-3                 MF_Discrete_Semiconductor (0.78740157 1.27952756) R0
+U12                                           SOT-23-3                 MF_Discrete_Semiconductor (1.06692913 0.62598425) R180
+U15                                           SOT-23-3                 MF_Discrete_Semiconductor (1.06692913 0.88582677) R180

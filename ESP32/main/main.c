@@ -12,7 +12,8 @@
 #include <pins.h>
 #include <button.h>
 
-#include "bme280.h"
+#include "bme_test.h"
+#include "i2c.h"
 
 static const char *TAG = "main";
 
@@ -21,11 +22,18 @@ struct menu_item {
   void (*handler)(void);
 };
 
-const struct menu_item demoMenu[] = {
-    /*{"UART GPS", &uartdemo},
-    {"I2C", &i2cdemo},
-    {"uGFX demo", &demoUgfx},
-    {"charging demo", &demoPower},*/
+const struct menu_item level_zero[] = {
+    /*{"UART GPS", &demo_gps},
+    {"LCD Test", &demo_lvgl},*/
+    {"I2C Peripherals Test", &i2c_scan},
+    {NULL, NULL},
+};
+
+const struct menu_item i2c_devices[] = {
+    /*{"Port Expander", &demo_port_expander},
+    {"LSM303 Magnetometer", &demo_lsm_mag},
+    {"LSM303 Accelerometer", &demo_lsm_accl},*/
+    {"BME280", &demo_bme},
     {NULL, NULL},
 };
 

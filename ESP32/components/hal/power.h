@@ -62,6 +62,20 @@ extern esp_err_t power_sdcard_enable(void);
  */
 extern esp_err_t power_sdcard_disable(void);
 
+/**
+ * enable power to the display
+ *
+ * @return ESP_OK on success; any other value indicates an error
+ */
+extern esp_err_t power_display_enable(void);
+
+/**
+ * disable power to the display
+ *
+ * @return ESP_OK on success; any other value indicates an error
+ */
+extern esp_err_t power_display_disable(void);
+
 __END_DECLS
 
 #endif // POWER_H

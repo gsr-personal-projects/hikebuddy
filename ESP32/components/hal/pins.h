@@ -6,23 +6,23 @@
 
 //#ifdef CONFIG_HB_BOARD_V0
 
-#define PCA_0_LED_RED       0
+#define PCA_0_LED_BLE       0
 #define PCA_0_LED_GRN       1
-#define PCA_0_LED_BLE       2
+#define PCA_0_LED_RED       2
 #define PCA_0_PWR_GPS       3
 #define PCA_0_PWR_SDC       4
 #define PCA_0_PWR_LCD       6
 #define PCA_0_RST_GPS       7
 #define PCA_0_EN_LCD        5
 
-#define PCA_1_BTN_LEFT      0
-#define PCA_1_BTN_RIGHT     1
-#define PCA_1_BTN_UP        2
-#define PCA_1_BTN_DOWN      3
-#define PCA_1_BTN_SEL       4
-#define PCA_1_INT_ACL1      5
-#define PCA_1_INT_ACL2      6
-#define PCA_1_INT_MAG       7
+#define PCA_1_BTN_LEFT      8
+#define PCA_1_BTN_RIGHT     9
+#define PCA_1_BTN_UP       10
+#define PCA_1_BTN_DOWN     11
+#define PCA_1_BTN_SEL      12
+#define PCA_1_INT_ACL1     13
+#define PCA_1_INT_ACL2     14
+#define PCA_1_INT_MAG      15
 
 #define PIN_LCD_CLK        14
 #define PIN_LCD_MOSI       13

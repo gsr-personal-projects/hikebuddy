@@ -15,6 +15,7 @@
 
 #include "pins.h"
 #include "power.h"
+#include "pca9555.h"
 
 static const char *TAG = "power";
 
@@ -62,6 +63,18 @@ esp_err_t power_gps_enable(void) {
 
 esp_err_t power_gps_disable(void) {
 	return ESP_OK; // TODO
+}
+
+esp_err_t power_display_enable(void) {
+    esp_err_t res;
+	res = pca9555_set_output_state(PCA_0_PWR_LCD, 1);
+	return res;
+}
+
+esp_err_t power_display_disable(void) {
+    esp_err_t res;
+	res = pca9555_set_output_state(PCA_0_PWR_LCD, 1);
+	return res;
 }
 
 esp_err_t power_init(void) {

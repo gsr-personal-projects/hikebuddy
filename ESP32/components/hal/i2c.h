@@ -7,20 +7,30 @@
 
 __BEGIN_DECLS
 
+/** initialize i2c bus
+ * @return ESP_OK on success; any other value indicates an error
+ */
 extern esp_err_t i2c_init(void);
 
-extern esp_err_t i2c_write_bit(uint8_t addr, uint8_t reg, uint8_t bitNum, uint8_t data);
-extern esp_err_t i2c_write_bits(uint8_t addr, uint8_t reg, uint8_t bitStart, uint8_t length, uint8_t data);
-extern esp_err_t i2c_write_byte(uint8_t addr, uint8_t reg, uint8_t data);
-extern esp_err_t i2c_write_bytes(uint8_t addr, uint8_t reg, uint8_t *data, size_t length);
+/** read register via i2c bus
+ * @return ESP_OK on success; any other value indicates an error
+ */
+extern esp_err_t i2c_read_reg(uint8_t addr, uint8_t reg, uint8_t *value, size_t value_len);
 
-extern esp_err_t i2c_read_bit(uint8_t addr, uint8_t reg, uint8_t bitNum, uint8_t *data);
-extern esp_err_t i2c_read_bits(uint8_t addr, uint8_t reg, uint8_t bitStart, uint8_t length, uint8_t *data);
-extern esp_err_t i2c_read_byte(uint8_t addr, uint8_t reg, uint8_t *data);
-extern esp_err_t i2c_read_bytes(uint8_t addr, uint8_t reg, uint8_t *data, size_t length);
+/** write to register via i2c bus
+ * @return ESP_OK on success; any other value indicates an error
+ */
+extern esp_err_t i2c_write_reg(uint8_t addr, uint8_t reg, uint8_t value);
 
-extern esp_err_t i2c_test_connection(uint8_t addr);
-extern void i2c_scan(void);
+/** read event via i2c bus
+ * @return ESP_OK on success; any other value indicates an error
+ */
+extern esp_err_t i2c_read_event(uint8_t addr, uint8_t *buf);
+
+/** write multiple registers on the i2c bus
+ * @return ESP_OK on success; any other value indicates an error
+ */
+extern esp_err_t i2c_write_burst(uint8_t addr, uint8_t reg, uint8_t *value, uint16_t value_len);
 
 __END_DECLS
 

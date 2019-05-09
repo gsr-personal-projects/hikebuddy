@@ -7,7 +7,7 @@ __BEGIN_DECLS
 /**
  * Run BME test
  */
-extern void demo_ bme(void);
+extern void demo_bme(void);
 
 __END_DECLS
 

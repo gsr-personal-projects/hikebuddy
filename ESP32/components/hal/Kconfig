@@ -20,8 +20,8 @@ config HIKEBUDDY_INPUT_DEBUG
     help
         Debugging
 
-config HIKEBUDDY_PCA555D_DEBUG
-    bool "Enable PCA555D port-expander debug messages"
+config HIKEBUDDY_PCA9555_DEBUG
+    bool "Enable PCA9555 port-expander debug messages"
     depends on HIKEBUDDY_V1
     default n
     help

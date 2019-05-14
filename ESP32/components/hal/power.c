@@ -12,6 +12,8 @@
 #include <esp_log.h>
 #include <driver/adc.h>
 #include <driver/gpio.h>
+#include <freertos/FreeRTOS.h>
+#include <freertos/task.h>
 
 #include "pins.h"
 #include "power.h"
@@ -68,6 +70,7 @@ esp_err_t power_gps_disable(void) {
 esp_err_t power_display_enable(void) {
     esp_err_t res;
 	res = pca9555_set_output_state(PCA_0_PWR_LCD, 1);
+	vTaskDelay(50 / portTICK_PERIOD_MS); // wait for power to stabilize
 	return res;
 }
 

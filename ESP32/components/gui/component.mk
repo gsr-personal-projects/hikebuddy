@@ -19,6 +19,7 @@ COMPONENT_SRCDIRS := . \
     $(LVGLLIB)/lv_fonts \
     $(LVGLLIB)/lv_objx \
     $(LVGLLIB)/lv_themes \
+    lvgl_examples
 
 COMPONENT_ADD_INCLUDEDIRS := . \
     ./include \
@@ -30,6 +31,7 @@ COMPONENT_ADD_INCLUDEDIRS := . \
     $(LVGLLIB)/lv_fonts \
     $(LVGLLIB)/lv_objx \
     $(LVGLLIB)/lv_themes \
+    lvgl_examples
 
 COMPONENT_PRIV_INCLUDEDIRS +=  . \
     ./include \
@@ -41,11 +43,6 @@ COMPONENT_PRIV_INCLUDEDIRS +=  . \
     $(LVGLLIB)/lv_fonts \
     $(LVGLLIB)/lv_objx \
     $(LVGLLIB)/lv_themes \
-
-ifdef CONFIG_LVGL_USE_CUSTOM_DRIVER
-COMPONENT_DEPENDS += $(call dequote,$(CONFIG_LVGL_CUSTOM_DRIVER_COMPONENT_NAME))
-else
-COMPONENT_DEPENDS += gdrivers
-endif
+    lvgl_examples
 
 endif  #CONFIG_LVGL_GUI_ENABLE

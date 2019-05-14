@@ -2,6 +2,24 @@
 #ifndef LCD_H
 #define LCD_H
 
+#ifndef HIGH
+#define HIGH 1
+#endif
+#ifndef LOW
+#define LOW 0
+#endif
+#define MLCD_WR 0x01
+#define MLCD_VCOM 0x02
+#define MLCD_CLR 0x04
+
+//TODO define width, height and other display params in config menu
+#define WIDTH 400
+#define HEIGHT 240
+#define SPIFREQ 2000000
+#define FRAMERATE 10
+#define VCOMFREQ 10
+#define STACKSIZE 2048
+
 #include <stdint.h>
 #include <esp_err.h>
 
@@ -36,13 +54,17 @@ extern esp_err_t lcd_clrscr(void);
  * Call if screen is enabled but hasn't changed in a *long* time
  * @return ESP_OK on success; any other value indicates an error
  */
-extern esp_err_t lcd_invert_vcom(void);
+extern esp_err_t lcd_update_vcom(void);
 
 /**
  * Fill buffer with all 1 or 0
- * @return ESP_OK on success; any other value indicates an error
  */
 extern void lcd_paintall(bool);
+
+/**
+ * Set a pixel value to black or white
+ */
+extern void lcd_set_pixel(uint16_t, uint16_t, bool);
 
 /**
  * Flush buffer

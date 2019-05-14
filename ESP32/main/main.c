@@ -6,6 +6,10 @@
 #include "esp_sleep.h"
 #include <string.h>
 
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "esp_freertos_hooks.h"
+
 #include <esp_log.h>
 
 #include <board.h>
@@ -18,6 +22,13 @@
 #include "pca9555.h"
 #include "power.h"
 #include "lcd.h"
+#include "leds.h"
+
+#include "lvgl.h"
+#include "lv_port.h"
+#include "lv_tutorials.h"
+
+#include "tests.h"
 
 static const char *TAG = "main";
 
@@ -44,22 +55,37 @@ const struct menu_item i2c_devices[] = {
 void app_main(void) {
     i2c_init();
     pca9555_init();
+    leds_init();
     vTaskDelay(1000 / portTICK_PERIOD_MS);
+    power_display_enable();
     pca9555_set_output_state(PCA_0_LED_RED, 0);
     vTaskDelay(1000 / portTICK_PERIOD_MS);
+    lcd_init();
     pca9555_set_output_state(PCA_0_LED_RED, 1);
-    pca9555_set_output_state(PCA_0_LED_GRN, 0);
-    vTaskDelay(1000 / portTICK_PERIOD_MS);
-    pca9555_set_output_state(PCA_0_LED_GRN, 1);
     pca9555_set_output_state(PCA_0_LED_BLE, 0);
     vTaskDelay(1000 / portTICK_PERIOD_MS);
-    pca9555_set_output_state(PCA_0_LED_BLE, 1);
-    power_display_enable();
+    
+    //test_lcd_scan();
+    //lvgl_init();lv_init();
+    lv_disp_drv_t disp;
+	ESP_LOGD(TAG, "initializing lvgl...");
+	lv_disp_drv_init(&disp);
+	ESP_LOGD(TAG, "registering flush function...");
+	disp.disp_flush = lvgl_disp_flush;
+	ESP_LOGD(TAG, "registering driver...");
+	lv_disp_drv_register(&disp);
+	ESP_LOGD(TAG, "registering tick hook...");
+	esp_register_freertos_tick_hook(lv_tick_task);
+	ESP_LOGD(TAG, "lvgl init done");
     lcd_enable();
-    lcd_init();
+    pca9555_set_output_state(PCA_0_LED_BLE, 1);
+    lv_tutorial_hello_world();
+/*    lcd_disable();*/
+/*    power_display_disable();*/
+/*    leds_init();*/
     while (1)
     {
-        esp_deep_sleep_start();
+/*        esp_deep_sleep_start();*/
     }
 }
 

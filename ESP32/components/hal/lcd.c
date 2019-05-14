@@ -7,6 +7,7 @@
 
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
+#include <freertos/timers.h>
 #include <esp_err.h>
 #include <esp_log.h>
 #include <driver/gpio.h>
@@ -17,25 +18,33 @@
 #include "pca9555.h"
 #include "lcd.h"
 
-#ifndef HIGH
-#define HIGH 1
-#endif
-#ifndef LOW
-#define LOW 0
-#endif
-#define MLCD_WR 0x80
-#define MLCD_VCOM 0x40
-#define MLCD_CLR 0x20
-
-//TODO define width and height in config menu
-#define WIDTH 400
-#define HEIGHT 240
-#define SPIFREQ 2000000
-
 static const char *TAG = "lcd";
 static uint8_t vcom = 0;
 static spi_device_handle_t *spi;
 static uint8_t *lcd_fb;
+
+// lcd flush task related declarations
+static StaticTask_t xTaskBuffer;
+static StackType_t xStack[STACKSIZE]; // TODO optimize this number
+static TaskHandle_t xHandle = NULL;
+
+static xSemaphoreHandle fb_access_mux = NULL;
+
+static void lcd_flush_task(void * params) {
+    int8_t n = 0;
+    while(1) {
+        vcom = (vcom == 0) ? 1 : 0;
+        if (n == VCOMFREQ / FRAMERATE) {
+            n = 0;
+            lcd_flush();
+        }
+        else {
+            lcd_update_vcom();
+        }
+        n += 1;
+        vTaskDelay(1000 / portTICK_PERIOD_MS / VCOMFREQ);
+    }
+}
 
 /**
 The memory LCD uses LSB first transfers (0th data bit is leftmost pixel)
@@ -82,73 +91,124 @@ esp_err_t lcd_init(void) {
     ret=spi_bus_initialize(HSPI_HOST, &bus_cfg, 1);
     ESP_ERROR_CHECK(ret);
     //Attach the LCD to the SPI bus
-    /*spi_device_interface_config_t dev_cfg={
+    spi_device_interface_config_t dev_cfg={
         .command_bits=8,
         .address_bits=0,
         .dummy_bits=0,
-        .mode=0,                                // SPI mode 0 TODO don't know what the 4 numbers mean
-        //.cs_ena_pretrans=0,                     // TODO configure to a minimum value that still works with the LCD
-        .clock_speed_hz=8000000,//SPIFREQ,
+        .mode=0,
+        .cs_ena_pretrans=0,
+        .clock_speed_hz=SPIFREQ,
         .spics_io_num=PIN_LCD_CS,
-        .queue_size=2,                          // Only one transaction queued at a time TODO
-        .flags=SPI_DEVICE_HALFDUPLEX|SPI_DEVICE_BIT_LSBFIRST|SPI_DEVICE_3WIRE,
-//        .pre_cb=lcd_spi_pre_transfer_callback,  // Specify pre-transfer callback to handle D/C line TODO
-//        .post_cb=                               // Post-transfer callback to get ready for the next frame to be sent
-    };*/
-    spi_device_interface_config_t dev_cfg={
-        .clock_speed_hz=10*1000*1000,           //Clock out at 10 MHz
-        .mode=0,                                //SPI mode 0
-        .spics_io_num=PIN_LCD_CS,               //CS pin
-        .queue_size=7,                          //We want to be able to queue 7 transactions at a time
+        .queue_size=1,
+        .flags=SPI_DEVICE_HALFDUPLEX|SPI_DEVICE_POSITIVE_CS|SPI_DEVICE_BIT_LSBFIRST|SPI_DEVICE_3WIRE,
+//        .pre_cb=lcd_spi_pre_transfer_callback,
+//        .post_cb=
     };
-    ret=spi_bus_add_device(HSPI_HOST, &dev_cfg, spi);
-    //ESP_ERROR_CHECK(ret);
-    /*// SPI should be initialized now
-    // clear the screen
-    ret = lcd_clrscr();
-    // Flash black then clear again to test
-    lcd_paintall(true);
-    ret = lcd_invert_vcom();
-    vTaskDelay(500 / portTICK_PERIOD_MS);
-    lcd_paintall(false);
-    ret = lcd_invert_vcom();*/
+    ret=spi_bus_add_device(HSPI_HOST, &dev_cfg, &spi);
+    ESP_ERROR_CHECK(ret);
+    ESP_LOGD(TAG, "SPI added device");
+    // SPI should be initialized now
+    lcd_init_fb();
+    static spi_transaction_t clr_trans;
+    clr_trans.flags = SPI_TRANS_USE_TXDATA;
+    clr_trans.cmd = MLCD_CLR + vcom*MLCD_VCOM;
+    clr_trans.rxlength = 0;
+    clr_trans.length = 8;
+    clr_trans.tx_data[0] = 0;
+    ret = spi_device_queue_trans(spi, &clr_trans, portMAX_DELAY);
+	// now start the flush task to update display and flip vcom periodically
+    xHandle = xTaskCreateStatic(
+                      lcd_flush_task,   /* Function that implements the task. */
+                      "LCD FLUSH",      /* Text name for the task. */
+                      STACKSIZE,        /* Number of indexes in the xStack array. */
+                      (void *) 1,       /* Parameter passed into the task. */
+                      0,                /* Priority at which the task is created. */
+                      xStack,           /* Array to use as the task's stack. */
+                      &xTaskBuffer );   /* Variable to hold the task's data structure. */
+    vTaskSuspend(xHandle);
+    ESP_LOGD(TAG, "init done");
     return ret;
 }
 
 esp_err_t lcd_init_fb(void) {
+    fb_access_mux = xSemaphoreCreateMutex();
     lcd_fb = heap_caps_malloc(((HEIGHT*(WIDTH+16))/8+4)*sizeof(uint8_t), MALLOC_CAP_DMA);
-    if (lcd_fb != NULL) {
+    ESP_LOGD(TAG, "Address of lcd_fb = %p", lcd_fb);
+    uint8_t *fb_ptr = lcd_fb;
+    if (lcd_fb == NULL) {
         return ESP_ERR_NO_MEM;
     }
-    for (uint8_t i=0; i < HEIGHT; i++) {
-        *lcd_fb++ = i;
-        lcd_fb += WIDTH/8;
-        *lcd_fb++ = (uint8_t)0;
-    }
+    lcd_paintall(false);
+    ESP_LOGD(TAG, "framebuffer init done");
     return ESP_OK;
 }
 
 void lcd_paintall(bool black) {
-    uint8_t c = 0x00;
-    if (black) {c = 0xff;}
-    for (uint8_t i=0; i < HEIGHT; i++) {
-        *lcd_fb++ = i;
+	if (xSemaphoreTake(fb_access_mux, portMAX_DELAY) != pdTRUE)
+		return;// ESP_ERR_TIMEOUT;
+    uint8_t c = 0xff;
+    if (black) {c = 0x00;}
+    uint8_t *fb_ptr = lcd_fb;
+    for (uint8_t i=1; i < HEIGHT+1; i++) {
+        *fb_ptr++ = i;
         for (uint8_t j = 0; j < WIDTH/8; j++) {
-            *lcd_fb++ = c;
+            *fb_ptr++ = c;
         }
-        *lcd_fb++ = (uint8_t)0;
+        *fb_ptr++ = 0x00;
     }
+    *fb_ptr++ = 0x00;
+
+	if (xSemaphoreGive(fb_access_mux) != pdTRUE) {
+		ESP_LOGE(TAG, "xSemaphoreGive() did not return pdTRUE.");
+	}
+    return;
+}
+
+void lcd_set_pixel(uint16_t x, uint16_t y, bool black) {
+    if ((x < 0) | (x > WIDTH-1) | (y < 0) | (y > HEIGHT-1)) {return;}
+	if (xSemaphoreTake(fb_access_mux, portMAX_DELAY) != pdTRUE)
+		return;// ESP_ERR_TIMEOUT;
+    // TODO also note the lines that changed, so that only those can be flushed to the display later
+/*    ESP_LOGD(TAG, "x, y, color = %d, %d, %d", x, y, black);*/
+    uint8_t *fb_ptr = lcd_fb;
+/*    ESP_LOGD(TAG, "Original fb_ptr: %p", fb_ptr);*/
+    // go to the correct y
+    fb_ptr += (2+WIDTH/8)*y;
+/*    ESP_LOGD(TAG, "Select line: fb_ptr: %p", fb_ptr);*/
+    // now go to correct x
+    fb_ptr += 1 + x/8;
+/*    ESP_LOGD(TAG, "Select location: fb_ptr: %p", fb_ptr);*/
+    uint8_t x_bit = x%8;
+    if (black) {*fb_ptr &= ~(1<<x_bit);}
+    else {*fb_ptr |= 1<<x_bit;}
+
+	if (xSemaphoreGive(fb_access_mux) != pdTRUE) {
+		ESP_LOGE(TAG, "xSemaphoreGive() did not return pdTRUE.");
+	}
     return;
 }
 
 esp_err_t lcd_flush(void) {
     esp_err_t ret;
+	if (xSemaphoreTake(fb_access_mux, portMAX_DELAY) != pdTRUE)
+		return ESP_ERR_TIMEOUT;
     static spi_transaction_t fb_trans;
     fb_trans.flags = 0;
-    fb_trans.cmd = MLCD_WR;
-    fb_trans.length = (HEIGHT*(WIDTH+16)+16)/8;
+    fb_trans.cmd = MLCD_WR + vcom*MLCD_VCOM; // set or reset the vcom bit
+    //ESP_LOGD(TAG, "%x", fb_trans.cmd);
+    fb_trans.rxlength = 0;
+    fb_trans.length = HEIGHT*(WIDTH+16)+8;
     fb_trans.tx_buffer = lcd_fb;
-    ret=spi_device_transmit(&spi, &fb_trans);
+    // wait for previous transfer to complete (typically this should be complete before the next write anyway)
+    spi_transaction_t *rtrans;
+    spi_device_get_trans_result(spi, &rtrans, portMAX_DELAY);
+    // then send the next frame
+    ret = spi_device_queue_trans(spi, &fb_trans, portMAX_DELAY);
+    //ESP_LOGD(TAG, "buffer flushed");
+
+	if (xSemaphoreGive(fb_access_mux) != pdTRUE) {
+		ESP_LOGE(TAG, "xSemaphoreGive() did not return pdTRUE.");
+	}
     return ret;
 }
 
@@ -156,34 +216,58 @@ esp_err_t lcd_clrscr(void) {
     esp_err_t ret;
     static spi_transaction_t clr_trans;
     clr_trans.flags = SPI_TRANS_USE_TXDATA;
-    clr_trans.cmd = MLCD_CLR;
+    clr_trans.cmd = MLCD_CLR + vcom*MLCD_VCOM;
+    clr_trans.rxlength = 0;
     clr_trans.length = 8;
     clr_trans.tx_data[0] = 0;
-    ret=spi_device_transmit(&spi, &clr_trans);
+    // wait for previous transfer to complete (typically this should be complete before the next write anyway)
+    spi_transaction_t *rtrans;
+    spi_device_get_trans_result(spi, &rtrans, portMAX_DELAY);
+    // then send the next frame
+    ret = spi_device_queue_trans(spi, &clr_trans, portMAX_DELAY);
+    ESP_LOGD(TAG, "screen cleared");
     return ret;
 }
 
-esp_err_t lcd_invert_vcom(void) {
+esp_err_t lcd_update_vcom(void) {
     esp_err_t ret;
     static spi_transaction_t vcom_trans;
     vcom_trans.flags = SPI_TRANS_USE_TXDATA;
-    if (vcom == 0) vcom = 1;
-    else vcom = 0;
-    vcom_trans.cmd = MLCD_VCOM*vcom;
+    vcom_trans.cmd =  vcom*MLCD_VCOM;
+    //vcom_trans.rxlength = 0;
     vcom_trans.length = 8;
     vcom_trans.tx_data[0] = 0;
-    ret=spi_device_transmit(&spi, &vcom_trans);
+    // wait for previous transfer to complete (typically this should be complete before the next write anyway)
+    spi_transaction_t *rtrans;
+    spi_device_get_trans_result(spi, &rtrans, portMAX_DELAY);
+    // then send the next frame
+    ret = spi_device_queue_trans(spi, &vcom_trans, portMAX_DELAY);
+    //ESP_LOGD(TAG, "VCOM inverted");
     return ret;
 }
 
 esp_err_t lcd_enable(void) {
+    // TODO first check that the lcd is initialized
     esp_err_t ret;
+    // clear the screen (initialize pixel memory), then enable display
+    ret = lcd_clrscr();
+    vTaskDelay(50 / portTICK_PERIOD_MS); // wait for disp to stabilize
 	ret = pca9555_set_output_state(PCA_0_EN_LCD, 1);
+    ESP_LOGD(TAG, "enabled display");
+    vTaskResume(xHandle);
+	vTaskDelay(10 / portTICK_PERIOD_MS); // wait for disp to stabilize
+    ESP_LOGD(TAG, "started framebuffer flush task");
 	return ret;
 }
 
 esp_err_t lcd_disable(void) {
     esp_err_t ret;
+    vTaskSuspend(xHandle);
+    ESP_LOGD(TAG, "suspended framebuffer flush task");
+    // clear the screen (initialize pixel memory), then disable display
+    ret = lcd_clrscr();
+    vTaskDelay(50 / portTICK_PERIOD_MS); // wait for disp to stabilize
 	ret = pca9555_set_output_state(PCA_0_EN_LCD, 0);
+    ESP_LOGD(TAG, "device disabled");
 	return ret;
 }

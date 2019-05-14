@@ -1,0 +1,23 @@
+menu "Memory LCD display"
+
+config LVGL_GUI_ENABLE
+    bool "Enable LVGL GUI drivers"
+    default y
+
+config WIDTH
+    string "Display width in pixels"
+    default 400
+
+config HEIGHT
+    string "Display height in pixels"
+    default 240
+
+config SPIFREQ
+    string "SPI frequency in Hz (divisor of 80 Mhz, at most 2 MHz)"
+    default 1000000
+
+config FRAMERATE
+    string "Frequency of frameuffer flushing in Hz (divisor of 100, at most 5)"
+    default 1
+
+endmenu

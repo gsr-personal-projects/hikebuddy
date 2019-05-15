@@ -1,6 +1,7 @@
 #include <esp_log.h>
 
 #include "bme280.h"
+#include "i2c.h"
 #include "bme_test.h"
 
 void demo_bme(void) {

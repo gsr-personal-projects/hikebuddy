@@ -26,7 +26,7 @@ extern void input_add_event(uint32_t button_id, bool pressed, bool in_isr);
 
 /** retrieve button input
  * @param timeout the timeout in milliseconds; use -1 for infinite wait
- * @return button_id is button is pressed; 0 if timeout is reached
+ * @return button_id if button is pressed; 0 if timeout is reached
  */
 extern uint32_t input_get_event(int timeout);
 

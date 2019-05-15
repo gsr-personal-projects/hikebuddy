@@ -6,7 +6,6 @@
 #include "pins.h"
 #include "base.h"
 #include "input.h"
-#include "button.h"
 #include "gpiobutton.h"
 #include "i2c.h"
 #include "power.h"

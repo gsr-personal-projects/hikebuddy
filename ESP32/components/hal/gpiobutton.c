@@ -12,9 +12,8 @@ static const char *TAG = "gpiobutton";
 uint32_t gpiobutton_conv[40] = { 0 };
 int gpiobutton_old_state[40] = { 0 };
 
-void
-gpiobutton_handler(void *arg)
-{ /* in interrupt handler */
+void gpiobutton_handler(void *arg) {
+    /* in interrupt handler */
 	uint32_t gpio_num = (uint32_t) arg;
 
 	int new_state = gpio_get_level(gpio_num);
@@ -26,9 +25,7 @@ gpiobutton_handler(void *arg)
 	gpiobutton_old_state[gpio_num] = new_state;
 }
 
-esp_err_t
-gpiobutton_add(int gpio_num, uint32_t button_id)
-{
+esp_err_t gpiobutton_add(int gpio_num, uint32_t button_id) {
 	esp_err_t res = base_init();
 	if (res != ESP_OK)
 		return res;

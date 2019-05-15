@@ -1,5 +1,9 @@
 #include <sdkconfig.h>
 
+#ifdef CONFIG_LCD_DEBUG
+#define LOG_LOCAL_LEVEL ESP_LOG_DEBUG
+#endif // CONFIG_LCD_DEBUG
+
 #include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>
@@ -22,6 +26,7 @@ static const char *TAG = "lcd";
 static uint8_t vcom = 0;
 static spi_device_handle_t *spi;
 static uint8_t *lcd_fb;
+static bool invert = false;
 
 // lcd flush task related declarations
 static StaticTask_t xTaskBuffer;
@@ -146,8 +151,8 @@ esp_err_t lcd_init_fb(void) {
 void lcd_paintall(bool black) {
 	if (xSemaphoreTake(fb_access_mux, portMAX_DELAY) != pdTRUE)
 		return;// ESP_ERR_TIMEOUT;
-    uint8_t c = 0xff;
-    if (black) {c = 0x00;}
+    uint8_t c = 0x00;
+    if (black) {c = 0xff;}
     uint8_t *fb_ptr = lcd_fb;
     for (uint8_t i=1; i < HEIGHT+1; i++) {
         *fb_ptr++ = i;
@@ -179,8 +184,14 @@ void lcd_set_pixel(uint16_t x, uint16_t y, bool black) {
     fb_ptr += 1 + x/8;
 /*    ESP_LOGD(TAG, "Select location: fb_ptr: %p", fb_ptr);*/
     uint8_t x_bit = x%8;
-    if (black) {*fb_ptr &= ~(1<<x_bit);}
-    else {*fb_ptr |= 1<<x_bit;}
+    if (invert) {
+        if (black) {*fb_ptr &= ~(1<<x_bit);}
+        else {*fb_ptr |= 1<<x_bit;}
+    }
+    else {
+        if (black) {*fb_ptr |= 1<<x_bit;}
+        else {*fb_ptr &= ~(1<<x_bit);}
+    }
 
 	if (xSemaphoreGive(fb_access_mux) != pdTRUE) {
 		ESP_LOGE(TAG, "xSemaphoreGive() did not return pdTRUE.");
@@ -204,7 +215,7 @@ esp_err_t lcd_flush(void) {
     spi_device_get_trans_result(spi, &rtrans, portMAX_DELAY);
     // then send the next frame
     ret = spi_device_queue_trans(spi, &fb_trans, portMAX_DELAY);
-    //ESP_LOGD(TAG, "buffer flushed");
+/*    ESP_LOGD(TAG, "buffer flushed");*/
 
 	if (xSemaphoreGive(fb_access_mux) != pdTRUE) {
 		ESP_LOGE(TAG, "xSemaphoreGive() did not return pdTRUE.");

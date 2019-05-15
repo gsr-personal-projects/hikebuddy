@@ -1,14 +1,14 @@
-/** @file bme_test.h */
-#ifndef BMETEST_H
-#define BMETEST_H
+/** @file lsm_test.h */
+#ifndef LSMTEST_H
+#define LSMTEST_H
 
 __BEGIN_DECLS
 
 /**
- * Run BME test
+ * Run LSM test
  */
-extern void demo_ bme(void);
+extern void demo_lsm(void);
 
 __END_DECLS
 
-#endif // BMETEST_H
+#endif // LSMTEST_H

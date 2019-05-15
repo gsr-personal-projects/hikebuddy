@@ -4,6 +4,8 @@
 
 #include <stdint.h>
 #include <esp_err.h>
+#include "lv_tutorials.h"
+#include "bme_test.h"
 
 __BEGIN_DECLS
 

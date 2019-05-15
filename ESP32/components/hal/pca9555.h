@@ -23,8 +23,6 @@ extern void pca9555_set_interrupt_handler(uint8_t pin, pca9555_intr_t handler, v
 
 /** configure port-expander gpio port - get input status */
 extern uint16_t pca9555_get_input(void);
-/** configure port-expander gpio port - get interrupt status */
-extern uint16_t pca9555_get_interrupt_status(void);
 
 __END_DECLS
 

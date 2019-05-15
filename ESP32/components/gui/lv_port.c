@@ -42,7 +42,7 @@
 //#ifdef CONFIG_LVGL_GUI_ENABLE
 
 #include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
+#include <freertos/timers.h>
 #include "esp_freertos_hooks.h"
 #include <esp_log.h>
 
@@ -50,6 +50,14 @@
 #include "lcd.h"
 
 static const char *TAG = "lvgl";
+
+// lcd flush task related declarations
+static TimerHandle_t xTimer;
+static StaticTimer_t xTimerBuffer;
+
+static void IRAM_ATTR vTimerCallback( TimerHandle_t xTimer ) {
+    lv_task_handler();
+}
 
 /*********************
  *      DEFINES
@@ -63,9 +71,6 @@ static const char *TAG = "lvgl";
  *  STATIC PROTOTYPES
  **********************/
 //static void IRAM_ATTR lv_tick_task(void);
-static void ex_disp_map(int32_t x1, int32_t y1, int32_t x2, int32_t y2, const lv_color_t * color_p);
-static void ex_disp_fill(int32_t x1, int32_t y1, int32_t x2, int32_t y2,  lv_color_t color);
-
 /**********************
  *  STATIC VARIABLES
  **********************/
@@ -88,13 +93,13 @@ static void ex_disp_fill(int32_t x1, int32_t y1, int32_t x2, int32_t y2,  lv_col
  * This function is required only when LV_VDB_SIZE != 0 in lv_conf.h*/
 void lvgl_disp_flush(int32_t x1, int32_t y1, int32_t x2, int32_t y2, const lv_color_t * color_p) {
     /*The most simple case (but also the slowest) to put all pixels to the screen one-by-one*/
-    ESP_LOGD(TAG, "Inside display_flush");
-    int32_t x;
-    int32_t y;
+/*    ESP_LOGD(TAG, "Inside display_flush");*/
+    int16_t x;
+    int16_t y;
     for(y = y1; y <= y2; y++) {
         for(x = x1; x <= x2; x++) {
             /* Put a pixel to the display. For example: */
-            lcd_set_pixel((uint8_t)x, (uint8_t)y, (bool)color_p->full);
+            lcd_set_pixel(x, y, (bool)color_p->full);
             color_p++;
         }
     }
@@ -107,46 +112,26 @@ void lvgl_disp_flush(int32_t x1, int32_t y1, int32_t x2, int32_t y2, const lv_co
 void lvgl_init() {
     lv_init();
     lv_disp_drv_t disp;
+	ESP_LOGD(TAG, "initializing...");
 	lv_disp_drv_init(&disp);
+	ESP_LOGD(TAG, "registering flush function...");
 	disp.disp_flush = lvgl_disp_flush;
+	ESP_LOGD(TAG, "registering driver...");
 	lv_disp_drv_register(&disp);
+	ESP_LOGD(TAG, "registering tick hook...");
 	esp_register_freertos_tick_hook(lv_tick_task);
+	ESP_LOGD(TAG, "starting task timer...");
+	// now start a timer to periodically call lv_task _handler
+	xTimer = xTimerCreateStatic ( 
+                    "lvgl task timer",
+                    10,
+                    pdTRUE,
+                    ( void * ) 0,
+                    vTimerCallback,
+                    &xTimerBuffer
+            );
+    xTimerStart(xTimer, portMAX_DELAY);
 	ESP_LOGD(TAG, "init done");
-}
-
-/* Write a pixel array (called 'map') to the a specific area on the display
- * This function is required only when LV_VDB_SIZE == 0 in lv_conf.h*/
-static void ex_disp_map(int32_t x1, int32_t y1, int32_t x2, int32_t y2, const lv_color_t * color_p)
-{
-    /*The most simple case (but also the slowest) to put all pixels to the screen one-by-one*/
-    int32_t x;
-    int32_t y;
-    for(y = y1; y <= y2; y++) {
-        for(x = x1; x <= x2; x++) {
-            /* Put a pixel to the display. For example: */
-            lcd_set_pixel((uint8_t)x, (uint8_t)y, (bool)color_p->full);
-            color_p++;
-        }
-    }
-}
-
-
-/* Write a pixel array (called 'map') to the a specific area on the display
- * This function is required only when LV_VDB_SIZE == 0 in lv_conf.h*/
-static void ex_disp_fill(int32_t x1, int32_t y1, int32_t x2, int32_t y2,  lv_color_t color)
-{
-    /*The most simple case (but also the slowest) to put all pixels to the screen one-by-one*/
-
-    int32_t x;
-    int32_t y;
-    for(y = y1; y <= y2; y++) {
-        for(x = x1; x <= x2; x++) {
-            /* Put a pixel to the display. For example: */
-            lcd_set_pixel((uint16_t)x, (uint16_t)y, (bool)color.full);
-        }
-    }
-
-    (void)color; /*Just to avid warnings*/
 }
 
 void IRAM_ATTR lv_tick_task(void) {

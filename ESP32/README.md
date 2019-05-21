@@ -1,4 +1,4 @@
-Firmware HikeBuddy
+HikeBuddy Firmware
 =====================
 
 Debian prerequisites

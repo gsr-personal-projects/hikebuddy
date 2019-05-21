@@ -20,7 +20,7 @@
 
 #include "pins.h"
 #include "base.h"
-#include "i2c.h"
+#include "hal_i2c.h"
 #include "pca9555.h"
 #include "input.h"
 

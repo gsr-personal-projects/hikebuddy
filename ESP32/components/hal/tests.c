@@ -13,7 +13,7 @@
 #include <driver/gpio.h>
 #include "pins.h"
 #include "bme_test.h"
-#include "i2c.h"
+#include "hal_i2c.h"
 #include "pca9555.h"
 #include "power.h"
 #include "lcd.h"

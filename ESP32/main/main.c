@@ -17,7 +17,7 @@
 #include <pins.h>
 #include <gpiobutton.h>
 
-#include "i2c.h"
+#include "hal_i2c.h"
 #include "pca9555.h"
 #include "power.h"
 #include "lcd.h"
@@ -26,6 +26,8 @@
 #include "lvgl.h"
 #include "lv_port.h"
 
+#include "bme280.h"
+#include "bme_test.h"
 #include "tests.h"
 
 static const char *TAG = "main";
@@ -46,7 +48,7 @@ const struct menu_item i2c_devices[] = {
     /*{"Port Expander", &demo_port_expander},
     {"LSM303 Magnetometer", &demo_lsm_mag},
     {"LSM303 Accelerometer", &demo_lsm_accl},*/
-    {"BME280", &demo_bme},
+    {"BME280", &demo_bme_gui},
     {NULL, NULL},
 };
 
@@ -61,7 +63,10 @@ void app_main(void) {
     lcd_enable();
     
     lvgl_init();
-    lv_tutorial_objects();
+    //lv_display_set_orientation(90);
+    demo_bme_gui();
+    
+/*    demo_bme_gui();*/
 /*    lcd_disable();*/
 /*    power_display_disable();*/
     

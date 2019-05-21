@@ -7,7 +7,7 @@
 #include "base.h"
 #include "input.h"
 #include "gpiobutton.h"
-#include "i2c.h"
+#include "hal_i2c.h"
 #include "power.h"
 #include "leds.h"
 #include "feedback.h"

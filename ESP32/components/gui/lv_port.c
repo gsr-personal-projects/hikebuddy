@@ -99,7 +99,7 @@ void lvgl_disp_flush(int32_t x1, int32_t y1, int32_t x2, int32_t y2, const lv_co
     for(y = y1; y <= y2; y++) {
         for(x = x1; x <= x2; x++) {
             /* Put a pixel to the display. For example: */
-            lcd_set_pixel(x, y, (bool)color_p->full);
+            lcd_set_pixel(WIDTH-y, x, (bool)color_p->full);
             color_p++;
         }
     }

@@ -52,9 +52,9 @@ static const char *input_button_name[16] = {
 
 void input_add_event(uint32_t button_id, bool pressed, bool in_isr) { /* maybe in interrupt handler */
 #ifdef CONFIG_HIKEBUDDY_INPUT_DEBUG
-	ets_printf("input: Button %s %s.\n",
-			input_button_name[button_id < 10 ? button_id : 0],
-			pressed ? "pressed" : "released");
+/*	ets_printf("input: Button %s %s.\n",*/
+/*			input_button_name[button_id < 10 ? button_id : 0],*/
+/*			pressed ? "pressed" : "released");*/
 #endif // CONFIG_HIKEBUDDY_INPUT_DEBUG
 
 	if (pressed) {

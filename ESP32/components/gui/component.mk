@@ -19,7 +19,8 @@ COMPONENT_SRCDIRS := . \
     $(LVGLLIB)/lv_fonts \
     $(LVGLLIB)/lv_objx \
     $(LVGLLIB)/lv_themes \
-    lvgl_examples
+    lvgl_examples \
+    fonts
 
 COMPONENT_ADD_INCLUDEDIRS := . \
     ./include \
@@ -31,7 +32,8 @@ COMPONENT_ADD_INCLUDEDIRS := . \
     $(LVGLLIB)/lv_fonts \
     $(LVGLLIB)/lv_objx \
     $(LVGLLIB)/lv_themes \
-    lvgl_examples
+    lvgl_examples \
+    fonts
 
 COMPONENT_PRIV_INCLUDEDIRS +=  . \
     ./include \
@@ -43,6 +45,7 @@ COMPONENT_PRIV_INCLUDEDIRS +=  . \
     $(LVGLLIB)/lv_fonts \
     $(LVGLLIB)/lv_objx \
     $(LVGLLIB)/lv_themes \
-    lvgl_examples
+    lvgl_examples \
+    fonts
 
 endif  #CONFIG_LVGL_GUI_ENABLE

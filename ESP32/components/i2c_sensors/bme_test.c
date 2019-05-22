@@ -8,7 +8,7 @@
 
 #include "lvgl.h"
 
-LV_FONT_DECLARE(dejavu_sans_bold_16);
+LV_FONT_DECLARE(synchronizer_10);
 
 static const char *TAG = "BME Demo";
 
@@ -24,6 +24,10 @@ static lv_obj_t * lb_scroll_title;
 static lv_obj_t * lb_scroll_value;
 static lv_obj_t * lb_scroll_btn_left;
 static lv_obj_t * lb_scroll_btn_right;
+static lv_chart_series_t * s_t;
+static lv_chart_series_t * s_h;
+static lv_chart_series_t * s_p;
+static lv_chart_series_t * s_a;
 
 typedef enum {
     TEMPERATURE,
@@ -43,7 +47,7 @@ static uint8_t cdptr = 0;
 void fill_from_current_data(current_data* cd, char* name, char* value) {
     if (cd->name == TEMPERATURE) {
         snprintf(name, 25, "Temperature");
-        snprintf(value, 15, "%.2f \u2103", cd->value);
+        snprintf(value, 15, "%.2f C", cd->value);
     }
     if (cd->name == HUMIDITY) {
         snprintf(name, 25, "Humidity");
@@ -93,6 +97,28 @@ void demo_bme_normal(void) {
     }
 }
 
+void weather_update_task(void) {
+    bme_forced_measure();
+    cd[0].value = read_temperature();
+    cd[2].value = read_pressure() / 1000.0F;
+    cd[1].value = read_humidity();
+    cd[3].value = read_altitude();
+    if (cd[3].value < -100) {cd[3].value = -100;}
+    lv_chart_set_next(ch_t, s_t, cd[0].value);
+    lv_chart_set_next(ch_h, s_h, cd[1].value);
+    lv_chart_set_next(ch_p, s_p, cd[2].value);
+    lv_chart_set_next(ch_a, s_a, cd[3].value);
+/*    lv_chart_refresh(ch_t);*/
+/*    lv_chart_refresh(ch_p);*/
+/*    lv_chart_refresh(ch_h);*/
+/*    lv_chart_refresh(ch_a);*/
+    fill_from_current_data(&cd[cdptr], scroll_title, scroll_value);
+    lv_label_set_text(lb_scroll_title, scroll_title);
+    lv_label_set_text(lb_scroll_value, scroll_value);
+    lv_obj_align(lb_scroll_title, ch_a, LV_ALIGN_OUT_BOTTOM_MID, 0, 0);
+    lv_obj_align(lb_scroll_value, lb_scroll_title, LV_ALIGN_OUT_BOTTOM_MID, 0, 0);
+}
+
 void button_monitor_task(void) {
     uint32_t button_id;
     while ((button_id = input_get_event(50)) != 0) { // exhaust input queue
@@ -108,26 +134,15 @@ void button_monitor_task(void) {
         }
         if (button_id == 9) {
             set_base_pressure();
+            weather_update_task();
         }
         ESP_LOGD(TAG, "cdptr after: %d", cdptr);
     }
     fill_from_current_data(&cd[cdptr], scroll_title, scroll_value);
     lv_label_set_text(lb_scroll_title, scroll_title);
     lv_label_set_text(lb_scroll_value, scroll_value);
-}
-
-void weather_update_task(void) {
-/*    while (1) {*/
-        bme_forced_measure();
-        cd[0].value = read_temperature();
-        cd[2].value = read_pressure() / 1000.0F;
-        cd[1].value = read_humidity();
-        cd[3].value = read_altitude();
-        fill_from_current_data(&cd[cdptr], scroll_title, scroll_value);
-        lv_label_set_text(lb_scroll_title, scroll_title);
-        lv_label_set_text(lb_scroll_value, scroll_value);
-/*        vTaskDelay(1000 / portTICK_PERIOD_MS);*/
-/*    }*/
+    lv_obj_align(lb_scroll_title, ch_a, LV_ALIGN_OUT_BOTTOM_MID, 0, 0);
+    lv_obj_align(lb_scroll_value, lb_scroll_title, LV_ALIGN_OUT_BOTTOM_MID, 0, 0);
 }
 
 void demo_bme_gui(void) {
@@ -151,7 +166,7 @@ void demo_bme_gui(void) {
     ch_lb_style.body.padding.hor = 0;
     ch_lb_style.body.padding.ver = 0;
     ch_lb_style.body.padding.inner = 0;
-    ch_lb_style.text.font = &dejavu_sans_bold_16;
+    ch_lb_style.text.font = &synchronizer_10;
     static lv_style_t no_pad_style;
     lv_style_copy(&no_pad_style, &lv_style_plain);
     no_pad_style.body.padding.hor = 0;
@@ -169,46 +184,50 @@ void demo_bme_gui(void) {
     lv_obj_align(label, NULL, LV_ALIGN_CENTER, 0, 0);
 
     ch_t = lv_chart_create(scr, NULL);
+    lv_chart_set_point_count(ch_t, 288);
     lv_obj_set_style(ch_t, &lv_style_transp);
     lv_obj_set_size(ch_t, scr_w-20, scr_h / 5);
     lv_obj_align(ch_t, label, LV_ALIGN_OUT_BOTTOM_MID, 0, 0);
     lv_chart_set_series_width(ch_t, 3);
     lv_obj_t * lb_t = lv_label_create(ch_t, NULL);
     lv_label_set_text(lb_t, "Temperature");
-    lv_obj_align(lb_t, NULL, LV_ALIGN_IN_TOP_LEFT, 5, 3);
+    lv_obj_align(lb_t, NULL, LV_ALIGN_IN_TOP_LEFT, 5, 8);
     lv_label_set_body_draw(lb_t, true);
     lv_label_set_style(lb_t, &ch_lb_style);
     
     ch_h = lv_chart_create(scr, NULL);
+    lv_chart_set_point_count(ch_h, 288);
     lv_obj_set_style(ch_h, &lv_style_transp);
     lv_obj_set_size(ch_h, scr_w-20, scr_h / 5);
     lv_obj_align(ch_h, ch_t, LV_ALIGN_OUT_BOTTOM_MID, 0, 0);
     lv_chart_set_series_width(ch_h, 3);
     lv_obj_t * lb_h = lv_label_create(ch_h, NULL);
     lv_label_set_text(lb_h, "Humidity");
-    lv_obj_align(lb_h, NULL, LV_ALIGN_IN_TOP_LEFT, 5, 3);
+    lv_obj_align(lb_h, NULL, LV_ALIGN_IN_TOP_LEFT, 5, 8);
     lv_label_set_body_draw(lb_h, true);
     lv_label_set_style(lb_h, &ch_lb_style);
     
     ch_p = lv_chart_create(scr, NULL);
+    lv_chart_set_point_count(ch_p, 288);
     lv_obj_set_style(ch_p, &lv_style_transp);
     lv_obj_set_size(ch_p, scr_w-20, scr_h / 5);
     lv_obj_align(ch_p, ch_h, LV_ALIGN_OUT_BOTTOM_MID, 0, 0);
     lv_chart_set_series_width(ch_p, 3);
     lv_obj_t * lb_p = lv_label_create(ch_p, NULL);
     lv_label_set_text(lb_p, "Pressure");
-    lv_obj_align(lb_p, NULL, LV_ALIGN_IN_TOP_LEFT, 5, 3);
+    lv_obj_align(lb_p, NULL, LV_ALIGN_IN_TOP_LEFT, 5, 8);
     lv_label_set_body_draw(lb_p, true);
     lv_label_set_style(lb_p, &ch_lb_style);
     
     ch_a = lv_chart_create(scr, NULL);
+    lv_chart_set_point_count(ch_a, 288);
     lv_obj_set_style(ch_a, &lv_style_transp);
     lv_obj_set_size(ch_a, scr_w-20, scr_h / 5);
     lv_obj_align(ch_a, ch_p, LV_ALIGN_OUT_BOTTOM_MID, 0, 0);
     lv_chart_set_series_width(ch_a, 3);
     lv_obj_t * lb_a = lv_label_create(ch_a, NULL);
     lv_label_set_text(lb_a, "Altitude");
-    lv_obj_align(lb_a, NULL, LV_ALIGN_IN_TOP_LEFT, 5, 3);
+    lv_obj_align(lb_a, NULL, LV_ALIGN_IN_TOP_LEFT, 5, 8);
     lv_label_set_body_draw(lb_a, true);
     lv_label_set_style(lb_a, &ch_lb_style);
     
@@ -217,34 +236,34 @@ void demo_bme_gui(void) {
     lb_scroll_title = lv_label_create(scr, NULL);
     lv_obj_align(lb_scroll_title, ch_a, LV_ALIGN_OUT_BOTTOM_MID, 0, 0);
     lv_label_set_text(lb_scroll_title, "");
-    lb_scroll_btn_left = lv_label_create(scr, NULL);
-    lv_label_set_text(lb_scroll_btn_left, SYMBOL_LEFT);
-    lv_obj_align(lb_scroll_btn_left, ch_a, LV_ALIGN_OUT_BOTTOM_LEFT, 0, 8);
-    lb_scroll_btn_right = lv_label_create(scr, NULL);
-    lv_label_set_text(lb_scroll_btn_right, SYMBOL_RIGHT);
-    lv_obj_set_width(lb_scroll_btn_right, 20);
-    lv_obj_align(lb_scroll_btn_right, ch_a, LV_ALIGN_OUT_BOTTOM_RIGHT, 0, 8);
-    lv_obj_set_width(lb_scroll_btn_left, 20);
     lb_scroll_value = lv_label_create(scr, NULL);
     lv_obj_align(lb_scroll_value, lb_scroll_title, LV_ALIGN_OUT_BOTTOM_MID, 0, 0);
     lv_label_set_text(lb_scroll_value, "");
+    lb_scroll_btn_left = lv_label_create(scr, NULL);
+    lv_label_set_text(lb_scroll_btn_left, SYMBOL_LEFT);
+    lv_obj_align(lb_scroll_btn_left, ch_a, LV_ALIGN_OUT_BOTTOM_LEFT, 0, 12);
+    lb_scroll_btn_right = lv_label_create(scr, NULL);
+    lv_label_set_text(lb_scroll_btn_right, SYMBOL_RIGHT);
+    lv_obj_align(lb_scroll_btn_right, ch_a, LV_ALIGN_OUT_BOTTOM_RIGHT, 0, 12);
     
-    
-    /*Add a data series and set some points*/
-/*    lv_chart_series_t * s_t = lv_chart_add_series(ch_t, LV_COLOR_BLACK);*/
-/*    lv_chart_series_t * s_h = lv_chart_add_series(ch_h, LV_COLOR_BLACK);*/
-/*    lv_chart_series_t * s_p = lv_chart_add_series(ch_p, LV_COLOR_BLACK);*/
-/*    lv_chart_series_t * s_a = lv_chart_add_series(ch_a, LV_COLOR_BLACK);*/
-/*    lv_chart_set_next(ch_t, s_t, 10);*/
-/*    lv_chart_set_next(ch_t, s_t, 25);*/
-/*    lv_chart_set_next(ch_h, s_h, 45);*/
-/*    lv_chart_set_next(ch_h, s_h, 80);*/
-/*    lv_chart_set_next(ch_p, s_p, 20);*/
-/*    lv_chart_set_next(ch_p, s_p, 30);*/
-/*    lv_chart_set_next(ch_a, s_a, 50);*/
-/*    lv_chart_set_next(ch_a, s_a, 0);*/
+    s_t = lv_chart_add_series(ch_t, LV_COLOR_BLACK);
+    s_p = lv_chart_add_series(ch_p, LV_COLOR_BLACK);
+    s_h = lv_chart_add_series(ch_h, LV_COLOR_BLACK);
+    s_a = lv_chart_add_series(ch_a, LV_COLOR_BLACK);
+    lv_chart_set_div_line_count(ch_t, 1, 5);
+    lv_chart_set_div_line_count(ch_h, 1, 5);
+    lv_chart_set_div_line_count(ch_p, 1, 5);
+    lv_chart_set_div_line_count(ch_a, 1, 5);
+    lv_chart_set_range(ch_t, -10, 40);
+    lv_chart_set_range(ch_h, 10, 80);
+    lv_chart_set_range(ch_p, 90, 110);
+    lv_chart_set_range(ch_a, -10, 50);
+/*    lv_chart_init_points(ch_t, s_t, 24);*/
+/*    lv_chart_init_points(ch_p, s_p, 100);*/
+/*    lv_chart_init_points(ch_h, s_h, 50);*/
+/*    lv_chart_init_points(ch_a, s_a, 0);*/
     
     lv_task_create(button_monitor_task, 400, LV_TASK_PRIO_MID, NULL);
-    lv_task_create(weather_update_task, 1000, LV_TASK_PRIO_MID, NULL);
+    lv_task_create(weather_update_task, 300000, LV_TASK_PRIO_MID, NULL);
 /*    xTaskCreate(&weather_update_task, "weather update task", 2048, NULL, 1, NULL);*/
 }

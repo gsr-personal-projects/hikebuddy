@@ -1,4 +1,6 @@
 /***************************************************************************
+  Based on Adafruit library described below
+  Adapted by Saurabh Gandhi to the HikeBuddy ESP32 board
   This is a library for the LSM303 Accelerometer and magnentometer/compass
 
   Designed specifically to work with the Adafruit LSM303DLHC Breakout

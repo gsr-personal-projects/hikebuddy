@@ -27,6 +27,7 @@ static uint8_t vcom = 0;
 static spi_device_handle_t *spi;
 static uint8_t *lcd_fb;
 static bool invert = false;
+static bool changed = true;
 
 // lcd flush task related declarations
 static StaticTask_t xTaskBuffer;
@@ -39,7 +40,7 @@ static void lcd_flush_task(void * params) {
     int8_t n = 0;
     while(1) {
         vcom = (vcom == 0) ? 1 : 0;
-        if (n == VCOMFREQ / FRAMERATE) {
+        if ((n >= VCOMFREQ / FRAMERATE) & changed) {
             n = 0;
             lcd_flush();
         }
@@ -162,6 +163,7 @@ void lcd_paintall(bool black) {
         *fb_ptr++ = 0x00;
     }
     *fb_ptr++ = 0x00;
+	changed = true;
 
 	if (xSemaphoreGive(fb_access_mux) != pdTRUE) {
 		ESP_LOGE(TAG, "xSemaphoreGive() did not return pdTRUE.");
@@ -192,6 +194,7 @@ void lcd_set_pixel(uint16_t x, uint16_t y, bool black) {
         if (black) {*fb_ptr |= 1<<x_bit;}
         else {*fb_ptr &= ~(1<<x_bit);}
     }
+	changed = true;
 
 	if (xSemaphoreGive(fb_access_mux) != pdTRUE) {
 		ESP_LOGE(TAG, "xSemaphoreGive() did not return pdTRUE.");
@@ -216,6 +219,7 @@ esp_err_t lcd_flush(void) {
     // then send the next frame
     ret = spi_device_queue_trans(spi, &fb_trans, portMAX_DELAY);
 /*    ESP_LOGD(TAG, "buffer flushed");*/
+    changed = false;
 
 	if (xSemaphoreGive(fb_access_mux) != pdTRUE) {
 		ESP_LOGE(TAG, "xSemaphoreGive() did not return pdTRUE.");

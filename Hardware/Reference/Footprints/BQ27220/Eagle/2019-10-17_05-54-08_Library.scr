@@ -1,0 +1,136 @@
+# Created by Ultra Librarian Gold 8.3.134 Copyright © 1999-2018
+# Frank Frank, Accelerated Designs
+
+Grid mil;
+Set Wire_Bend 2;
+
+
+Edit 'YZF9.pac';
+Layer 1;
+Smd 'A1' 12 12 -100 R0 (-19.685 19.685);
+Layer 1;
+Smd 'A2' 12 12 -100 R0 (0 19.685);
+Layer 1;
+Smd 'A3' 12 12 -100 R0 (19.685 19.685);
+Layer 1;
+Smd 'B1' 12 12 -100 R0 (-19.685 0);
+Layer 1;
+Smd 'B2' 12 12 -100 R0 (0 0);
+Layer 1;
+Smd 'B3' 12 12 -100 R0 (19.685 0);
+Layer 1;
+Smd 'C1' 12 12 -100 R0 (-19.685 -19.685);
+Layer 1;
+Smd 'C2' 12 12 -100 R0 (0 -19.685);
+Layer 1;
+Smd 'C3' 12 12 -100 R0 (19.685 -19.685);
+Layer 21;
+Change Size 50;
+Change Ratio 6;
+Text 'A' SR0 (-99 -5);
+Change Size 50;
+Change Ratio 6;
+Text 'C' SR0 (-99 -45);
+Change Size 50;
+Change Ratio 6;
+Text '1' SR90 (5 54);
+Change Size 50;
+Change Ratio 6;
+Text '3' SR90 (45 54);
+Layer 51;
+Wire 6 (-19 29) (-29 19);
+Wire 6 (-29 -29) (29 -29);
+Wire 6 (29 -29) (29 29);
+Wire 6 (29 29) (-29 29);
+Wire 6 (-29 29) (-29 -29);
+Change Size 50;
+Change Ratio 6;
+Text 'A' SR0 (-99 -5);
+Change Size 50;
+Change Ratio 6;
+Text 'C' SR0 (-99 -45);
+Change Size 50;
+Change Ratio 6;
+Text '1' SR90 (5 54);
+Change Size 50;
+Change Ratio 6;
+Text '3' SR90 (45 54);
+Layer 22;
+Change Size 50;
+Change Ratio 6;
+Text 'A' SMR0 (-54 -5);
+Change Size 50;
+Change Ratio 6;
+Text 'C' SMR0 (-54 -45);
+Change Size 50;
+Change Ratio 6;
+Text '1' SMR90 (-45 54);
+Change Size 50;
+Change Ratio 6;
+Text '3' SMR90 (-5 54);
+Layer 39;
+Wire 6 (-39 -39) (-39 39);
+Wire 6 (-39 39) (39 39);
+Wire 6 (39 39) (39 -39);
+Wire 6 (39 -39) (-39 -39);
+Layer 39;
+Change Spacing 50;
+Change Pour solid;
+Polygon 6  (-39 -39) (-39 39) (39 39) (39 -39) (-39 -39);
+Layer 39;
+Layer 39;
+Change Spacing 50;
+Change Pour solid;
+Polygon 6  (-47.0276 47.0276) (47.0276 47.0276) (47.0276 -47.0276) (-47.0276 -47.0276) (-47.0276 47.0276);
+Layer 23;
+Wire 6 (-10 0) (10 0);
+Wire 6 (0 -10) (0 10);
+Layer 25;
+Change Size 50;
+Change Ratio 6;
+Text '>Name' SR0 (-129 -25);
+Layer 27;
+
+Edit 'BQ27220YZFR.sym';
+Layer 94;
+Pin 'GPOUT' Out None Middle R0 Both 0 (100 0)
+Pin 'SDA' I/O None Middle R0 Both 0 (100 -100)
+Pin 'SCL' I/O None Middle R0 Both 0 (100 -200)
+Pin 'VIN' In None Middle R0 Both 0 (100 -300)
+Pin 'VSS' Pwr None Middle R180 Both 0 (1500 -400)
+Pin 'VDD' Pwr None Middle R180 Both 0 (1500 -300)
+Pin 'SRP' In None Middle R180 Both 0 (1500 -200)
+Pin 'SRN' In None Middle R180 Both 0 (1500 -100)
+Pin 'BAT' In None Middle R180 Both 0 (1500 0)
+Wire 6 (300 200) (300 -600);
+Wire 6 (300 -600) (1300 -600);
+Wire 6 (1300 -600) (1300 200);
+Wire 6 (1300 200) (300 200);
+Layer 97;
+Layer 95;
+Change Size 82;
+Change Ratio 6;
+Text '>Name' SR0 (614 359);
+Layer 96;
+Change Size 82;
+Change Ratio 6;
+Text '>Value' SR0 (589 259);
+
+Edit 'BQ27220YZFR.dev';
+Prefix 'U';
+Description '';
+Value Off;
+Add BQ27220YZFR 'A' Next  0 (0 0);
+Package 'YZF9';
+Technology '';
+Attribute Vendor 'Texas Instruments';
+Attribute Manufacturer_Part_Number 'BQ27220YZFR';
+Connect 'A.GPOUT' 'A1';
+Connect 'A.SDA' 'A2';
+Connect 'A.SCL' 'A3';
+Connect 'A.VIN' 'B1';
+Connect 'A.VSS' 'B2';
+Connect 'A.VDD' 'B3';
+Connect 'A.SRP' 'C1';
+Connect 'A.SRN' 'C2';
+Connect 'A.BAT' 'C3';

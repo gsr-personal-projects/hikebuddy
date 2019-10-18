@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.1">
+<eagle version="9.5.1">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
@@ -3905,7 +3905,7 @@ Diode with low voltage drop</description>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="WIREPAD" urn="urn:adsk.eagle:component:30861/1" prefix="PAD" library_version="1">
+<deviceset name="WIREPAD" urn="urn:adsk.eagle:component:30861/2" prefix="PAD" library_version="2">
 <description>&lt;b&gt;Wire PAD&lt;/b&gt; connect wire on PCB</description>
 <gates>
 <gate name="G$1" symbol="PAD" x="0" y="0"/>
@@ -3919,7 +3919,9 @@ Diode with low voltage drop</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:30830/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="1" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="1,6/0,9" package="1,6/0,9">
@@ -3930,7 +3932,9 @@ Diode with low voltage drop</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:30840/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="2,15/1,0" package="2,15/1,0">
@@ -3941,7 +3945,9 @@ Diode with low voltage drop</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:30831/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="2" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="2,54/0,8" package="2,54/0,8">
@@ -3952,7 +3958,9 @@ Diode with low voltage drop</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:30838/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="2,54/0,9" package="2,54/0,9">
@@ -3963,7 +3971,9 @@ Diode with low voltage drop</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:30847/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="6" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="2,54/1,0" package="2,54/1,0">
@@ -3974,7 +3984,9 @@ Diode with low voltage drop</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:30828/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="4" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="2,54/1,1" package="2,54/1,1">
@@ -3985,7 +3997,9 @@ Diode with low voltage drop</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:30836/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="2" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="3,17/1,1" package="3,17/1,1">
@@ -3996,7 +4010,9 @@ Diode with low voltage drop</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:30832/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="3,17/1,2" package="3,17/1,2">
@@ -4007,7 +4023,9 @@ Diode with low voltage drop</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:30842/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="1" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="3,17/1,3" package="3,17/1,3">
@@ -4018,7 +4036,9 @@ Diode with low voltage drop</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:30833/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="5" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="3,81/1,1" package="3,81/1,1">
@@ -4029,7 +4049,9 @@ Diode with low voltage drop</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:30829/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="3,81/1,3" package="3,81/1,3">
@@ -4040,7 +4062,9 @@ Diode with low voltage drop</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:30834/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="3,81/1,4" package="3,81/1,4">
@@ -4051,7 +4075,9 @@ Diode with low voltage drop</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:30835/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="1" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="4,16O1,6" package="4,16O1,6">
@@ -4062,7 +4088,9 @@ Diode with low voltage drop</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:30843/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="1" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="SMD5-1,8" package="5-1,8">
@@ -4073,7 +4101,9 @@ Diode with low voltage drop</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:30844/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="4" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="SMD5-2,5" package="5-2,5">
@@ -4084,7 +4114,9 @@ Diode with low voltage drop</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:30845/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="3" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="SMD1,27-254" package="SMD1,27-2,54">
@@ -4095,7 +4127,9 @@ Diode with low voltage drop</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:30839/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="11" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="SMD2,54-5,08" package="SMD2,54-5,08">
@@ -4106,7 +4140,9 @@ Diode with low voltage drop</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:30841/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="2" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -6263,8 +6299,8 @@ Source: &lt;a href="https://www.hirose.com/product/en/download_file/key_name/FH1
 </part>
 <part name="GND25" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R30" library="SparkFun-Resistors" deviceset="10KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
-<part name="PIEZO+" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="WIREPAD" device="SMD1,27-254" package3d_urn="urn:adsk.eagle:package:30839/1" value=""/>
-<part name="PIEZO-" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="WIREPAD" device="SMD1,27-254" package3d_urn="urn:adsk.eagle:package:30839/1" value=""/>
+<part name="PIEZO+" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="WIREPAD" device="SMD1,27-254" package3d_urn="urn:adsk.eagle:package:30839/1" value="WIREPADSMD1,27-254"/>
+<part name="PIEZO-" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="WIREPAD" device="SMD1,27-254" package3d_urn="urn:adsk.eagle:package:30839/1" value="WIREPADSMD1,27-254"/>
 <part name="SUPPLY9" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="V_BATT" device=""/>
 <part name="LM2750" library="LM2750SD-5.0" deviceset="LM2750SD-5.0" device="" package3d_urn="urn:adsk.eagle:package:9987730/3"/>
 <part name="GND27" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -6290,8 +6326,8 @@ Source: &lt;a href="https://www.hirose.com/product/en/download_file/key_name/FH1
 </part>
 <part name="GND32" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R32" library="SparkFun-Resistors" deviceset="10KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
-<part name="MOTOR+" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="WIREPAD" device="SMD1,27-254" package3d_urn="urn:adsk.eagle:package:30839/1" value=""/>
-<part name="MOTOR-" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="WIREPAD" device="SMD1,27-254" package3d_urn="urn:adsk.eagle:package:30839/1" value=""/>
+<part name="MOTOR+" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="WIREPAD" device="SMD1,27-254" package3d_urn="urn:adsk.eagle:package:30839/1" value="WIREPADSMD1,27-254"/>
+<part name="MOTOR-" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="WIREPAD" device="SMD1,27-254" package3d_urn="urn:adsk.eagle:package:30839/1" value="WIREPADSMD1,27-254"/>
 <part name="SUPPLY12" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="V_BATT" device=""/>
 <part name="R33" library="SparkFun-Resistors" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:23555/3" value="1k"/>
 <part name="R34" library="SparkFun-Resistors" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:23555/3" value="1k"/>

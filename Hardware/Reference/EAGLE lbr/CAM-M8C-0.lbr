@@ -1,0 +1,206 @@
+<!--This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0-->
+<eagle version="7.1.0">
+<drawing>
+<settings>
+<setting alwaysvectorfont="no"/>
+<setting verticaltext="up"/>
+</settings>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<layers>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="yes" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
+<layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+</layers>
+<library>
+<packages>
+<package name="LCC100P960X1400X210-31N">
+<wire x1="-4.8" y1="-7" x2="-4.8" y2="7" width="0.127" layer="51"/>
+<wire x1="-4.8" y1="7" x2="4.8" y2="7" width="0.127" layer="21"/>
+<wire x1="4.8" y1="7" x2="4.8" y2="-7" width="0.127" layer="51"/>
+<wire x1="4.8" y1="-7" x2="2.65" y2="-7" width="0.127" layer="21"/>
+<rectangle x1="-2.45322" y1="1.02218" x2="2.4" y2="8.2" layer="41" rot="R90"/>
+<wire x1="-2.65" y1="-7" x2="-4.8" y2="-7" width="0.127" layer="21"/>
+<wire x1="-5.5" y1="7.25" x2="5.5" y2="7.25" width="0.05" layer="39"/>
+<wire x1="5.5" y1="7.25" x2="5.5" y2="-7.75" width="0.05" layer="39"/>
+<wire x1="5.5" y1="-7.75" x2="-5.5" y2="-7.75" width="0.05" layer="39"/>
+<wire x1="-5.5" y1="-7.75" x2="-5.5" y2="7.25" width="0.05" layer="39"/>
+<circle x="6" y="-6.25" radius="0.25" width="0" layer="21"/>
+<text x="-4.64255" y="7.47965" size="1.31022" layer="25">&gt;NAME</text>
+<text x="-4.62478" y="-9.35237" size="1.30523" layer="27">&gt;VALUE</text>
+<smd name="29" x="0" y="-6.6" dx="1.5" dy="0.7" layer="1" rot="R90"/>
+<smd name="28" x="-1" y="-6.6" dx="1.5" dy="0.7" layer="1" rot="R90"/>
+<smd name="30" x="1" y="-6.6" dx="1.5" dy="0.7" layer="1" rot="R90"/>
+<smd name="31" x="2" y="-6.6" dx="1.5" dy="0.7" layer="1" rot="R90"/>
+<smd name="27" x="-2" y="-6.6" dx="1.5" dy="0.7" layer="1" rot="R90"/>
+<smd name="1" x="4.4" y="-6.2" dx="1.5" dy="0.7" layer="1" rot="R180"/>
+<smd name="2" x="4.4" y="-5.2" dx="1.5" dy="0.7" layer="1" rot="R180"/>
+<smd name="3" x="4.4" y="-4.2" dx="1.5" dy="0.7" layer="1" rot="R180"/>
+<smd name="4" x="4.4" y="-3.2" dx="1.5" dy="0.7" layer="1" rot="R180"/>
+<smd name="5" x="4.4" y="-2.2" dx="1.5" dy="0.7" layer="1" rot="R180"/>
+<smd name="6" x="4.4" y="-1.2" dx="1.5" dy="0.7" layer="1" rot="R180"/>
+<smd name="7" x="4.4" y="-0.2" dx="1.5" dy="0.7" layer="1" rot="R180"/>
+<smd name="8" x="4.4" y="0.8" dx="1.5" dy="0.7" layer="1" rot="R180"/>
+<smd name="9" x="4.4" y="1.8" dx="1.5" dy="0.7" layer="1" rot="R180"/>
+<smd name="10" x="4.4" y="2.8" dx="1.5" dy="0.7" layer="1" rot="R180"/>
+<smd name="11" x="4.4" y="3.8" dx="1.5" dy="0.7" layer="1" rot="R180"/>
+<smd name="12" x="4.4" y="4.8" dx="1.5" dy="0.7" layer="1" rot="R180"/>
+<smd name="26" x="-4.4" y="-6.2" dx="1.5" dy="0.7" layer="1" rot="R180"/>
+<smd name="25" x="-4.4" y="-5.2" dx="1.5" dy="0.7" layer="1" rot="R180"/>
+<smd name="24" x="-4.4" y="-4.2" dx="1.5" dy="0.7" layer="1" rot="R180"/>
+<smd name="23" x="-4.4" y="-3.2" dx="1.5" dy="0.7" layer="1" rot="R180"/>
+<smd name="22" x="-4.4" y="-2.2" dx="1.5" dy="0.7" layer="1" rot="R180"/>
+<smd name="21" x="-4.4" y="-1.2" dx="1.5" dy="0.7" layer="1" rot="R180"/>
+<smd name="20" x="-4.4" y="-0.2" dx="1.5" dy="0.7" layer="1" rot="R180"/>
+<smd name="19" x="-4.4" y="0.8" dx="1.5" dy="0.7" layer="1" rot="R180"/>
+<smd name="18" x="-4.4" y="1.8" dx="1.5" dy="0.7" layer="1" rot="R180"/>
+<smd name="17" x="-4.4" y="2.8" dx="1.5" dy="0.7" layer="1" rot="R180"/>
+<smd name="16" x="-4.4" y="3.8" dx="1.5" dy="0.7" layer="1" rot="R180"/>
+<smd name="15" x="-4.4" y="4.8" dx="1.5" dy="0.7" layer="1" rot="R180"/>
+<smd name="14" x="-4.4" y="5.95" dx="1.5" dy="1" layer="1" rot="R180"/>
+<smd name="13" x="4.4" y="5.95" dx="1.5" dy="1" layer="1" rot="R180"/>
+</package>
+</packages>
+<symbols>
+<symbol name="CAM-M8C-0">
+<wire x1="-17.78" y1="43.18" x2="17.78" y2="43.18" width="0.41" layer="94"/>
+<wire x1="17.78" y1="43.18" x2="17.78" y2="-43.18" width="0.41" layer="94"/>
+<wire x1="17.78" y1="-43.18" x2="-17.78" y2="-43.18" width="0.41" layer="94"/>
+<wire x1="-17.78" y1="-43.18" x2="-17.78" y2="43.18" width="0.41" layer="94"/>
+<text x="-17.78" y="44.18" size="2.0828" layer="95" ratio="10" rot="SR0">&gt;NAME</text>
+<text x="-17.78" y="-47.18" size="2.0828" layer="96" ratio="10" rot="SR0">&gt;VALUE</text>
+<pin name="D_SEL" x="-22.86" y="30.48" length="middle" direction="in"/>
+<pin name="LNA_EN" x="-22.86" y="27.94" length="middle" direction="in"/>
+<pin name="RESET_N" x="-22.86" y="25.4" length="middle" direction="in"/>
+<pin name="RF_IN" x="-22.86" y="22.86" length="middle" direction="in"/>
+<pin name="RXD/SPI_MOSI" x="-22.86" y="20.32" length="middle" direction="in"/>
+<pin name="SAFEBOOT_N" x="-22.86" y="17.78" length="middle" direction="in"/>
+<pin name="SCL/SPI_CLK" x="-22.86" y="15.24" length="middle" direction="in" function="clk"/>
+<pin name="RESERVED" x="-22.86" y="10.16" length="middle"/>
+<pin name="RESERVED-1" x="-22.86" y="5.08" length="middle"/>
+<pin name="SDA/SPI_CS_N" x="-22.86" y="7.10543e-15" length="middle"/>
+<pin name="V_BCKP" x="22.86" y="40.64" length="middle" direction="pwr" rot="R180"/>
+<pin name="VCC" x="22.86" y="38.1" length="middle" direction="pwr" rot="R180"/>
+<pin name="VCC_IO" x="22.86" y="35.56" length="middle" direction="pwr" rot="R180"/>
+<pin name="EXTINT" x="22.86" y="30.48" length="middle" direction="out" rot="R180"/>
+<pin name="RF_OUT" x="22.86" y="27.94" length="middle" direction="out" rot="R180"/>
+<pin name="TIMEPULSE" x="22.86" y="25.4" length="middle" direction="out" rot="R180"/>
+<pin name="TXD/SPI_MISO" x="22.86" y="22.86" length="middle" direction="out" rot="R180"/>
+<pin name="GND-9" x="22.86" y="-5.08" length="middle" direction="pwr" rot="R180"/>
+<pin name="GND-8" x="22.86" y="-7.62" length="middle" direction="pwr" rot="R180"/>
+<pin name="GND-7" x="22.86" y="-10.16" length="middle" direction="pwr" rot="R180"/>
+<pin name="GND-6" x="22.86" y="-12.7" length="middle" direction="pwr" rot="R180"/>
+<pin name="GND-5" x="22.86" y="-15.24" length="middle" direction="pwr" rot="R180"/>
+<pin name="GND-4" x="22.86" y="-17.78" length="middle" direction="pwr" rot="R180"/>
+<pin name="GND-3" x="22.86" y="-20.32" length="middle" direction="pwr" rot="R180"/>
+<pin name="GND-2" x="22.86" y="-22.86" length="middle" direction="pwr" rot="R180"/>
+<pin name="GND-13" x="22.86" y="-25.4" length="middle" direction="pwr" rot="R180"/>
+<pin name="GND-12" x="22.86" y="-27.94" length="middle" direction="pwr" rot="R180"/>
+<pin name="GND-11" x="22.86" y="-30.48" length="middle" direction="pwr" rot="R180"/>
+<pin name="GND-10" x="22.86" y="-33.02" length="middle" direction="pwr" rot="R180"/>
+<pin name="GND-1" x="22.86" y="-35.56" length="middle" direction="pwr" rot="R180"/>
+<pin name="GND" x="22.86" y="-38.1" length="middle" direction="pwr" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="CAM-M8C-0" prefix="U">
+<description>None</description>
+<gates>
+<gate name="G$1" symbol="CAM-M8C-0" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="LCC100P960X1400X210-31N">
+<connects>
+<connect gate="G$1" pin="D_SEL" pad="20"/>
+<connect gate="G$1" pin="EXTINT" pad="7"/>
+<connect gate="G$1" pin="GND" pad="15"/>
+<connect gate="G$1" pin="GND-1" pad="18"/>
+<connect gate="G$1" pin="GND-10" pad="4"/>
+<connect gate="G$1" pin="GND-11" pad="22"/>
+<connect gate="G$1" pin="GND-12" pad="21"/>
+<connect gate="G$1" pin="GND-13" pad="27"/>
+<connect gate="G$1" pin="GND-2" pad="11"/>
+<connect gate="G$1" pin="GND-3" pad="12"/>
+<connect gate="G$1" pin="GND-4" pad="13"/>
+<connect gate="G$1" pin="GND-5" pad="14"/>
+<connect gate="G$1" pin="GND-6" pad="19"/>
+<connect gate="G$1" pin="GND-7" pad="31"/>
+<connect gate="G$1" pin="GND-8" pad="10"/>
+<connect gate="G$1" pin="GND-9" pad="5"/>
+<connect gate="G$1" pin="LNA_EN" pad="30"/>
+<connect gate="G$1" pin="RESERVED" pad="2"/>
+<connect gate="G$1" pin="RESERVED-1" pad="28"/>
+<connect gate="G$1" pin="RESET_N" pad="23"/>
+<connect gate="G$1" pin="RF_IN" pad="17"/>
+<connect gate="G$1" pin="RF_OUT" pad="16"/>
+<connect gate="G$1" pin="RXD/SPI_MOSI" pad="26"/>
+<connect gate="G$1" pin="SAFEBOOT_N" pad="24"/>
+<connect gate="G$1" pin="SCL/SPI_CLK" pad="6"/>
+<connect gate="G$1" pin="SDA/SPI_CS_N" pad="3"/>
+<connect gate="G$1" pin="TIMEPULSE" pad="29"/>
+<connect gate="G$1" pin="TXD/SPI_MISO" pad="25"/>
+<connect gate="G$1" pin="V_BCKP" pad="8"/>
+<connect gate="G$1" pin="VCC" pad="9"/>
+<connect gate="G$1" pin="VCC_IO" pad="1"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MP" value="CAM-M8C-0"/>
+<attribute name="Price" value="None"/>
+<attribute name="MF" value="U-Blox America"/>
+<attribute name="Availability" value="Unavailable"/>
+<attribute name="Package" value="SMD-31 u-blox"/>
+<attribute name="Description" value="
+Ic Receiver Gps Chip Ant 31lcc
+"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+</drawing>
+</eagle>

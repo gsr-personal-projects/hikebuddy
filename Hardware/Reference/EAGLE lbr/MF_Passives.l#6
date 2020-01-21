@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.1">
+<eagle version="7.4.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
-<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
@@ -81,7 +80,7 @@
 <wire x1="1.1" y1="0.55" x2="-1.1" y2="0.55" width="0.127" layer="21"/>
 <text x="-1.1" y="1.1" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 </package>
-<package name="R0603" urn="urn:adsk.eagle:footprint:16347901/1">
+<package name="R0603">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard 0603 Package for Resistors&lt;br/&gt;</description>
 <smd name="P$1" x="-0.75" y="0" dx="0.6" dy="0.9" layer="1" rot="R180"/>
 <smd name="P$2" x="0.75" y="0" dx="0.6" dy="0.9" layer="1" rot="R180"/>
@@ -121,7 +120,7 @@
 <wire x1="1.1" y1="0.55" x2="-1.1" y2="0.55" width="0.127" layer="21"/>
 <text x="-1.1" y="1.1" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 </package>
-<package name="C0603" urn="urn:adsk.eagle:footprint:16347897/1">
+<package name="C0603">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard 0603 Package for Capacitors&lt;br/&gt;</description>
 <smd name="P$1" x="-0.75" y="0" dx="0.6" dy="0.9" layer="1" rot="R180"/>
 <smd name="P$2" x="0.75" y="0" dx="0.6" dy="0.9" layer="1" rot="R180"/>
@@ -141,7 +140,7 @@
 <wire x1="1.8" y1="0.9" x2="-1.8" y2="0.9" width="0.127" layer="21"/>
 <text x="-1.8" y="1.1" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 </package>
-<package name="C1206" urn="urn:adsk.eagle:footprint:16347895/1">
+<package name="C1206">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard 1206 Package for Capacitors&lt;br/&gt;</description>
 <smd name="P$1" x="-1.45" y="0" dx="0.9" dy="1.6" layer="1" rot="R180"/>
 <smd name="P$2" x="1.45" y="0" dx="0.9" dy="1.6" layer="1" rot="R180"/>
@@ -272,7 +271,7 @@
 <wire x1="1.1" y1="0.55" x2="-1.1" y2="0.55" width="0.127" layer="21"/>
 <text x="-1.1" y="1.1" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 </package>
-<package name="L1210" urn="urn:adsk.eagle:footprint:16347885/1">
+<package name="L1210">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard 1210 Package for Inductors&lt;br/&gt;</description>
 <smd name="P$1" x="-1.45" y="0" dx="0.9" dy="2.5" layer="1" rot="R180"/>
 <smd name="P$2" x="1.45" y="0" dx="0.9" dy="2.5" layer="1" rot="R180"/>
@@ -317,32 +316,6 @@
 <text x="-2" y="1.905" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 </package>
 </packages>
-<packages3d>
-<package3d name="C0603" urn="urn:adsk.eagle:package:16347923/3" type="model">
-<description>&lt;b&gt;Description:&lt;/b&gt; Standard 0603 Package for Capacitors&lt;br/&gt;</description>
-<packageinstances>
-<packageinstance name="C0603"/>
-</packageinstances>
-</package3d>
-<package3d name="R0603" urn="urn:adsk.eagle:package:16347927/2" type="model">
-<description>&lt;b&gt;Description:&lt;/b&gt; Standard 0603 Package for Resistors&lt;br/&gt;</description>
-<packageinstances>
-<packageinstance name="R0603"/>
-</packageinstances>
-</package3d>
-<package3d name="C1206" urn="urn:adsk.eagle:package:16347921/2" type="model">
-<description>&lt;b&gt;Description:&lt;/b&gt; Standard 1206 Package for Capacitors&lt;br/&gt;</description>
-<packageinstances>
-<packageinstance name="C1206"/>
-</packageinstances>
-</package3d>
-<package3d name="L1210" urn="urn:adsk.eagle:package:16347911/2" type="model">
-<description>&lt;b&gt;Description:&lt;/b&gt; Standard 1210 Package for Inductors&lt;br/&gt;</description>
-<packageinstances>
-<packageinstance name="L1210"/>
-</packageinstances>
-</package3d>
-</packages3d>
 <symbols>
 <symbol name="RESISTOR">
 <description>&lt;b&gt;Library:&lt;/b&gt;  MF_Passives&lt;br/&gt;
@@ -463,6 +436,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 <attribute name="WATTAGE" value="" constant="no"/>
 </technology>
@@ -473,9 +447,6 @@
 <connect gate="G$1" pin="P$1" pad="P$1"/>
 <connect gate="G$1" pin="P$2" pad="P$2"/>
 </connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:16347927/2"/>
-</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="HOUSEPART" value="" constant="no"/>
@@ -483,6 +454,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 <attribute name="WATTAGE" value="" constant="no"/>
 </technology>
@@ -500,6 +472,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 <attribute name="WATTAGE" value="" constant="no"/>
 </technology>
@@ -517,6 +490,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 <attribute name="WATTAGE" value="" constant="no"/>
 </technology>
@@ -534,6 +508,7 @@
 <attribute name="POPULATE" value="" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 <attribute name="WATTAGE" value="" constant="no"/>
 </technology>
@@ -561,6 +536,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 </technology>
 </technologies>
@@ -570,9 +546,6 @@
 <connect gate="G$1" pin="P$1" pad="P$1"/>
 <connect gate="G$1" pin="P$2" pad="P$2"/>
 </connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:16347923/3"/>
-</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="DIELECTRIC" value="" constant="no"/>
@@ -581,6 +554,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 </technology>
 </technologies>
@@ -598,6 +572,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 </technology>
 </technologies>
@@ -607,9 +582,6 @@
 <connect gate="G$1" pin="P$1" pad="P$1"/>
 <connect gate="G$1" pin="P$2" pad="P$2"/>
 </connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:16347921/2"/>
-</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="DIELECTRIC" value="" constant="no"/>
@@ -618,6 +590,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 </technology>
 </technologies>
@@ -635,6 +608,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 </technology>
 </technologies>
@@ -660,6 +634,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 </technology>
 </technologies>
@@ -676,6 +651,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
+
 <attribute name="VOTLAGE" value="" constant="no"/>
 </technology>
 </technologies>
@@ -692,6 +668,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 </technology>
 </technologies>
@@ -708,6 +685,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 </technology>
 </technologies>
@@ -724,6 +702,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 </technology>
 </technologies>
@@ -748,6 +727,7 @@
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
+
 </technology>
 </technologies>
 </device>
@@ -762,6 +742,7 @@
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
+
 </technology>
 </technologies>
 </device>
@@ -770,15 +751,13 @@
 <connect gate="G$1" pin="P$1" pad="P$1"/>
 <connect gate="G$1" pin="P$2" pad="P$2"/>
 </connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:16347911/2"/>
-</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="HOUSEPART" value="" constant="no"/>
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
+
 </technology>
 </technologies>
 </device>
@@ -812,6 +791,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 <attribute name="WATTAGE" value="" constant="no"/>
 </technology>
@@ -849,6 +829,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 <attribute name="WATTAGE" value="" constant="no"/>
 </technology>
@@ -869,16 +850,4 @@
 </devicesets>
 </library>
 </drawing>
-<compatibility>
-<note version="8.3" severity="warning">
-Since Version 8.3, EAGLE supports URNs for individual library
-assets (packages, symbols, and devices). The URNs of those assets
-will not be understood (or retained) with this version.
-</note>
-<note version="8.3" severity="warning">
-Since Version 8.3, EAGLE supports the association of 3D packages
-with devices in libraries, schematics, and board files. Those 3D
-packages will not be understood (or retained) with this version.
-</note>
-</compatibility>
 </eagle>

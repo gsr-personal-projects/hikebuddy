@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.1">
+<eagle version="9.3.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -117,7 +117,7 @@
 </layers>
 <library>
 <packages>
-<package name="LED0603" urn="urn:adsk.eagle:footprint:16347961/1">
+<package name="LED0603">
 <description>&lt;b&gt;Description:&lt;/b&gt; Footprint for Single LEDs in 0603&lt;br/&gt;</description>
 <smd name="CATHODE" x="-0.75" y="0" dx="0.8" dy="0.8" layer="1"/>
 <smd name="ANODE" x="0.75" y="0" dx="0.8" dy="0.8" layer="1"/>
@@ -131,12 +131,12 @@
 <vertex x="-1.7" y="-0.75"/>
 <vertex x="-1.5" y="-0.75"/>
 </polygon>
+<text x="-1.7" y="1.1" size="1.016" layer="25" font="vector" ratio="16">&gt;VALUE</text>
 <polygon width="0.127" layer="21">
 <vertex x="-0.15" y="0"/>
 <vertex x="0.15" y="0.3"/>
 <vertex x="0.15" y="-0.3"/>
 </polygon>
-<text x="-1.7" y="1.1" size="1.016" layer="25" font="vector" ratio="16">&gt;VALUE</text>
 </package>
 <package name="LED0805">
 <description>&lt;b&gt;Description:&lt;/b&gt; Footprint for Single LEDs in 0805&lt;br/&gt;</description>
@@ -267,12 +267,6 @@ Source: http://www.osram.convergy.de ... LSG T770.pdf</description>
 <description>&lt;b&gt;Description:&lt;/b&gt; Footprint for LEDs in PLCC4 Standard.&lt;br/&gt;</description>
 <packageinstances>
 <packageinstance name="PLCC4"/>
-</packageinstances>
-</package3d>
-<package3d name="LED0603" urn="urn:adsk.eagle:package:16347970/2" type="model">
-<description>&lt;b&gt;Description:&lt;/b&gt; Footprint for Single LEDs in 0603&lt;br/&gt;</description>
-<packageinstances>
-<packageinstance name="LED0603"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -496,9 +490,6 @@ Source: http://www.osram.convergy.de ... LSG T770.pdf</description>
 <connect gate="G$1" pin="ANODE" pad="ANODE"/>
 <connect gate="G$1" pin="CATHODE" pad="CATHODE"/>
 </connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:16347970/2"/>
-</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="HOUSEPART" value="YES" constant="no"/>
@@ -529,9 +520,6 @@ Source: http://www.osram.convergy.de ... LSG T770.pdf</description>
 <connect gate="G$1" pin="ANODE" pad="ANODE"/>
 <connect gate="G$1" pin="CATHODE" pad="CATHODE"/>
 </connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:16347970/2"/>
-</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="HOUSEPART" value="YES" constant="no"/>
@@ -562,9 +550,6 @@ Source: http://www.osram.convergy.de ... LSG T770.pdf</description>
 <connect gate="G$1" pin="ANODE" pad="ANODE"/>
 <connect gate="G$1" pin="CATHODE" pad="CATHODE"/>
 </connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:16347970/2"/>
-</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="HOUSEPART" value="NO" constant="no"/>

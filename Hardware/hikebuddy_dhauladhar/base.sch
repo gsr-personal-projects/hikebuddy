@@ -4999,7 +4999,7 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <vertex x="-2.946" y="1.45" curve="90"/>
 </polygon>
 </package>
-<package name="LED0603">
+<package name="LED0603" urn="urn:adsk.eagle:footprint:16347961/1">
 <description>&lt;b&gt;Description:&lt;/b&gt; Footprint for Single LEDs in 0603&lt;br/&gt;</description>
 <smd name="CATHODE" x="-0.75" y="0" dx="0.8" dy="0.8" layer="1"/>
 <smd name="ANODE" x="0.75" y="0" dx="0.8" dy="0.8" layer="1"/>
@@ -5013,12 +5013,12 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <vertex x="-1.7" y="-0.75"/>
 <vertex x="-1.5" y="-0.75"/>
 </polygon>
-<text x="-1.7" y="1.1" size="1.016" layer="25" font="vector" ratio="16">&gt;VALUE</text>
 <polygon width="0.127" layer="21">
 <vertex x="-0.15" y="0"/>
 <vertex x="0.15" y="0.3"/>
 <vertex x="0.15" y="-0.3"/>
 </polygon>
+<text x="-1.7" y="1.1" size="1.016" layer="25" font="vector" ratio="16">&gt;VALUE</text>
 </package>
 <package name="LED0805">
 <description>&lt;b&gt;Description:&lt;/b&gt; Footprint for Single LEDs in 0805&lt;br/&gt;</description>
@@ -5047,6 +5047,12 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <description>&lt;b&gt;Description:&lt;/b&gt; Footprint for LEDs in PLCC4 Standard.&lt;br/&gt;</description>
 <packageinstances>
 <packageinstance name="PLCC4"/>
+</packageinstances>
+</package3d>
+<package3d name="LED0603" urn="urn:adsk.eagle:package:16347970/2" type="model">
+<description>&lt;b&gt;Description:&lt;/b&gt; Footprint for Single LEDs in 0603&lt;br/&gt;</description>
+<packageinstances>
+<packageinstance name="LED0603"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -5202,6 +5208,9 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <connect gate="G$1" pin="ANODE" pad="ANODE"/>
 <connect gate="G$1" pin="CATHODE" pad="CATHODE"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16347970/2"/>
+</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="HOUSEPART" value="YES" constant="no"/>
@@ -5232,6 +5241,9 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <connect gate="G$1" pin="ANODE" pad="ANODE"/>
 <connect gate="G$1" pin="CATHODE" pad="CATHODE"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16347970/2"/>
+</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="HOUSEPART" value="YES" constant="no"/>
@@ -5262,6 +5274,9 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <connect gate="G$1" pin="ANODE" pad="ANODE"/>
 <connect gate="G$1" pin="CATHODE" pad="CATHODE"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16347970/2"/>
+</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="HOUSEPART" value="NO" constant="no"/>
@@ -5542,7 +5557,7 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 </library>
 <library name="LTC3586EUFE-3_TRPBF">
 <packages>
-<package name="QFN40P600X400X80-39N">
+<package name="QFN40P600X400X80-39N" urn="urn:adsk.eagle:footprint:16348002/1">
 <rectangle x1="-0.76" y1="-1.39" x2="0.76" y2="1.39" layer="31"/>
 <text x="-3.91" y="-4.615" size="1.27" layer="27" align="top-left">&gt;VALUE</text>
 <text x="-3.91" y="4.615" size="1.27" layer="25">&gt;NAME</text>
@@ -5605,6 +5620,15 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <smd name="39" x="0" y="0" dx="2.4" dy="4.4" layer="1" cream="no"/>
 </package>
 </packages>
+<packages3d>
+<package3d name="QFN40P600X400X80-39N" urn="urn:adsk.eagle:package:16348004/2" type="model">
+<description>38-QFN, 0.40 mm pitch, 4.00 X 6.00 X 0.80 mm body
+&lt;p&gt;38-pin QFN package with 0.40 mm pitch with body size 4.00 X 6.00 X 0.80 mm&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="QFN40P600X400X80-39N"/>
+</packageinstances>
+</package3d>
+</packages3d>
 <symbols>
 <symbol name="LTC3586EUFE-3#TRPBF">
 <wire x1="-12.7" y1="58.42" x2="12.7" y2="58.42" width="0.41" layer="94"/>
@@ -5695,6 +5719,9 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <connect gate="G$1" pin="VOUT3" pad="16 17"/>
 <connect gate="G$1" pin="VOUT4" pad="6 7"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16348004/2"/>
+</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="AVAILABILITY" value="Unavailable"/>
@@ -5712,7 +5739,7 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 </library>
 <library name="MAX17260SETD_coulomb">
 <packages>
-<package name="SON40P300X300X80-15N">
+<package name="SON40P300X300X80-15N" urn="urn:adsk.eagle:footprint:16348019/1">
 <rectangle x1="-0.54" y1="-0.73" x2="0.54" y2="0.73" layer="31"/>
 <circle x="-2.445" y="1.2" radius="0.1" width="0.2" layer="21"/>
 <circle x="-2.445" y="1.2" radius="0.1" width="0.2" layer="51"/>
@@ -5745,6 +5772,13 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <smd name="15" x="0" y="0" dx="1.7" dy="2.3" layer="1" cream="no"/>
 </package>
 </packages>
+<packages3d>
+<package3d name="SON40P300X300X80-15N" urn="urn:adsk.eagle:package:16348021/2" type="model">
+<packageinstances>
+<packageinstance name="SON40P300X300X80-15N"/>
+</packageinstances>
+</package3d>
+</packages3d>
 <symbols>
 <symbol name="MAX17260SETD+">
 <wire x1="-12.7" y1="25.4" x2="12.7" y2="25.4" width="0.41" layer="94"/>
@@ -5789,6 +5823,9 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <connect gate="G$1" pin="SDA" pad="13"/>
 <connect gate="G$1" pin="TH" pad="1"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16348021/2"/>
+</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="AVAILABILITY" value="Unavailable"/>
@@ -5816,7 +5853,7 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <wire x1="1.1" y1="0.55" x2="-1.1" y2="0.55" width="0.127" layer="21"/>
 <text x="-1.1" y="1.1" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 </package>
-<package name="C0603">
+<package name="C0603" urn="urn:adsk.eagle:footprint:16347897/1">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard 0603 Package for Capacitors&lt;br/&gt;</description>
 <smd name="P$1" x="-0.75" y="0" dx="0.6" dy="0.9" layer="1" rot="R180"/>
 <smd name="P$2" x="0.75" y="0" dx="0.6" dy="0.9" layer="1" rot="R180"/>
@@ -5836,7 +5873,7 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <wire x1="1.8" y1="0.9" x2="-1.8" y2="0.9" width="0.127" layer="21"/>
 <text x="-1.8" y="1.1" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 </package>
-<package name="C1206">
+<package name="C1206" urn="urn:adsk.eagle:footprint:16347895/1">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard 1206 Package for Capacitors&lt;br/&gt;</description>
 <smd name="P$1" x="-1.45" y="0" dx="0.9" dy="1.6" layer="1" rot="R180"/>
 <smd name="P$2" x="1.45" y="0" dx="0.9" dy="1.6" layer="1" rot="R180"/>
@@ -5866,7 +5903,7 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <wire x1="1.1" y1="0.55" x2="-1.1" y2="0.55" width="0.127" layer="21"/>
 <text x="-1.1" y="1.1" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 </package>
-<package name="R0603">
+<package name="R0603" urn="urn:adsk.eagle:footprint:16347901/1">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard 0603 Package for Resistors&lt;br/&gt;</description>
 <smd name="P$1" x="-0.75" y="0" dx="0.6" dy="0.9" layer="1" rot="R180"/>
 <smd name="P$2" x="0.75" y="0" dx="0.6" dy="0.9" layer="1" rot="R180"/>
@@ -5926,7 +5963,7 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <wire x1="1.4" y1="0.7" x2="-1.4" y2="0.7" width="0.127" layer="21"/>
 <text x="-1.4" y="1.1" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 </package>
-<package name="L1210">
+<package name="L1210" urn="urn:adsk.eagle:footprint:16347885/1">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard 1210 Package for Inductors&lt;br/&gt;</description>
 <smd name="P$1" x="-1.45" y="0" dx="0.9" dy="2.5" layer="1" rot="R180"/>
 <smd name="P$2" x="1.45" y="0" dx="0.9" dy="2.5" layer="1" rot="R180"/>
@@ -5937,6 +5974,32 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <text x="-2.2" y="1.8" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 </package>
 </packages>
+<packages3d>
+<package3d name="C0603" urn="urn:adsk.eagle:package:16347923/3" type="model">
+<description>&lt;b&gt;Description:&lt;/b&gt; Standard 0603 Package for Capacitors&lt;br/&gt;</description>
+<packageinstances>
+<packageinstance name="C0603"/>
+</packageinstances>
+</package3d>
+<package3d name="R0603" urn="urn:adsk.eagle:package:16347927/2" type="model">
+<description>&lt;b&gt;Description:&lt;/b&gt; Standard 0603 Package for Resistors&lt;br/&gt;</description>
+<packageinstances>
+<packageinstance name="R0603"/>
+</packageinstances>
+</package3d>
+<package3d name="C1206" urn="urn:adsk.eagle:package:16347921/2" type="model">
+<description>&lt;b&gt;Description:&lt;/b&gt; Standard 1206 Package for Capacitors&lt;br/&gt;</description>
+<packageinstances>
+<packageinstance name="C1206"/>
+</packageinstances>
+</package3d>
+<package3d name="L1210" urn="urn:adsk.eagle:package:16347911/2" type="model">
+<description>&lt;b&gt;Description:&lt;/b&gt; Standard 1210 Package for Inductors&lt;br/&gt;</description>
+<packageinstances>
+<packageinstance name="L1210"/>
+</packageinstances>
+</package3d>
+</packages3d>
 <symbols>
 <symbol name="CAPACITOR_NP">
 <description>&lt;b&gt;Library:&lt;/b&gt;  MF_Passives&lt;br/&gt;
@@ -6010,6 +6073,9 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <connect gate="G$1" pin="P$1" pad="P$1"/>
 <connect gate="G$1" pin="P$2" pad="P$2"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16347923/3"/>
+</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="DIELECTRIC" value="" constant="no"/>
@@ -6044,6 +6110,9 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <connect gate="G$1" pin="P$1" pad="P$1"/>
 <connect gate="G$1" pin="P$2" pad="P$2"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16347921/2"/>
+</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="DIELECTRIC" value="" constant="no"/>
@@ -6104,6 +6173,9 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <connect gate="G$1" pin="P$1" pad="P$1"/>
 <connect gate="G$1" pin="P$2" pad="P$2"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16347927/2"/>
+</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="HOUSEPART" value="" constant="no"/>
@@ -6209,6 +6281,9 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <connect gate="G$1" pin="P$1" pad="P$1"/>
 <connect gate="G$1" pin="P$2" pad="P$2"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16347911/2"/>
+</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="HOUSEPART" value="" constant="no"/>
@@ -6224,7 +6299,7 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 </library>
 <library name="LPS4018-472MRB">
 <packages>
-<package name="INDP_LPS4018-472MRB">
+<package name="INDP_LPS4018-472MRB" urn="urn:adsk.eagle:footprint:16347980/1">
 <polygon width="0.01" layer="1">
 <vertex x="-1.64" y="-1.945"/>
 <vertex x="-0.75" y="-1.945"/>
@@ -6249,16 +6324,6 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <vertex x="2.2" y="-1.395"/>
 <vertex x="2.2" y="1.395"/>
 </polygon>
-<wire x1="-1.95" y1="-1.95" x2="1.95" y2="-1.95" width="0.127" layer="51"/>
-<wire x1="1.95" y1="-1.95" x2="1.95" y2="1.95" width="0.127" layer="51"/>
-<wire x1="1.95" y1="1.95" x2="-1.95" y2="1.95" width="0.127" layer="51"/>
-<wire x1="-2.45" y1="2.2" x2="-2.45" y2="-2.2" width="0.05" layer="39"/>
-<wire x1="-2.45" y1="-2.2" x2="2.45" y2="-2.2" width="0.05" layer="39"/>
-<wire x1="2.45" y1="-2.2" x2="2.45" y2="2.2" width="0.05" layer="39"/>
-<wire x1="2.45" y1="2.2" x2="-2.45" y2="2.2" width="0.05" layer="39"/>
-<text x="-2.659290625" y="2.459959375" size="1.2738" layer="25">&gt;NAME</text>
-<text x="-2.55695" y="-3.71015" size="1.27343125" layer="27">&gt;VALUE</text>
-<wire x1="-1.95" y1="1.95" x2="-1.95" y2="-1.95" width="0.127" layer="51"/>
 <polygon width="0.01" layer="29">
 <vertex x="-1.72" y="2.09"/>
 <vertex x="-0.65" y="2.09"/>
@@ -6307,11 +6372,28 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <vertex x="2.2" y="-1.395"/>
 <vertex x="2.2" y="1.395"/>
 </polygon>
+<wire x1="-1.95" y1="-1.95" x2="1.95" y2="-1.95" width="0.127" layer="51"/>
+<wire x1="1.95" y1="-1.95" x2="1.95" y2="1.95" width="0.127" layer="51"/>
+<wire x1="1.95" y1="1.95" x2="-1.95" y2="1.95" width="0.127" layer="51"/>
+<wire x1="-2.45" y1="2.2" x2="-2.45" y2="-2.2" width="0.05" layer="39"/>
+<wire x1="-2.45" y1="-2.2" x2="2.45" y2="-2.2" width="0.05" layer="39"/>
+<wire x1="2.45" y1="-2.2" x2="2.45" y2="2.2" width="0.05" layer="39"/>
+<wire x1="2.45" y1="2.2" x2="-2.45" y2="2.2" width="0.05" layer="39"/>
+<wire x1="-1.95" y1="1.95" x2="-1.95" y2="-1.95" width="0.127" layer="51"/>
+<text x="-2.659290625" y="2.459959375" size="1.2738" layer="25">&gt;NAME</text>
+<text x="-2.55695" y="-3.71015" size="1.27343125" layer="27">&gt;VALUE</text>
 <circle x="-2.58" y="0.03" radius="0.05385" width="0.127" layer="21"/>
 <smd name="1" x="-1.77" y="0" dx="1.27" dy="0.635" layer="1" rot="R90" stop="no" cream="no"/>
 <smd name="2" x="1.81" y="0.1" dx="1.27" dy="0.635" layer="1" rot="R90" stop="no" cream="no"/>
 </package>
 </packages>
+<packages3d>
+<package3d name="INDP_LPS4018-472MRB" urn="urn:adsk.eagle:package:16347982/2" type="model">
+<packageinstances>
+<packageinstance name="INDP_LPS4018-472MRB"/>
+</packageinstances>
+</package3d>
+</packages3d>
 <symbols>
 <symbol name="LPS4018-472MRB">
 <text x="-5.092659375" y="2.54631875" size="1.27316875" layer="95">&gt;NAME</text>
@@ -6341,6 +6423,9 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16347982/2"/>
+</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="AVAILABILITY" value="Unavailable"/>
@@ -6482,7 +6567,7 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 </library>
 <library name="DRV2605LTDGSRQ1">
 <packages>
-<package name="SOP50P490X110-10N">
+<package name="SOP50P490X110-10N" urn="urn:adsk.eagle:footprint:16348028/1">
 <circle x="-3.585" y="1.3" radius="0.1" width="0.2" layer="21"/>
 <circle x="-3.585" y="1.3" radius="0.1" width="0.2" layer="51"/>
 <wire x1="-1.5" y1="1.5" x2="1.5" y2="1.5" width="0.127" layer="51"/>
@@ -6509,6 +6594,15 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <smd name="10" x="2.145" y="1" dx="1.44" dy="0.3" layer="1" roundness="25"/>
 </package>
 </packages>
+<packages3d>
+<package3d name="SOP50P490X110-10N" urn="urn:adsk.eagle:package:16348030/2" type="model">
+<description>10-SOP, 0.50 mm pitch, 4.90 mm span, 3.00 X 3.00 X 1.10 mm body
+&lt;p&gt;10-pin SOP package with 0.50 mm pitch, 4.90 mm span with body size 3.00 X 3.00 X 1.10 mm&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="SOP50P490X110-10N"/>
+</packageinstances>
+</package3d>
+</packages3d>
 <symbols>
 <symbol name="DRV2605LTDGSRQ1">
 <wire x1="-12.7" y1="17.78" x2="12.7" y2="17.78" width="0.41" layer="94"/>
@@ -6549,6 +6643,9 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <connect gate="G$1" pin="VDD" pad="10"/>
 <connect gate="G$1" pin="VDD/NC" pad="6"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16348030/2"/>
+</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="AVAILABILITY" value="Unavailable"/>
@@ -6566,29 +6663,36 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 </library>
 <library name="B3U-3000P">
 <packages>
-<package name="SW_B3U-3000P">
+<package name="SW_B3U-3000P" urn="urn:adsk.eagle:footprint:16346046/1">
 <wire x1="1.5" y1="1.25" x2="-1.5" y2="1.25" width="0.127" layer="21"/>
 <wire x1="-1.5" y1="1.25" x2="-1.5" y2="-1.25" width="0.127" layer="51"/>
 <wire x1="-1.5" y1="-1.25" x2="-0.85" y2="-1.25" width="0.127" layer="21"/>
 <wire x1="-0.85" y1="-1.25" x2="0.85" y2="-1.25" width="0.127" layer="21"/>
 <wire x1="0.85" y1="-1.25" x2="1.5" y2="-1.25" width="0.127" layer="21"/>
 <wire x1="1.5" y1="-1.25" x2="1.5" y2="1.25" width="0.127" layer="51"/>
-<circle x="-2" y="1.2" radius="0.127" width="0" layer="21"/>
 <wire x1="2.5" y1="-2.2" x2="-2.5" y2="-2.2" width="0.127" layer="39"/>
 <wire x1="-2.5" y1="-2.2" x2="-2.5" y2="1.5" width="0.127" layer="39"/>
 <wire x1="-2.5" y1="1.5" x2="2.5" y2="1.5" width="0.127" layer="39"/>
 <wire x1="2.5" y1="1.5" x2="2.5" y2="-2.2" width="0.127" layer="39"/>
-<text x="-2.603459375" y="1.60213125" size="0.81388125" layer="25">&gt;NAME</text>
-<text x="-2.604340625" y="-3.205340625" size="0.81415625" layer="27">&gt;VALUE</text>
 <wire x1="0.45" y1="-1.95" x2="-0.45" y2="-1.95" width="0.127" layer="21"/>
 <wire x1="-0.85" y1="-1.25" x2="-0.85" y2="-1.7" width="0.127" layer="21"/>
 <wire x1="0.85" y1="-1.25" x2="0.85" y2="-1.7" width="0.127" layer="21"/>
 <wire x1="0.45" y1="-1.95" x2="0.85" y2="-1.7" width="0.127" layer="21"/>
 <wire x1="-0.45" y1="-1.95" x2="-0.85" y2="-1.7" width="0.127" layer="21"/>
+<circle x="-2" y="1.2" radius="0.127" width="0" layer="21"/>
+<text x="-2.603459375" y="1.60213125" size="0.81388125" layer="25">&gt;NAME</text>
+<text x="-2.604340625" y="-3.205340625" size="0.81415625" layer="27">&gt;VALUE</text>
 <smd name="2" x="1.7" y="0" dx="0.8" dy="1.7" layer="1" rot="R180"/>
 <smd name="1" x="-1.7" y="0" dx="0.8" dy="1.7" layer="1" rot="R180"/>
 </package>
 </packages>
+<packages3d>
+<package3d name="SW_B3U-3000P" urn="urn:adsk.eagle:package:16346045/2" type="model">
+<packageinstances>
+<packageinstance name="SW_B3U-3000P"/>
+</packageinstances>
+</package3d>
+</packages3d>
 <symbols>
 <symbol name="B3U-3000P">
 <wire x1="-7.62" y1="5.08" x2="-7.62" y2="0" width="0.254" layer="94"/>
@@ -6620,6 +6724,9 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16346045/2"/>
+</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="AVAILABILITY" value="Unavailable"/>
@@ -6637,44 +6744,93 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 </library>
 <library name="LSM303CTR">
 <packages>
-<package name="LGA12R50P_200X200X100">
-<wire x1="-1" y1="1" x2="1" y2="1" width="0.127" layer="51"/>
-<wire x1="1" y1="-1" x2="-1" y2="-1" width="0.127" layer="51"/>
-<wire x1="-1" y1="-1" x2="-1" y2="1" width="0.127" layer="51"/>
-<text x="-1.253190625" y="1.253190625" size="0.30558125" layer="25">&gt;NAME</text>
-<text x="-1.2528" y="-1.75391875" size="0.305484375" layer="27">&gt;VALUE</text>
-<wire x1="-1.275" y1="1.275" x2="1.275" y2="1.275" width="0.05" layer="39"/>
-<wire x1="1.275" y1="1.275" x2="1.275" y2="-1.275" width="0.05" layer="39"/>
-<wire x1="1.275" y1="-1.275" x2="-1.275" y2="-1.275" width="0.05" layer="39"/>
-<wire x1="-1.275" y1="-1.275" x2="-1.275" y2="1.275" width="0.05" layer="39"/>
-<wire x1="1" y1="-1" x2="1" y2="1" width="0.127" layer="51"/>
-<circle x="-1.3" y="0.7" radius="0.1" width="0" layer="21"/>
-<rectangle x1="-1.06" y1="0.5414" x2="-0.54" y2="0.96" layer="29"/>
-<rectangle x1="-1.022840625" y1="0.0401125" x2="-0.5" y2="0.46" layer="29"/>
-<rectangle x1="-1.023190625" y1="-0.4614375" x2="-0.5" y2="-0.04" layer="29"/>
-<rectangle x1="-1.06" y1="-0.960478125" x2="-0.54" y2="-0.54" layer="29"/>
-<rectangle x1="0.54" y1="0.54060625" x2="1.06" y2="0.96" layer="29"/>
-<rectangle x1="0.5055625" y1="0.04004375" x2="1.025" y2="0.46" layer="29"/>
-<rectangle x1="0.5062875" y1="-0.461171875" x2="1.025" y2="-0.04" layer="29"/>
-<rectangle x1="0.54" y1="-0.961025" x2="1.06" y2="-0.54" layer="29"/>
-<rectangle x1="-0.46066875" y1="0.500725" x2="-0.04" y2="1.02" layer="29"/>
-<rectangle x1="0.040103125" y1="0.5012875" x2="0.46" y2="1.02" layer="29"/>
-<rectangle x1="-0.461084375" y1="-1.022409375" x2="-0.04" y2="-0.5" layer="29"/>
-<rectangle x1="0.040096875" y1="-1.02245" x2="0.46" y2="-0.5" layer="29"/>
-<smd name="1" x="-0.8" y="0.75" dx="0.45" dy="0.35" layer="1" stop="no"/>
-<smd name="2" x="-0.76" y="0.25" dx="0.45" dy="0.35" layer="1" stop="no"/>
-<smd name="3" x="-0.76" y="-0.25" dx="0.45" dy="0.35" layer="1" stop="no"/>
-<smd name="4" x="-0.8" y="-0.75" dx="0.45" dy="0.35" layer="1" stop="no"/>
-<smd name="5" x="-0.25" y="-0.76" dx="0.45" dy="0.35" layer="1" rot="R90" stop="no"/>
-<smd name="6" x="0.25" y="-0.76" dx="0.45" dy="0.35" layer="1" rot="R90" stop="no"/>
-<smd name="7" x="0.8" y="-0.75" dx="0.45" dy="0.35" layer="1" stop="no"/>
-<smd name="8" x="0.76" y="-0.25" dx="0.45" dy="0.35" layer="1" stop="no"/>
-<smd name="9" x="0.76" y="0.25" dx="0.45" dy="0.35" layer="1" stop="no"/>
-<smd name="10" x="0.8" y="0.75" dx="0.45" dy="0.35" layer="1" stop="no"/>
-<smd name="11" x="0.25" y="0.76" dx="0.45" dy="0.35" layer="1" rot="R90" stop="no"/>
-<smd name="12" x="-0.25" y="0.76" dx="0.45" dy="0.35" layer="1" rot="R90" stop="no"/>
+<package name="LGA-12" urn="urn:adsk.eagle:footprint:39901/1">
+<description>&lt;h3&gt;LGA-12 2x2x1 mm 12-lead&lt;/h3&gt;
+&lt;ul&gt;&lt;li&gt;0.50mm pitch&lt;/li&gt;
+&lt;li&gt;Pads are 0.25x0.275 mm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Derrived from the following ST PDFs&lt;/h4&gt;
+&lt;ul&gt;&lt;li&gt;http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00089896.pdf&lt;/li&gt;
+&lt;li&gt;http://www.st.com/web/en/resource/technical/document/technical_note/CD00134799.pdf&lt;/li&gt;&lt;/ul&gt;</description>
+<wire x1="-0.975" y1="-0.975" x2="-0.975" y2="0.975" width="0.127" layer="51"/>
+<wire x1="-0.975" y1="0.975" x2="0.975" y2="0.975" width="0.127" layer="51"/>
+<wire x1="0.975" y1="0.975" x2="0.975" y2="-0.975" width="0.127" layer="51"/>
+<wire x1="0.975" y1="-0.975" x2="-0.975" y2="-0.975" width="0.127" layer="51"/>
+<wire x1="-1.175" y1="0.775" x2="-0.775" y2="1.175" width="0.127" layer="21"/>
+<wire x1="1.1" y1="1.1" x2="0.7" y2="1.1" width="0.127" layer="21"/>
+<wire x1="1.1" y1="1.1" x2="1.1" y2="0.7" width="0.127" layer="21"/>
+<wire x1="1.1" y1="-1.1" x2="0.7" y2="-1.1" width="0.127" layer="21"/>
+<wire x1="1.1" y1="-1.1" x2="1.1" y2="-0.7" width="0.127" layer="21"/>
+<wire x1="-1.1" y1="-1.1" x2="-0.7" y2="-1.1" width="0.127" layer="21"/>
+<wire x1="-1.1" y1="-1.1" x2="-1.1" y2="-0.7" width="0.127" layer="21"/>
+<wire x1="1.406" y1="-0.355" x2="1.406" y2="0.526" width="0.0762" layer="51"/>
+<wire x1="2.398" y1="0.526" x2="1.406" y2="0.526" width="0.0762" layer="51"/>
+<wire x1="2.398" y1="0.526" x2="2.248" y2="0.376" width="0.0762" layer="51"/>
+<wire x1="2.398" y1="0.526" x2="2.248" y2="0.676" width="0.0762" layer="51"/>
+<wire x1="2.254" y1="-0.072" x2="1.894" y2="-0.262" width="0.0762" layer="51" curve="225"/>
+<wire x1="1.894" y1="-0.262" x2="1.754" y2="-0.222" width="0.0762" layer="51"/>
+<wire x1="1.894" y1="-0.262" x2="1.924" y2="-0.142" width="0.0762" layer="51"/>
+<wire x1="1.406" y1="-0.358" x2="1.256" y2="-0.208" width="0.0762" layer="51"/>
+<wire x1="1.406" y1="-0.358" x2="1.556" y2="-0.208" width="0.0762" layer="51"/>
+<wire x1="1.176" y1="0.152" x2="1.536" y2="0.342" width="0.0762" layer="51" curve="225"/>
+<wire x1="1.536" y1="0.342" x2="1.676" y2="0.302" width="0.0762" layer="51"/>
+<wire x1="1.536" y1="0.342" x2="1.506" y2="0.222" width="0.0762" layer="51"/>
+<wire x1="1.9144" y1="0.3026" x2="2.1044" y2="0.6626" width="0.0762" layer="51" curve="-225"/>
+<wire x1="2.1044" y1="0.6626" x2="2.0644" y2="0.8026" width="0.0762" layer="51"/>
+<wire x1="2.1044" y1="0.6626" x2="1.9844" y2="0.6326" width="0.0762" layer="51"/>
+<smd name="12" x="-0.25" y="0.75" dx="0.35" dy="0.375" layer="1"/>
+<smd name="11" x="0.25" y="0.75" dx="0.35" dy="0.375" layer="1"/>
+<smd name="10" x="0.75" y="0.75" dx="0.35" dy="0.375" layer="1" rot="R270"/>
+<smd name="9" x="0.75" y="0.25" dx="0.35" dy="0.375" layer="1" rot="R270"/>
+<smd name="8" x="0.75" y="-0.25" dx="0.35" dy="0.375" layer="1" rot="R270"/>
+<smd name="7" x="0.75" y="-0.75" dx="0.35" dy="0.375" layer="1" rot="R270"/>
+<smd name="6" x="0.25" y="-0.75" dx="0.35" dy="0.375" layer="1" rot="R180"/>
+<smd name="5" x="-0.25" y="-0.75" dx="0.35" dy="0.375" layer="1" rot="R180"/>
+<smd name="4" x="-0.75" y="-0.75" dx="0.35" dy="0.375" layer="1" rot="R90"/>
+<smd name="3" x="-0.75" y="-0.25" dx="0.35" dy="0.375" layer="1" rot="R90"/>
+<smd name="2" x="-0.75" y="0.25" dx="0.35" dy="0.375" layer="1" rot="R90"/>
+<smd name="1" x="-0.75" y="0.75" dx="0.35" dy="0.375" layer="1" rot="R90"/>
+<rectangle x1="0.125" y1="0.6125" x2="0.375" y2="0.8875" layer="51"/>
+<rectangle x1="-0.375" y1="0.6125" x2="-0.125" y2="0.8875" layer="51"/>
+<rectangle x1="-0.875" y1="0.1125" x2="-0.625" y2="0.3875" layer="51" rot="R90"/>
+<rectangle x1="-0.875" y1="-0.3875" x2="-0.625" y2="-0.1125" layer="51" rot="R90"/>
+<rectangle x1="-0.875" y1="-0.8875" x2="-0.625" y2="-0.6125" layer="51" rot="R90"/>
+<rectangle x1="-0.375" y1="-0.8875" x2="-0.125" y2="-0.6125" layer="51" rot="R180"/>
+<rectangle x1="0.125" y1="-0.8875" x2="0.375" y2="-0.6125" layer="51" rot="R180"/>
+<rectangle x1="0.625" y1="-0.8875" x2="0.875" y2="-0.6125" layer="51" rot="R270"/>
+<rectangle x1="0.625" y1="-0.3875" x2="0.875" y2="-0.1125" layer="51" rot="R270"/>
+<rectangle x1="0.625" y1="0.1125" x2="0.875" y2="0.3875" layer="51" rot="R270"/>
+<rectangle x1="0.625" y1="0.6125" x2="0.875" y2="0.8875" layer="51" rot="R270"/>
+<rectangle x1="-0.55" y1="-0.55" x2="0.55" y2="0.55" layer="39"/>
+<polygon width="0" layer="51">
+<vertex x="-0.8875" y="0.625"/>
+<vertex x="-0.8875" y="0.875"/>
+<vertex x="-0.6125" y="0.875"/>
+<vertex x="-0.6125" y="0.7"/>
+<vertex x="-0.6875" y="0.625"/>
+</polygon>
+<text x="2.585" y="0.516" size="0.3" layer="51" ratio="15" rot="MR0" align="center">X</text>
+<text x="1.42" y="-0.59" size="0.3" layer="51" ratio="15" rot="MR0" align="center">Y</text>
+<text x="2.248" y="-0.299" size="0.3" layer="51" ratio="15" align="center">Z</text>
+<text x="0" y="1.905" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-2.54" size="0.6096" layer="27" font="vector" ratio="20" align="bottom-center">&gt;VALUE</text>
+<circle x="2.058" y="-0.089" radius="0.02828125" width="0.0762" layer="51"/>
 </package>
 </packages>
+<packages3d>
+<package3d name="LGA-12" urn="urn:adsk.eagle:package:39983/1" type="box">
+<description>LGA-12 2x2x1 mm 12-lead
+0.50mm pitch
+Pads are 0.25x0.275 mm
+
+Derrived from the following ST PDFs
+http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00089896.pdf
+http://www.st.com/web/en/resource/technical/document/technical_note/CD00134799.pdf</description>
+<packageinstances>
+<packageinstance name="LGA-12"/>
+</packageinstances>
+</package3d>
+</packages3d>
 <symbols>
 <symbol name="LSM303CTR">
 <text x="-10.185" y="13.2151" size="1.78238125" layer="95">&gt;NAME</text>
@@ -6703,7 +6859,7 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <gate name="G$1" symbol="LSM303CTR" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="LGA12R50P_200X200X100">
+<device name="" package="LGA-12">
 <connects>
 <connect gate="G$1" pin="C1" pad="5"/>
 <connect gate="G$1" pin="CS_MAG" pad="3"/>
@@ -6717,10 +6873,13 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <connect gate="G$1" pin="VDD" pad="9"/>
 <connect gate="G$1" pin="VDD_IO" pad="10"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39983/1"/>
+</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="AVAILABILITY" value="Unavailable"/>
-<attribute name="DESCRIPTION" value=" MEMS Module, Tri-Axis Accelerometer, Tri-Axis Magnetometer, 2g, 4g, 8g, 16g, LGA, 12, 1.9 V "/>
+<attribute name="DESCRIPTION" value=" Accelerometer, Magnetometer, Temperature, 6 Axis Sensor I²C, SPI Output "/>
 <attribute name="MF" value="STMicroelectronics"/>
 <attribute name="MP" value="LSM303CTR"/>
 <attribute name="PACKAGE" value="LGA-12 STMicroelectronics"/>
@@ -6776,7 +6935,7 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <smd name="5" x="1.143" y="0" dx="1.2192" dy="0.508" layer="1"/>
 <smd name="6" x="1.143" y="0.9398" dx="1.2192" dy="0.508" layer="1"/>
 </package>
-<package name="DFN">
+<package name="DFN" urn="urn:adsk.eagle:footprint:16348050/1">
 <wire x1="-2.7686" y1="-0.9906" x2="0.2286" y2="-0.9906" width="0" layer="51"/>
 <wire x1="0.2286" y1="-0.9906" x2="0.2286" y2="0.9906" width="0" layer="51"/>
 <wire x1="0.2286" y1="0.9906" x2="-0.9652" y2="0.9906" width="0" layer="51"/>
@@ -6795,6 +6954,15 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <smd name="7" x="-1.27" y="0" dx="1.5494" dy="1.3462" layer="1"/>
 </package>
 </packages>
+<packages3d>
+<package3d name="DFN" urn="urn:adsk.eagle:package:16348053/2" type="model">
+<description>6-SON (DFN), 0.50 mm pitch, 2.00 X 3.00 X 0.80 mm body, 1.35 X 1.65 mm thermal pad
+&lt;p&gt;6-pin SON (DFN) package with 0.50 mm pitch with body size 2.00 X 3.00 X 0.80 mm and thermal pad size 1.35 X 1.65 mm&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="DFN"/>
+</packageinstances>
+</package3d>
+</packages3d>
 <symbols>
 <symbol name="LTC6991CS6TRMPBF">
 <wire x1="-12.7" y1="10.16" x2="-12.7" y2="-15.24" width="0.4064" layer="94"/>
@@ -6847,6 +7015,9 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <connect gate="A" pin="SET" pad="3"/>
 <connect gate="A" pin="V+" pad="1"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16348053/2"/>
+</package3dinstances>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -6857,7 +7028,7 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 </library>
 <library name="47352-1001">
 <packages>
-<package name="MOLEX_47352-1001">
+<package name="MOLEX_47352-1001" urn="urn:adsk.eagle:footprint:16346115/1">
 <wire x1="-7" y1="7.6" x2="7" y2="7.6" width="0.127" layer="51"/>
 <wire x1="7" y1="7.6" x2="7" y2="-7.6" width="0.127" layer="51"/>
 <wire x1="7" y1="-7.6" x2="4.5" y2="-7.6" width="0.127" layer="51"/>
@@ -6872,8 +7043,6 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <wire x1="7" y1="-5.5" x2="7" y2="7.6" width="0.127" layer="21"/>
 <wire x1="7" y1="7.6" x2="1.8" y2="7.6" width="0.127" layer="21"/>
 <wire x1="-2.6" y1="7.6" x2="-0.4" y2="7.6" width="0.127" layer="21"/>
-<circle x="2" y="-7.3" radius="0.1" width="0.3" layer="21"/>
-<circle x="2" y="-3.7" radius="0.1" width="0.3" layer="51"/>
 <wire x1="-7.5" y1="8.15" x2="7.55" y2="8.15" width="0.05" layer="39"/>
 <wire x1="7.55" y1="8.15" x2="7.55" y2="-8.15" width="0.05" layer="39"/>
 <wire x1="7.55" y1="-8.15" x2="4.25" y2="-8.15" width="0.05" layer="39"/>
@@ -6882,6 +7051,8 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <wire x1="-5.6" y1="-6.85" x2="-5.6" y2="-7.15" width="0.05" layer="39"/>
 <wire x1="-5.6" y1="-7.15" x2="-7.5" y2="-7.15" width="0.05" layer="39"/>
 <wire x1="-7.5" y1="-7.15" x2="-7.5" y2="8.15" width="0.05" layer="39"/>
+<circle x="2" y="-7.3" radius="0.1" width="0.3" layer="21"/>
+<circle x="2" y="-3.7" radius="0.1" width="0.3" layer="51"/>
 <text x="-7.62" y="8.89" size="1.27" layer="25">&gt;NAME</text>
 <text x="-7.62" y="-10.16" size="1.27" layer="27">&gt;VALUE</text>
 <smd name="8" x="-5.76" y="-3.66" dx="1.5" dy="0.8" layer="1" rot="R90"/>
@@ -6899,6 +7070,13 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <smd name="1" x="1.94" y="-3.66" dx="1.5" dy="0.8" layer="1" rot="R90"/>
 </package>
 </packages>
+<packages3d>
+<package3d name="MOLEX_47352-1001" urn="urn:adsk.eagle:package:16346114/2" type="model">
+<packageinstances>
+<packageinstance name="MOLEX_47352-1001"/>
+</packageinstances>
+</package3d>
+</packages3d>
 <symbols>
 <symbol name="47352-1001">
 <wire x1="-7.62" y1="15.24" x2="7.62" y2="15.24" width="0.254" layer="94"/>
@@ -6939,6 +7117,9 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <connect gate="G$1" pin="VDD" pad="4"/>
 <connect gate="G$1" pin="VSS" pad="6"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16346114/2"/>
+</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="AVAILABILITY" value="Unavailable"/>
@@ -7013,7 +7194,7 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <part name="GND18" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C23" library="SparkFun-Capacitors" deviceset="10UF" device="-0603-6.3V-20%" package3d_urn="urn:adsk.eagle:package:23616/2" value="10uF"/>
 <part name="SUPPLY11" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="5V" device=""/>
-<part name="U$5" library="myLib" deviceset="LS027B_LCD_SHARP" device="FH12-10S-0.5SH" value="51441-1093">
+<part name="U$5" library="myLib" deviceset="LS027B_LCD_SHARP" device="FH12-10S-0.5SH" override_package3d_urn="urn:adsk.eagle:package:16346093/2" override_package_urn="urn:adsk.eagle:footprint:16346094/1" value="51441-1093">
 <attribute name="MPN" value="51441-1093"/>
 </part>
 <part name="GND30" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -7025,9 +7206,9 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <part name="R37" library="SparkFun-Resistors" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:23555/3" value="2K"/>
 <part name="R38" library="SparkFun-Resistors" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:23555/3" value="2K"/>
 <part name="D4" library="MF_LEDs" deviceset="LED_RGB_CA" device="_PLCC4" package3d_urn="urn:adsk.eagle:package:10009056/2" value="MF-LED-3228-RGB"/>
-<part name="FLASH" library="MF_Switches" deviceset="TACT" device="_4.2MM" value="MF-SW-TACT-4.2MM"/>
-<part name="RESET" library="MF_Switches" deviceset="TACT" device="_4.2MM" value="MF-SW-TACT-4.2MM"/>
-<part name="UBLOX_GPS" library="CAM-M8C-0" deviceset="CAM-M8C-0" device=""/>
+<part name="FLASH" library="MF_Switches" deviceset="TACT" device="_4.2MM" override_package3d_urn="urn:adsk.eagle:package:16346061/2" override_package_urn="urn:adsk.eagle:footprint:16346062/1" value="MF-SW-TACT-4.2MM"/>
+<part name="RESET" library="MF_Switches" deviceset="TACT" device="_4.2MM" override_package3d_urn="urn:adsk.eagle:package:16346070/2" override_package_urn="urn:adsk.eagle:footprint:16346071/1" value="MF-SW-TACT-4.2MM"/>
+<part name="UBLOX_GPS" library="CAM-M8C-0" deviceset="CAM-M8C-0" device="" override_package3d_urn="urn:adsk.eagle:package:16346138/2" override_package_urn="urn:adsk.eagle:footprint:16346139/1"/>
 <part name="R15" library="SparkFun-Resistors" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
 <part name="R17" library="SparkFun-Resistors" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
 <part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -7039,70 +7220,70 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 </part>
 <part name="J2" library="SparkFun-Connectors" deviceset="CONN_06" device="LOCK" value="GPS Port"/>
 <part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="U1" library="LTC3586EUFE-3_TRPBF" deviceset="LTC3586EUFE-3#TRPBF" device="" value=" LTC3586EUFE-1#PBF"/>
-<part name="U2" library="MAX17260SETD_coulomb" deviceset="MAX17260SETD+" device=""/>
-<part name="BATTERY1" library="SparkFun-Connectors" deviceset="JST_2MM_MALE" device=""/>
+<part name="U1" library="LTC3586EUFE-3_TRPBF" deviceset="LTC3586EUFE-3#TRPBF" device="" package3d_urn="urn:adsk.eagle:package:16348004/2" value=" LTC3586EUFE-1#PBF"/>
+<part name="U2" library="MAX17260SETD_coulomb" deviceset="MAX17260SETD+" device="" package3d_urn="urn:adsk.eagle:package:16348021/2"/>
+<part name="BATTERY1" library="SparkFun-Connectors" deviceset="JST_2MM_MALE" device="" override_package3d_urn="urn:adsk.eagle:package:16346146/2" override_package_urn="urn:adsk.eagle:footprint:16346147/1"/>
 <part name="SUPPLY2" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="V_USB" device=""/>
 <part name="J1" library="MF_Connectors" deviceset="USB" device="_MICRO_RIGHT" package3d_urn="urn:adsk.eagle:package:9948223/2" value="MF-CON-MICROUSB-RIGHT"/>
 <part name="GND7" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
-<part name="C9" library="MF_Passives" deviceset="CAPACITOR_NP" device="_1206" value="10uF"/>
+<part name="C9" library="MF_Passives" deviceset="CAPACITOR_NP" device="_1206" package3d_urn="urn:adsk.eagle:package:16347921/2" value="10uF"/>
 <part name="GND10" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
-<part name="R7" library="MF_Passives" deviceset="RESISTOR" device="_0603" value="2K"/>
-<part name="R8" library="MF_Passives" deviceset="RESISTOR" device="_0603" value="3K"/>
-<part name="C10" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" value="0.1uF"/>
-<part name="R9" library="MF_Passives" deviceset="RESISTOR" device="_0603" value="560K"/>
-<part name="R20" library="MF_Passives" deviceset="RESISTOR" device="_0603" value="100K"/>
-<part name="C11" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" value="22uF"/>
-<part name="C12" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" value="22uF"/>
-<part name="D1" library="MF_LEDs" deviceset="LED_SINGLE" device="-0603-RED" value="MF-LED-0603-RED"/>
-<part name="R21" library="MF_Passives" deviceset="RESISTOR" device="_0603" value="1K"/>
-<part name="L2" library="LPS4018-472MRB" deviceset="LPS4018-472MRB" device="" value="3.3uH">
+<part name="R7" library="MF_Passives" deviceset="RESISTOR" device="_0603" package3d_urn="urn:adsk.eagle:package:16347927/2" value="2K"/>
+<part name="R8" library="MF_Passives" deviceset="RESISTOR" device="_0603" package3d_urn="urn:adsk.eagle:package:16347927/2" value="3K"/>
+<part name="C10" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="0.1uF"/>
+<part name="R9" library="MF_Passives" deviceset="RESISTOR" device="_0603" package3d_urn="urn:adsk.eagle:package:16347927/2" value="560K"/>
+<part name="R20" library="MF_Passives" deviceset="RESISTOR" device="_0603" package3d_urn="urn:adsk.eagle:package:16347927/2" value="100K"/>
+<part name="C11" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="22uF"/>
+<part name="C12" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="22uF"/>
+<part name="D1" library="MF_LEDs" deviceset="LED_SINGLE" device="-0603-RED" package3d_urn="urn:adsk.eagle:package:16347970/2" value="MF-LED-0603-RED"/>
+<part name="R21" library="MF_Passives" deviceset="RESISTOR" device="_0603" package3d_urn="urn:adsk.eagle:package:16347927/2" value="1K"/>
+<part name="L2" library="LPS4018-472MRB" deviceset="LPS4018-472MRB" device="" package3d_urn="urn:adsk.eagle:package:16347982/2" value="3.3uH">
 <attribute name="MPN" value="LPS4018-472MRB"/>
 </part>
-<part name="L3" library="MF_Passives" deviceset="INDUCTOR" device="_1210" value="2.2uH">
+<part name="L3" library="MF_Passives" deviceset="INDUCTOR" device="_1210" package3d_urn="urn:adsk.eagle:package:16347911/2" value="2.2uH">
 <attribute name="MPN" value="L1210R2R2MDWIT"/>
 </part>
-<part name="L4" library="MF_Passives" deviceset="INDUCTOR" device="_1210" value="4.7uH">
+<part name="L4" library="MF_Passives" deviceset="INDUCTOR" device="_1210" package3d_urn="urn:adsk.eagle:package:16347911/2" value="4.7uH">
 <attribute name="MPN" value="L1210R4R7MDWIT"/>
 </part>
-<part name="L5" library="MF_Passives" deviceset="INDUCTOR" device="_1210" value="2.2uH">
+<part name="L5" library="MF_Passives" deviceset="INDUCTOR" device="_1210" package3d_urn="urn:adsk.eagle:package:16347911/2" value="2.2uH">
 <attribute name="MPN" value="L1210R2R2MDWIT"/>
 </part>
-<part name="L6" library="MF_Passives" deviceset="INDUCTOR" device="_1210" value="4.7uH">
+<part name="L6" library="MF_Passives" deviceset="INDUCTOR" device="_1210" package3d_urn="urn:adsk.eagle:package:16347911/2" value="4.7uH">
 <attribute name="MPN" value="L1210R4R7MDWIT"/>
 </part>
-<part name="R22" library="MF_Passives" deviceset="RESISTOR" device="_0603" value="220K"/>
-<part name="R23" library="MF_Passives" deviceset="RESISTOR" device="_0603" value="680K"/>
-<part name="C13" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" value="10pF"/>
-<part name="C16" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" value="10uF"/>
-<part name="R24" library="MF_Passives" deviceset="RESISTOR" device="_0603" value="220K"/>
-<part name="R25" library="MF_Passives" deviceset="RESISTOR" device="_0603" value="680K"/>
-<part name="C18" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" value="10pF"/>
-<part name="C24" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" value="10uF"/>
-<part name="C25" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" value="1uF"/>
-<part name="C26" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" value="1uF"/>
-<part name="C27" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" value="10uF"/>
-<part name="C28" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" value="10uF"/>
-<part name="C29" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" value="22uF"/>
-<part name="R26" library="MF_Passives" deviceset="RESISTOR" device="_0603" value="680K"/>
-<part name="R27" library="MF_Passives" deviceset="RESISTOR" device="_0603" value="220K"/>
-<part name="C30" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" value="22uF"/>
-<part name="R28" library="MF_Passives" deviceset="RESISTOR" device="_0603" value="121K"/>
-<part name="C31" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" value="33pF"/>
-<part name="R29" library="MF_Passives" deviceset="RESISTOR" device="_0603" value="15K"/>
-<part name="C32" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" value="330pF"/>
-<part name="C33" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" value="10pF"/>
-<part name="C34" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" value="0.47uF"/>
-<part name="C35" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" value="0.1uF"/>
-<part name="VREG_MODE" library="jumper" library_urn="urn:adsk.eagle:library:252" deviceset="SJ2W" device="" package3d_urn="urn:adsk.eagle:package:15474/1" value="VREG MODE"/>
-<part name="U5" library="DRV2605LTDGSRQ1" deviceset="DRV2605LTDGSRQ1" device=""/>
+<part name="R22" library="MF_Passives" deviceset="RESISTOR" device="_0603" package3d_urn="urn:adsk.eagle:package:16347927/2" value="220K"/>
+<part name="R23" library="MF_Passives" deviceset="RESISTOR" device="_0603" package3d_urn="urn:adsk.eagle:package:16347927/2" value="680K"/>
+<part name="C13" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="10pF"/>
+<part name="C16" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="10uF"/>
+<part name="R24" library="MF_Passives" deviceset="RESISTOR" device="_0603" package3d_urn="urn:adsk.eagle:package:16347927/2" value="220K"/>
+<part name="R25" library="MF_Passives" deviceset="RESISTOR" device="_0603" package3d_urn="urn:adsk.eagle:package:16347927/2" value="680K"/>
+<part name="C18" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="10pF"/>
+<part name="C24" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="10uF"/>
+<part name="C25" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="1uF"/>
+<part name="C26" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="1uF"/>
+<part name="C27" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="10uF"/>
+<part name="C28" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="10uF"/>
+<part name="C29" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="22uF"/>
+<part name="R26" library="MF_Passives" deviceset="RESISTOR" device="_0603" package3d_urn="urn:adsk.eagle:package:16347927/2" value="680K"/>
+<part name="R27" library="MF_Passives" deviceset="RESISTOR" device="_0603" package3d_urn="urn:adsk.eagle:package:16347927/2" value="220K"/>
+<part name="C30" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="22uF"/>
+<part name="R28" library="MF_Passives" deviceset="RESISTOR" device="_0603" package3d_urn="urn:adsk.eagle:package:16347927/2" value="121K"/>
+<part name="C31" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="33pF"/>
+<part name="R29" library="MF_Passives" deviceset="RESISTOR" device="_0603" package3d_urn="urn:adsk.eagle:package:16347927/2" value="15K"/>
+<part name="C32" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="330pF"/>
+<part name="C33" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="10pF"/>
+<part name="C34" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="0.47uF"/>
+<part name="C35" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="0.1uF"/>
+<part name="VREG_MODE" library="jumper" library_urn="urn:adsk.eagle:library:252" deviceset="SJ2W" device="" package3d_urn="urn:adsk.eagle:package:15474/1" override_package3d_urn="urn:adsk.eagle:package:16347991/2" override_package_urn="urn:adsk.eagle:footprint:15439/1" value="VREG MODE"/>
+<part name="U5" library="DRV2605LTDGSRQ1" deviceset="DRV2605LTDGSRQ1" device="" package3d_urn="urn:adsk.eagle:package:16348030/2"/>
 <part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C36" library="SparkFun-Capacitors" deviceset="4.7UF" device="-0603-6.3V-(10%)" package3d_urn="urn:adsk.eagle:package:23616/2" value="4.7uF"/>
 <part name="C37" library="SparkFun-Capacitors" deviceset="4.7UF" device="-0603-6.3V-(10%)" package3d_urn="urn:adsk.eagle:package:23616/2" value="4.7uF"/>
-<part name="S1" library="B3U-3000P" deviceset="B3U-3000P" device=""/>
-<part name="S2" library="B3U-3000P" deviceset="B3U-3000P" device=""/>
-<part name="S3" library="B3U-3000P" deviceset="B3U-3000P" device=""/>
-<part name="S4" library="B3U-3000P" deviceset="B3U-3000P" device=""/>
+<part name="S1" library="B3U-3000P" deviceset="B3U-3000P" device="" package3d_urn="urn:adsk.eagle:package:16346045/2" override_package3d_urn="urn:adsk.eagle:package:16346036/2" override_package_urn="urn:adsk.eagle:footprint:16346037/1" override_locally_modified="yes"/>
+<part name="S2" library="B3U-3000P" deviceset="B3U-3000P" device="" package3d_urn="urn:adsk.eagle:package:16346045/2" override_package3d_urn="urn:adsk.eagle:package:16346040/2" override_package_urn="urn:adsk.eagle:footprint:16346041/1" override_locally_modified="yes"/>
+<part name="S3" library="B3U-3000P" deviceset="B3U-3000P" device="" package3d_urn="urn:adsk.eagle:package:16346045/2"/>
+<part name="S4" library="B3U-3000P" deviceset="B3U-3000P" device="" package3d_urn="urn:adsk.eagle:package:16346045/2" override_package3d_urn="urn:adsk.eagle:package:16346042/2" override_package_urn="urn:adsk.eagle:footprint:16346043/1" override_locally_modified="yes"/>
 <part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R32" library="SparkFun-Resistors" deviceset="10KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 <part name="R33" library="SparkFun-Resistors" deviceset="10KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
@@ -7128,18 +7309,18 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <part name="J8" library="SparkFun-Connectors" deviceset="CONN_06" device="LOCK"/>
 <part name="C8" library="SparkFun-Capacitors" deviceset="4.7PF" device="-0603-50V-5%" package3d_urn="urn:adsk.eagle:package:23616/2" value="10uF"/>
 <part name="C38" library="SparkFun-Capacitors" deviceset="4.7PF" device="-0603-50V-5%" package3d_urn="urn:adsk.eagle:package:23616/2" value="10uF"/>
-<part name="U7" library="LSM303CTR" deviceset="LSM303CTR" device=""/>
+<part name="U7" library="LSM303CTR" deviceset="LSM303CTR" device="" package3d_urn="urn:adsk.eagle:package:39983/1" override_package3d_urn="urn:adsk.eagle:package:16348711/2" override_package_urn="urn:adsk.eagle:footprint:39901/1"/>
 <part name="3V3_ESP4" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="VCC" device="" value="3V3_ESP"/>
 <part name="C39" library="SparkFun-Capacitors" deviceset="10UF" device="-0603-6.3V-20%" package3d_urn="urn:adsk.eagle:package:23616/2" value="10uF"/>
 <part name="GND24" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C40" library="SparkFun-Capacitors" deviceset="4.7UF" device="-0603-6.3V-(10%)" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uF"/>
 <part name="SUPPLY3" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="5V" device=""/>
 <part name="GND25" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="U9" library="LTC6991CS6TRMPBF" deviceset="LTC6991CS6TRMPBF" device="DFN" value="LTC6991CDCB#TRMPBF"/>
+<part name="U9" library="LTC6991CS6TRMPBF" deviceset="LTC6991CS6TRMPBF" device="DFN" package3d_urn="urn:adsk.eagle:package:16348053/2" value="LTC6991CDCB#TRMPBF"/>
 <part name="R39" library="SparkFun-Resistors" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:23555/3" value="750K"/>
 <part name="R44" library="SparkFun-Resistors" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:23555/3" value="560K"/>
 <part name="R45" library="SparkFun-Resistors" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:23555/3" value="100K"/>
-<part name="J9" library="47352-1001" deviceset="47352-1001" device=""/>
+<part name="J9" library="47352-1001" deviceset="47352-1001" device="" package3d_urn="urn:adsk.eagle:package:16346114/2"/>
 <part name="GND19" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
@@ -9587,6 +9768,11 @@ will not be understood (or retained) with this version.
 Since Version 8.3, EAGLE supports the association of 3D packages
 with devices in libraries, schematics, and board files. Those 3D
 packages will not be understood (or retained) with this version.
+</note>
+<note version="9.4" severity="warning">
+Since Version 9.4, EAGLE supports the overriding of 3D packages
+in schematics and board files. Those overridden 3d packages
+will not be understood (or retained) with this version.
 </note>
 </compatibility>
 </eagle>

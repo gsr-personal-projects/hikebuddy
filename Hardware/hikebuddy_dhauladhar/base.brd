@@ -173,7 +173,7 @@
 <layer number="255" name="routoute" color="7" fill="1" visible="no" active="yes"/>
 </layers>
 <board>
-<fusionsync huburn="a.cGVyc29uYWw6dWUyYzQ0NDAw" projecturn="a.cGVyc29uYWw6dWUyYzQ0NDAwIzIwMTkwMzE5MTgzMjY0NDI2" f3durn="urn:adsk.wipprod:dm.lineage:MPT95_tuTBuV00Tiw3IYBg" pcbguid="dcaf785d-6bae-4864-906e-09eca11e20a4" lastpulledtime="" lastsyncedchangeguid="af3eb03f-7cba-4d52-a4c6-a9be90f08968"/>
+<fusionsync huburn="a.cGVyc29uYWw6dWUyYzQ0NDAw" projecturn="a.cGVyc29uYWw6dWUyYzQ0NDAwIzIwMTkwMzE5MTgzMjY0NDI2" f3durn="urn:adsk.wipprod:dm.lineage:MPT95_tuTBuV00Tiw3IYBg" pcbguid="dcaf785d-6bae-4864-906e-09eca11e20a4" lastpulledtime="" lastsyncedchangeguid="d334e5b2-77be-78ba-d5fb-712658f1f552"/>
 <plain>
 <wire x1="0" y1="0" x2="75" y2="0" width="0" layer="20"/>
 <wire x1="75" y1="0" x2="75" y2="40" width="0" layer="20"/>
@@ -898,7 +898,7 @@ MAX3223-MAX3243.pdf</description>
 <vertex x="-2.946" y="1.45" curve="90"/>
 </polygon>
 </package>
-<package name="LED0603">
+<package name="LED0603" urn="urn:adsk.eagle:footprint:16347961/1">
 <description>&lt;b&gt;Description:&lt;/b&gt; Footprint for Single LEDs in 0603&lt;br/&gt;</description>
 <smd name="CATHODE" x="-0.75" y="0" dx="0.8" dy="0.8" layer="1"/>
 <smd name="ANODE" x="0.75" y="0" dx="0.8" dy="0.8" layer="1"/>
@@ -912,12 +912,12 @@ MAX3223-MAX3243.pdf</description>
 <vertex x="-1.7" y="-0.75"/>
 <vertex x="-1.5" y="-0.75"/>
 </polygon>
-<text x="-1.7" y="1.1" size="1.016" layer="25" font="vector" ratio="16">&gt;VALUE</text>
 <polygon width="0.127" layer="21">
 <vertex x="-0.15" y="0"/>
 <vertex x="0.15" y="0.3"/>
 <vertex x="0.15" y="-0.3"/>
 </polygon>
+<text x="-1.7" y="1.1" size="1.016" layer="25" font="vector" ratio="16">&gt;VALUE</text>
 </package>
 </packages>
 <packages3d>
@@ -925,6 +925,12 @@ MAX3223-MAX3243.pdf</description>
 <description>&lt;b&gt;Description:&lt;/b&gt; Footprint for LEDs in PLCC4 Standard.&lt;br/&gt;</description>
 <packageinstances>
 <packageinstance name="PLCC4"/>
+</packageinstances>
+</package3d>
+<package3d name="LED0603" urn="urn:adsk.eagle:package:16347970/2" type="model">
+<description>&lt;b&gt;Description:&lt;/b&gt; Footprint for Single LEDs in 0603&lt;br/&gt;</description>
+<packageinstances>
+<packageinstance name="LED0603"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -1004,7 +1010,7 @@ MAX3223-MAX3243.pdf</description>
 </library>
 <library name="LTC3586EUFE-3_TRPBF">
 <packages>
-<package name="QFN40P600X400X80-39N">
+<package name="QFN40P600X400X80-39N" urn="urn:adsk.eagle:footprint:16348002/1">
 <rectangle x1="-0.76" y1="-1.39" x2="0.76" y2="1.39" layer="31"/>
 <text x="-3.91" y="-4.615" size="1.27" layer="27" align="top-left">&gt;VALUE</text>
 <text x="-3.91" y="4.615" size="1.27" layer="25">&gt;NAME</text>
@@ -1067,10 +1073,19 @@ MAX3223-MAX3243.pdf</description>
 <smd name="39" x="0" y="0" dx="2.4" dy="4.4" layer="1" cream="no"/>
 </package>
 </packages>
+<packages3d>
+<package3d name="QFN40P600X400X80-39N" urn="urn:adsk.eagle:package:16348004/2" type="model">
+<description>38-QFN, 0.40 mm pitch, 4.00 X 6.00 X 0.80 mm body
+&lt;p&gt;38-pin QFN package with 0.40 mm pitch with body size 4.00 X 6.00 X 0.80 mm&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="QFN40P600X400X80-39N"/>
+</packageinstances>
+</package3d>
+</packages3d>
 </library>
 <library name="MAX17260SETD_coulomb">
 <packages>
-<package name="SON40P300X300X80-15N">
+<package name="SON40P300X300X80-15N" urn="urn:adsk.eagle:footprint:16348019/1">
 <rectangle x1="-0.54" y1="-0.73" x2="0.54" y2="0.73" layer="31"/>
 <circle x="-2.445" y="1.2" radius="0.1" width="0.2" layer="21"/>
 <circle x="-2.445" y="1.2" radius="0.1" width="0.2" layer="51"/>
@@ -1103,10 +1118,17 @@ MAX3223-MAX3243.pdf</description>
 <smd name="15" x="0" y="0" dx="1.7" dy="2.3" layer="1" cream="no"/>
 </package>
 </packages>
+<packages3d>
+<package3d name="SON40P300X300X80-15N" urn="urn:adsk.eagle:package:16348021/2" type="model">
+<packageinstances>
+<packageinstance name="SON40P300X300X80-15N"/>
+</packageinstances>
+</package3d>
+</packages3d>
 </library>
 <library name="MF_Passives">
 <packages>
-<package name="C1206">
+<package name="C1206" urn="urn:adsk.eagle:footprint:16347895/1">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard 1206 Package for Capacitors&lt;br/&gt;</description>
 <smd name="P$1" x="-1.45" y="0" dx="0.9" dy="1.6" layer="1" rot="R180"/>
 <smd name="P$2" x="1.45" y="0" dx="0.9" dy="1.6" layer="1" rot="R180"/>
@@ -1116,7 +1138,7 @@ MAX3223-MAX3243.pdf</description>
 <wire x1="2.2" y1="1.1" x2="-2.2" y2="1.1" width="0.127" layer="21"/>
 <text x="-2.2" y="1.3" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 </package>
-<package name="R0603">
+<package name="R0603" urn="urn:adsk.eagle:footprint:16347901/1">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard 0603 Package for Resistors&lt;br/&gt;</description>
 <smd name="P$1" x="-0.75" y="0" dx="0.6" dy="0.9" layer="1" rot="R180"/>
 <smd name="P$2" x="0.75" y="0" dx="0.6" dy="0.9" layer="1" rot="R180"/>
@@ -1126,7 +1148,7 @@ MAX3223-MAX3243.pdf</description>
 <wire x1="1.4" y1="0.7" x2="-1.4" y2="0.7" width="0.127" layer="21"/>
 <text x="-1.4" y="1.1" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 </package>
-<package name="C0603">
+<package name="C0603" urn="urn:adsk.eagle:footprint:16347897/1">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard 0603 Package for Capacitors&lt;br/&gt;</description>
 <smd name="P$1" x="-0.75" y="0" dx="0.6" dy="0.9" layer="1" rot="R180"/>
 <smd name="P$2" x="0.75" y="0" dx="0.6" dy="0.9" layer="1" rot="R180"/>
@@ -1136,7 +1158,7 @@ MAX3223-MAX3243.pdf</description>
 <wire x1="1.4" y1="0.7" x2="-1.4" y2="0.7" width="0.127" layer="21"/>
 <text x="-1.4" y="1.1" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 </package>
-<package name="L1210">
+<package name="L1210" urn="urn:adsk.eagle:footprint:16347885/1">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard 1210 Package for Inductors&lt;br/&gt;</description>
 <smd name="P$1" x="-1.45" y="0" dx="0.9" dy="2.5" layer="1" rot="R180"/>
 <smd name="P$2" x="1.45" y="0" dx="0.9" dy="2.5" layer="1" rot="R180"/>
@@ -1147,10 +1169,36 @@ MAX3223-MAX3243.pdf</description>
 <text x="-2.2" y="1.8" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 </package>
 </packages>
+<packages3d>
+<package3d name="R0603" urn="urn:adsk.eagle:package:16347927/2" type="model">
+<description>&lt;b&gt;Description:&lt;/b&gt; Standard 0603 Package for Resistors&lt;br/&gt;</description>
+<packageinstances>
+<packageinstance name="R0603"/>
+</packageinstances>
+</package3d>
+<package3d name="C0603" urn="urn:adsk.eagle:package:16347923/3" type="model">
+<description>&lt;b&gt;Description:&lt;/b&gt; Standard 0603 Package for Capacitors&lt;br/&gt;</description>
+<packageinstances>
+<packageinstance name="C0603"/>
+</packageinstances>
+</package3d>
+<package3d name="C1206" urn="urn:adsk.eagle:package:16347921/2" type="model">
+<description>&lt;b&gt;Description:&lt;/b&gt; Standard 1206 Package for Capacitors&lt;br/&gt;</description>
+<packageinstances>
+<packageinstance name="C1206"/>
+</packageinstances>
+</package3d>
+<package3d name="L1210" urn="urn:adsk.eagle:package:16347911/2" type="model">
+<description>&lt;b&gt;Description:&lt;/b&gt; Standard 1210 Package for Inductors&lt;br/&gt;</description>
+<packageinstances>
+<packageinstance name="L1210"/>
+</packageinstances>
+</package3d>
+</packages3d>
 </library>
 <library name="LPS4018-472MRB">
 <packages>
-<package name="INDP_LPS4018-472MRB">
+<package name="INDP_LPS4018-472MRB" urn="urn:adsk.eagle:footprint:16347980/1">
 <polygon width="0.01" layer="1">
 <vertex x="-1.64" y="-1.945"/>
 <vertex x="-0.75" y="-1.945"/>
@@ -1175,16 +1223,6 @@ MAX3223-MAX3243.pdf</description>
 <vertex x="2.2" y="-1.395"/>
 <vertex x="2.2" y="1.395"/>
 </polygon>
-<wire x1="-1.95" y1="-1.95" x2="1.95" y2="-1.95" width="0.127" layer="51"/>
-<wire x1="1.95" y1="-1.95" x2="1.95" y2="1.95" width="0.127" layer="51"/>
-<wire x1="1.95" y1="1.95" x2="-1.95" y2="1.95" width="0.127" layer="51"/>
-<wire x1="-2.45" y1="2.2" x2="-2.45" y2="-2.2" width="0.05" layer="39"/>
-<wire x1="-2.45" y1="-2.2" x2="2.45" y2="-2.2" width="0.05" layer="39"/>
-<wire x1="2.45" y1="-2.2" x2="2.45" y2="2.2" width="0.05" layer="39"/>
-<wire x1="2.45" y1="2.2" x2="-2.45" y2="2.2" width="0.05" layer="39"/>
-<text x="-2.659290625" y="2.459959375" size="1.2738" layer="25">&gt;NAME</text>
-<text x="-2.55695" y="-3.71015" size="1.27343125" layer="27">&gt;VALUE</text>
-<wire x1="-1.95" y1="1.95" x2="-1.95" y2="-1.95" width="0.127" layer="51"/>
 <polygon width="0.01" layer="29">
 <vertex x="-1.72" y="2.09"/>
 <vertex x="-0.65" y="2.09"/>
@@ -1233,11 +1271,28 @@ MAX3223-MAX3243.pdf</description>
 <vertex x="2.2" y="-1.395"/>
 <vertex x="2.2" y="1.395"/>
 </polygon>
+<wire x1="-1.95" y1="-1.95" x2="1.95" y2="-1.95" width="0.127" layer="51"/>
+<wire x1="1.95" y1="-1.95" x2="1.95" y2="1.95" width="0.127" layer="51"/>
+<wire x1="1.95" y1="1.95" x2="-1.95" y2="1.95" width="0.127" layer="51"/>
+<wire x1="-2.45" y1="2.2" x2="-2.45" y2="-2.2" width="0.05" layer="39"/>
+<wire x1="-2.45" y1="-2.2" x2="2.45" y2="-2.2" width="0.05" layer="39"/>
+<wire x1="2.45" y1="-2.2" x2="2.45" y2="2.2" width="0.05" layer="39"/>
+<wire x1="2.45" y1="2.2" x2="-2.45" y2="2.2" width="0.05" layer="39"/>
+<wire x1="-1.95" y1="1.95" x2="-1.95" y2="-1.95" width="0.127" layer="51"/>
+<text x="-2.659290625" y="2.459959375" size="1.2738" layer="25">&gt;NAME</text>
+<text x="-2.55695" y="-3.71015" size="1.27343125" layer="27">&gt;VALUE</text>
 <circle x="-2.58" y="0.03" radius="0.05385" width="0.127" layer="21"/>
 <smd name="1" x="-1.77" y="0" dx="1.27" dy="0.635" layer="1" rot="R90" stop="no" cream="no"/>
 <smd name="2" x="1.81" y="0.1" dx="1.27" dy="0.635" layer="1" rot="R90" stop="no" cream="no"/>
 </package>
 </packages>
+<packages3d>
+<package3d name="INDP_LPS4018-472MRB" urn="urn:adsk.eagle:package:16347982/2" type="model">
+<packageinstances>
+<packageinstance name="INDP_LPS4018-472MRB"/>
+</packageinstances>
+</package3d>
+</packages3d>
 </library>
 <library name="jumper" urn="urn:adsk.eagle:library:252">
 <description>&lt;b&gt;Jumpers&lt;/b&gt;&lt;p&gt;
@@ -1278,7 +1333,7 @@ MAX3223-MAX3243.pdf</description>
 </library>
 <library name="DRV2605LTDGSRQ1">
 <packages>
-<package name="SOP50P490X110-10N">
+<package name="SOP50P490X110-10N" urn="urn:adsk.eagle:footprint:16348028/1">
 <circle x="-3.585" y="1.3" radius="0.1" width="0.2" layer="21"/>
 <circle x="-3.585" y="1.3" radius="0.1" width="0.2" layer="51"/>
 <wire x1="-1.5" y1="1.5" x2="1.5" y2="1.5" width="0.127" layer="51"/>
@@ -1305,77 +1360,142 @@ MAX3223-MAX3243.pdf</description>
 <smd name="10" x="2.145" y="1" dx="1.44" dy="0.3" layer="1" roundness="25"/>
 </package>
 </packages>
+<packages3d>
+<package3d name="SOP50P490X110-10N" urn="urn:adsk.eagle:package:16348030/2" type="model">
+<description>10-SOP, 0.50 mm pitch, 4.90 mm span, 3.00 X 3.00 X 1.10 mm body
+&lt;p&gt;10-pin SOP package with 0.50 mm pitch, 4.90 mm span with body size 3.00 X 3.00 X 1.10 mm&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="SOP50P490X110-10N"/>
+</packageinstances>
+</package3d>
+</packages3d>
 </library>
 <library name="B3U-3000P">
 <packages>
-<package name="SW_B3U-3000P">
+<package name="SW_B3U-3000P" urn="urn:adsk.eagle:footprint:16346046/1">
 <wire x1="1.5" y1="1.25" x2="-1.5" y2="1.25" width="0.127" layer="21"/>
 <wire x1="-1.5" y1="1.25" x2="-1.5" y2="-1.25" width="0.127" layer="51"/>
 <wire x1="-1.5" y1="-1.25" x2="-0.85" y2="-1.25" width="0.127" layer="21"/>
 <wire x1="-0.85" y1="-1.25" x2="0.85" y2="-1.25" width="0.127" layer="21"/>
 <wire x1="0.85" y1="-1.25" x2="1.5" y2="-1.25" width="0.127" layer="21"/>
 <wire x1="1.5" y1="-1.25" x2="1.5" y2="1.25" width="0.127" layer="51"/>
-<circle x="-2" y="1.2" radius="0.127" width="0" layer="21"/>
 <wire x1="2.5" y1="-2.2" x2="-2.5" y2="-2.2" width="0.127" layer="39"/>
 <wire x1="-2.5" y1="-2.2" x2="-2.5" y2="1.5" width="0.127" layer="39"/>
 <wire x1="-2.5" y1="1.5" x2="2.5" y2="1.5" width="0.127" layer="39"/>
 <wire x1="2.5" y1="1.5" x2="2.5" y2="-2.2" width="0.127" layer="39"/>
-<text x="-2.603459375" y="1.60213125" size="0.81388125" layer="25">&gt;NAME</text>
-<text x="-2.604340625" y="-3.205340625" size="0.81415625" layer="27">&gt;VALUE</text>
 <wire x1="0.45" y1="-1.95" x2="-0.45" y2="-1.95" width="0.127" layer="21"/>
 <wire x1="-0.85" y1="-1.25" x2="-0.85" y2="-1.7" width="0.127" layer="21"/>
 <wire x1="0.85" y1="-1.25" x2="0.85" y2="-1.7" width="0.127" layer="21"/>
 <wire x1="0.45" y1="-1.95" x2="0.85" y2="-1.7" width="0.127" layer="21"/>
 <wire x1="-0.45" y1="-1.95" x2="-0.85" y2="-1.7" width="0.127" layer="21"/>
+<circle x="-2" y="1.2" radius="0.127" width="0" layer="21"/>
+<text x="-2.603459375" y="1.60213125" size="0.81388125" layer="25">&gt;NAME</text>
+<text x="-2.604340625" y="-3.205340625" size="0.81415625" layer="27">&gt;VALUE</text>
 <smd name="2" x="1.7" y="0" dx="0.8" dy="1.7" layer="1" rot="R180"/>
 <smd name="1" x="-1.7" y="0" dx="0.8" dy="1.7" layer="1" rot="R180"/>
 </package>
 </packages>
+<packages3d>
+<package3d name="SW_B3U-3000P" urn="urn:adsk.eagle:package:16346045/2" type="model">
+<packageinstances>
+<packageinstance name="SW_B3U-3000P"/>
+</packageinstances>
+</package3d>
+</packages3d>
 </library>
 <library name="LSM303CTR">
 <packages>
-<package name="LGA12R50P_200X200X100">
-<wire x1="-1" y1="1" x2="1" y2="1" width="0.127" layer="51"/>
-<wire x1="1" y1="-1" x2="-1" y2="-1" width="0.127" layer="51"/>
-<wire x1="-1" y1="-1" x2="-1" y2="1" width="0.127" layer="51"/>
-<text x="-1.253190625" y="1.253190625" size="0.30558125" layer="25">&gt;NAME</text>
-<text x="-1.2528" y="-1.75391875" size="0.305484375" layer="27">&gt;VALUE</text>
-<wire x1="-1.275" y1="1.275" x2="1.275" y2="1.275" width="0.05" layer="39"/>
-<wire x1="1.275" y1="1.275" x2="1.275" y2="-1.275" width="0.05" layer="39"/>
-<wire x1="1.275" y1="-1.275" x2="-1.275" y2="-1.275" width="0.05" layer="39"/>
-<wire x1="-1.275" y1="-1.275" x2="-1.275" y2="1.275" width="0.05" layer="39"/>
-<wire x1="1" y1="-1" x2="1" y2="1" width="0.127" layer="51"/>
-<circle x="-1.3" y="0.7" radius="0.1" width="0" layer="21"/>
-<rectangle x1="-1.06" y1="0.5414" x2="-0.54" y2="0.96" layer="29"/>
-<rectangle x1="-1.022840625" y1="0.0401125" x2="-0.5" y2="0.46" layer="29"/>
-<rectangle x1="-1.023190625" y1="-0.4614375" x2="-0.5" y2="-0.04" layer="29"/>
-<rectangle x1="-1.06" y1="-0.960478125" x2="-0.54" y2="-0.54" layer="29"/>
-<rectangle x1="0.54" y1="0.54060625" x2="1.06" y2="0.96" layer="29"/>
-<rectangle x1="0.5055625" y1="0.04004375" x2="1.025" y2="0.46" layer="29"/>
-<rectangle x1="0.5062875" y1="-0.461171875" x2="1.025" y2="-0.04" layer="29"/>
-<rectangle x1="0.54" y1="-0.961025" x2="1.06" y2="-0.54" layer="29"/>
-<rectangle x1="-0.46066875" y1="0.500725" x2="-0.04" y2="1.02" layer="29"/>
-<rectangle x1="0.040103125" y1="0.5012875" x2="0.46" y2="1.02" layer="29"/>
-<rectangle x1="-0.461084375" y1="-1.022409375" x2="-0.04" y2="-0.5" layer="29"/>
-<rectangle x1="0.040096875" y1="-1.02245" x2="0.46" y2="-0.5" layer="29"/>
-<smd name="1" x="-0.8" y="0.75" dx="0.45" dy="0.35" layer="1" stop="no"/>
-<smd name="2" x="-0.76" y="0.25" dx="0.45" dy="0.35" layer="1" stop="no"/>
-<smd name="3" x="-0.76" y="-0.25" dx="0.45" dy="0.35" layer="1" stop="no"/>
-<smd name="4" x="-0.8" y="-0.75" dx="0.45" dy="0.35" layer="1" stop="no"/>
-<smd name="5" x="-0.25" y="-0.76" dx="0.45" dy="0.35" layer="1" rot="R90" stop="no"/>
-<smd name="6" x="0.25" y="-0.76" dx="0.45" dy="0.35" layer="1" rot="R90" stop="no"/>
-<smd name="7" x="0.8" y="-0.75" dx="0.45" dy="0.35" layer="1" stop="no"/>
-<smd name="8" x="0.76" y="-0.25" dx="0.45" dy="0.35" layer="1" stop="no"/>
-<smd name="9" x="0.76" y="0.25" dx="0.45" dy="0.35" layer="1" stop="no"/>
-<smd name="10" x="0.8" y="0.75" dx="0.45" dy="0.35" layer="1" stop="no"/>
-<smd name="11" x="0.25" y="0.76" dx="0.45" dy="0.35" layer="1" rot="R90" stop="no"/>
-<smd name="12" x="-0.25" y="0.76" dx="0.45" dy="0.35" layer="1" rot="R90" stop="no"/>
+<package name="LGA-12" urn="urn:adsk.eagle:footprint:39901/1">
+<description>&lt;h3&gt;LGA-12 2x2x1 mm 12-lead&lt;/h3&gt;
+&lt;ul&gt;&lt;li&gt;0.50mm pitch&lt;/li&gt;
+&lt;li&gt;Pads are 0.25x0.275 mm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Derrived from the following ST PDFs&lt;/h4&gt;
+&lt;ul&gt;&lt;li&gt;http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00089896.pdf&lt;/li&gt;
+&lt;li&gt;http://www.st.com/web/en/resource/technical/document/technical_note/CD00134799.pdf&lt;/li&gt;&lt;/ul&gt;</description>
+<wire x1="-0.975" y1="-0.975" x2="-0.975" y2="0.975" width="0.127" layer="51"/>
+<wire x1="-0.975" y1="0.975" x2="0.975" y2="0.975" width="0.127" layer="51"/>
+<wire x1="0.975" y1="0.975" x2="0.975" y2="-0.975" width="0.127" layer="51"/>
+<wire x1="0.975" y1="-0.975" x2="-0.975" y2="-0.975" width="0.127" layer="51"/>
+<wire x1="-1.175" y1="0.775" x2="-0.775" y2="1.175" width="0.127" layer="21"/>
+<wire x1="1.1" y1="1.1" x2="0.7" y2="1.1" width="0.127" layer="21"/>
+<wire x1="1.1" y1="1.1" x2="1.1" y2="0.7" width="0.127" layer="21"/>
+<wire x1="1.1" y1="-1.1" x2="0.7" y2="-1.1" width="0.127" layer="21"/>
+<wire x1="1.1" y1="-1.1" x2="1.1" y2="-0.7" width="0.127" layer="21"/>
+<wire x1="-1.1" y1="-1.1" x2="-0.7" y2="-1.1" width="0.127" layer="21"/>
+<wire x1="-1.1" y1="-1.1" x2="-1.1" y2="-0.7" width="0.127" layer="21"/>
+<wire x1="1.406" y1="-0.355" x2="1.406" y2="0.526" width="0.0762" layer="51"/>
+<wire x1="2.398" y1="0.526" x2="1.406" y2="0.526" width="0.0762" layer="51"/>
+<wire x1="2.398" y1="0.526" x2="2.248" y2="0.376" width="0.0762" layer="51"/>
+<wire x1="2.398" y1="0.526" x2="2.248" y2="0.676" width="0.0762" layer="51"/>
+<wire x1="2.254" y1="-0.072" x2="1.894" y2="-0.262" width="0.0762" layer="51" curve="225"/>
+<wire x1="1.894" y1="-0.262" x2="1.754" y2="-0.222" width="0.0762" layer="51"/>
+<wire x1="1.894" y1="-0.262" x2="1.924" y2="-0.142" width="0.0762" layer="51"/>
+<wire x1="1.406" y1="-0.358" x2="1.256" y2="-0.208" width="0.0762" layer="51"/>
+<wire x1="1.406" y1="-0.358" x2="1.556" y2="-0.208" width="0.0762" layer="51"/>
+<wire x1="1.176" y1="0.152" x2="1.536" y2="0.342" width="0.0762" layer="51" curve="225"/>
+<wire x1="1.536" y1="0.342" x2="1.676" y2="0.302" width="0.0762" layer="51"/>
+<wire x1="1.536" y1="0.342" x2="1.506" y2="0.222" width="0.0762" layer="51"/>
+<wire x1="1.9144" y1="0.3026" x2="2.1044" y2="0.6626" width="0.0762" layer="51" curve="-225"/>
+<wire x1="2.1044" y1="0.6626" x2="2.0644" y2="0.8026" width="0.0762" layer="51"/>
+<wire x1="2.1044" y1="0.6626" x2="1.9844" y2="0.6326" width="0.0762" layer="51"/>
+<smd name="12" x="-0.25" y="0.75" dx="0.35" dy="0.375" layer="1"/>
+<smd name="11" x="0.25" y="0.75" dx="0.35" dy="0.375" layer="1"/>
+<smd name="10" x="0.75" y="0.75" dx="0.35" dy="0.375" layer="1" rot="R270"/>
+<smd name="9" x="0.75" y="0.25" dx="0.35" dy="0.375" layer="1" rot="R270"/>
+<smd name="8" x="0.75" y="-0.25" dx="0.35" dy="0.375" layer="1" rot="R270"/>
+<smd name="7" x="0.75" y="-0.75" dx="0.35" dy="0.375" layer="1" rot="R270"/>
+<smd name="6" x="0.25" y="-0.75" dx="0.35" dy="0.375" layer="1" rot="R180"/>
+<smd name="5" x="-0.25" y="-0.75" dx="0.35" dy="0.375" layer="1" rot="R180"/>
+<smd name="4" x="-0.75" y="-0.75" dx="0.35" dy="0.375" layer="1" rot="R90"/>
+<smd name="3" x="-0.75" y="-0.25" dx="0.35" dy="0.375" layer="1" rot="R90"/>
+<smd name="2" x="-0.75" y="0.25" dx="0.35" dy="0.375" layer="1" rot="R90"/>
+<smd name="1" x="-0.75" y="0.75" dx="0.35" dy="0.375" layer="1" rot="R90"/>
+<rectangle x1="0.125" y1="0.6125" x2="0.375" y2="0.8875" layer="51"/>
+<rectangle x1="-0.375" y1="0.6125" x2="-0.125" y2="0.8875" layer="51"/>
+<rectangle x1="-0.875" y1="0.1125" x2="-0.625" y2="0.3875" layer="51" rot="R90"/>
+<rectangle x1="-0.875" y1="-0.3875" x2="-0.625" y2="-0.1125" layer="51" rot="R90"/>
+<rectangle x1="-0.875" y1="-0.8875" x2="-0.625" y2="-0.6125" layer="51" rot="R90"/>
+<rectangle x1="-0.375" y1="-0.8875" x2="-0.125" y2="-0.6125" layer="51" rot="R180"/>
+<rectangle x1="0.125" y1="-0.8875" x2="0.375" y2="-0.6125" layer="51" rot="R180"/>
+<rectangle x1="0.625" y1="-0.8875" x2="0.875" y2="-0.6125" layer="51" rot="R270"/>
+<rectangle x1="0.625" y1="-0.3875" x2="0.875" y2="-0.1125" layer="51" rot="R270"/>
+<rectangle x1="0.625" y1="0.1125" x2="0.875" y2="0.3875" layer="51" rot="R270"/>
+<rectangle x1="0.625" y1="0.6125" x2="0.875" y2="0.8875" layer="51" rot="R270"/>
+<rectangle x1="-0.55" y1="-0.55" x2="0.55" y2="0.55" layer="39"/>
+<polygon width="0" layer="51">
+<vertex x="-0.8875" y="0.625"/>
+<vertex x="-0.8875" y="0.875"/>
+<vertex x="-0.6125" y="0.875"/>
+<vertex x="-0.6125" y="0.7"/>
+<vertex x="-0.6875" y="0.625"/>
+</polygon>
+<text x="2.585" y="0.516" size="0.3" layer="51" ratio="15" rot="MR0" align="center">X</text>
+<text x="1.42" y="-0.59" size="0.3" layer="51" ratio="15" rot="MR0" align="center">Y</text>
+<text x="2.248" y="-0.299" size="0.3" layer="51" ratio="15" align="center">Z</text>
+<text x="0" y="1.905" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-2.54" size="0.6096" layer="27" font="vector" ratio="20" align="bottom-center">&gt;VALUE</text>
+<circle x="2.058" y="-0.089" radius="0.02828125" width="0.0762" layer="51"/>
 </package>
 </packages>
+<packages3d>
+<package3d name="LGA-12" urn="urn:adsk.eagle:package:39983/1" type="box">
+<description>LGA-12 2x2x1 mm 12-lead
+0.50mm pitch
+Pads are 0.25x0.275 mm
+
+Derrived from the following ST PDFs
+http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00089896.pdf
+http://www.st.com/web/en/resource/technical/document/technical_note/CD00134799.pdf</description>
+<packageinstances>
+<packageinstance name="LGA-12"/>
+</packageinstances>
+</package3d>
+</packages3d>
 </library>
 <library name="LTC6991CS6TRMPBF">
 <packages>
-<package name="DFN">
+<package name="DFN" urn="urn:adsk.eagle:footprint:16348050/1">
 <wire x1="-2.7686" y1="-0.9906" x2="0.2286" y2="-0.9906" width="0" layer="51"/>
 <wire x1="0.2286" y1="-0.9906" x2="0.2286" y2="0.9906" width="0" layer="51"/>
 <wire x1="0.2286" y1="0.9906" x2="-0.9652" y2="0.9906" width="0" layer="51"/>
@@ -1394,10 +1514,19 @@ MAX3223-MAX3243.pdf</description>
 <smd name="7" x="-1.27" y="0" dx="1.5494" dy="1.3462" layer="1"/>
 </package>
 </packages>
+<packages3d>
+<package3d name="DFN" urn="urn:adsk.eagle:package:16348053/2" type="model">
+<description>6-SON (DFN), 0.50 mm pitch, 2.00 X 3.00 X 0.80 mm body, 1.35 X 1.65 mm thermal pad
+&lt;p&gt;6-pin SON (DFN) package with 0.50 mm pitch with body size 2.00 X 3.00 X 0.80 mm and thermal pad size 1.35 X 1.65 mm&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="DFN"/>
+</packageinstances>
+</package3d>
+</packages3d>
 </library>
 <library name="47352-1001">
 <packages>
-<package name="MOLEX_47352-1001">
+<package name="MOLEX_47352-1001" urn="urn:adsk.eagle:footprint:16346115/1">
 <wire x1="-7" y1="7.6" x2="7" y2="7.6" width="0.127" layer="51"/>
 <wire x1="7" y1="7.6" x2="7" y2="-7.6" width="0.127" layer="51"/>
 <wire x1="7" y1="-7.6" x2="4.5" y2="-7.6" width="0.127" layer="51"/>
@@ -1412,8 +1541,6 @@ MAX3223-MAX3243.pdf</description>
 <wire x1="7" y1="-5.5" x2="7" y2="7.6" width="0.127" layer="21"/>
 <wire x1="7" y1="7.6" x2="1.8" y2="7.6" width="0.127" layer="21"/>
 <wire x1="-2.6" y1="7.6" x2="-0.4" y2="7.6" width="0.127" layer="21"/>
-<circle x="2" y="-7.3" radius="0.1" width="0.3" layer="21"/>
-<circle x="2" y="-3.7" radius="0.1" width="0.3" layer="51"/>
 <wire x1="-7.5" y1="8.15" x2="7.55" y2="8.15" width="0.05" layer="39"/>
 <wire x1="7.55" y1="8.15" x2="7.55" y2="-8.15" width="0.05" layer="39"/>
 <wire x1="7.55" y1="-8.15" x2="4.25" y2="-8.15" width="0.05" layer="39"/>
@@ -1422,6 +1549,8 @@ MAX3223-MAX3243.pdf</description>
 <wire x1="-5.6" y1="-6.85" x2="-5.6" y2="-7.15" width="0.05" layer="39"/>
 <wire x1="-5.6" y1="-7.15" x2="-7.5" y2="-7.15" width="0.05" layer="39"/>
 <wire x1="-7.5" y1="-7.15" x2="-7.5" y2="8.15" width="0.05" layer="39"/>
+<circle x="2" y="-7.3" radius="0.1" width="0.3" layer="21"/>
+<circle x="2" y="-3.7" radius="0.1" width="0.3" layer="51"/>
 <text x="-7.62" y="8.89" size="1.27" layer="25">&gt;NAME</text>
 <text x="-7.62" y="-10.16" size="1.27" layer="27">&gt;VALUE</text>
 <smd name="8" x="-5.76" y="-3.66" dx="1.5" dy="0.8" layer="1" rot="R90"/>
@@ -1439,6 +1568,13 @@ MAX3223-MAX3243.pdf</description>
 <smd name="1" x="1.94" y="-3.66" dx="1.5" dy="0.8" layer="1" rot="R90"/>
 </package>
 </packages>
+<packages3d>
+<package3d name="MOLEX_47352-1001" urn="urn:adsk.eagle:package:16346114/2" type="model">
+<packageinstances>
+<packageinstance name="MOLEX_47352-1001"/>
+</packageinstances>
+</package3d>
+</packages3d>
 </library>
 </libraries>
 <attributes>
@@ -1730,7 +1866,7 @@ MAX3223-MAX3243.pdf</description>
 <element name="C23" library="SparkFun-Capacitors" package="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="10uF" x="29.39" y="2.14" smashed="yes" rot="R270">
 <attribute name="PROD_ID" value="CAP-11015" x="29.39" y="2.14" size="1.778" layer="27" font="vector" ratio="15" rot="R270" display="off"/>
 </element>
-<element name="U$5" library="myLib" package="FH12-10S-0.5SH" value="51441-1093" x="39" y="1.95" smashed="yes">
+<element name="U$5" library="myLib" package="FH12-10S-0.5SH" override_package3d_urn="urn:adsk.eagle:package:16346093/2" override_package_urn="urn:adsk.eagle:footprint:16346094/1" value="51441-1093" x="39" y="1.95" smashed="yes">
 <attribute name="MPN" value="51441-1093" x="39" y="1.95" size="1.778" layer="27" display="off"/>
 </element>
 <element name="R40" library="SparkFun-Resistors" package="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1k" x="48.315" y="3.622" smashed="yes" rot="MR180">
@@ -1757,21 +1893,21 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="POPULATE" value="1" x="72.435" y="4.078" size="0.6096" layer="28" font="vector" ratio="15" rot="MR180" display="off"/>
 <attribute name="URL" value="https://factory.macrofab.com/part/MF-LED-3228-RGB" x="72.435" y="4.078" size="0.6096" layer="28" font="vector" ratio="15" rot="MR180" display="off"/>
 </element>
-<element name="FLASH" library="MF_Switches" package="TACT4.2MM" value="MF-SW-TACT-4.2MM" x="34.308" y="33.655" smashed="yes">
+<element name="FLASH" library="MF_Switches" package="TACT4.2MM" override_package3d_urn="urn:adsk.eagle:package:16346061/2" override_package_urn="urn:adsk.eagle:footprint:16346062/1" value="MF-SW-TACT-4.2MM" x="34.308" y="33.655" smashed="yes">
 <attribute name="HOUSEPART" value="YES" x="34.308" y="33.655" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="MF-SW-TACT-4.2MM" x="34.308" y="33.655" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="38.245" y="32.158" size="0.8128" layer="25" font="vector" ratio="16" rot="R90"/>
 <attribute name="POPULATE" value="1" x="34.308" y="33.655" size="1.778" layer="27" display="off"/>
 <attribute name="URL" value="https://factory.macrofab.com/part/MF-SW-TACT-4.2MM" x="34.308" y="33.655" size="1.778" layer="27" display="off"/>
 </element>
-<element name="RESET" library="MF_Switches" package="TACT4.2MM" value="MF-SW-TACT-4.2MM" x="34.319" y="30.25" smashed="yes" rot="R180">
+<element name="RESET" library="MF_Switches" package="TACT4.2MM" override_package3d_urn="urn:adsk.eagle:package:16346070/2" override_package_urn="urn:adsk.eagle:footprint:16346071/1" value="MF-SW-TACT-4.2MM" x="34.319" y="30.25" smashed="yes" rot="R180">
 <attribute name="HOUSEPART" value="YES" x="34.319" y="30.25" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="MF-SW-TACT-4.2MM" x="34.319" y="30.25" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="38.3" y="28.581" size="0.8128" layer="25" font="vector" ratio="16" rot="R90"/>
 <attribute name="POPULATE" value="1" x="34.319" y="30.25" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="URL" value="https://factory.macrofab.com/part/MF-SW-TACT-4.2MM" x="34.319" y="30.25" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="UBLOX_GPS" library="CAM-M8C-0" package="LCC100P960X1400X210-31N" value="CAM-M8C-0" x="68" y="20" smashed="yes" rot="R270">
+<element name="UBLOX_GPS" library="CAM-M8C-0" package="LCC100P960X1400X210-31N" override_package3d_urn="urn:adsk.eagle:package:16346138/2" override_package_urn="urn:adsk.eagle:footprint:16346139/1" value="CAM-M8C-0" x="68" y="20" smashed="yes" rot="R270">
 <attribute name="AVAILABILITY" value="Unavailable" x="68" y="20" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="DESCRIPTION" value=" Ic Receiver Gps Chip Ant 31lcc " x="68" y="20" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MF" value="U-Blox America" x="68" y="20" size="1.778" layer="27" rot="R270" display="off"/>
@@ -1794,7 +1930,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="PROD_ID" value="RES-07856" x="64" y="26.95" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="J2" library="SparkFun-Connectors" package="1X06_LOCK" value="GPS Port" x="71.1" y="38.45" smashed="yes" rot="R180"/>
-<element name="U1" library="LTC3586EUFE-3_TRPBF" package="QFN40P600X400X80-39N" value=" LTC3586EUFE-1#PBF" x="15" y="23" smashed="yes" rot="MR0">
+<element name="U1" library="LTC3586EUFE-3_TRPBF" package="QFN40P600X400X80-39N" package3d_urn="urn:adsk.eagle:package:16348004/2" value=" LTC3586EUFE-1#PBF" x="15" y="23" smashed="yes" rot="MR0">
 <attribute name="AVAILABILITY" value="Unavailable" x="15" y="23" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="DESCRIPTION" value=" USB Power Manager 4.35V to 5.5V 38-Pin QFN EP T/R " x="15" y="23" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="MF" value="Analog Devices" x="15" y="23" size="1.778" layer="28" rot="MR0" display="off"/>
@@ -1802,7 +1938,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="PACKAGE" value="QFN -38 Analog Devices" x="15" y="23" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="PRICE" value="None" x="15" y="23" size="1.778" layer="28" rot="MR0" display="off"/>
 </element>
-<element name="U2" library="MAX17260SETD_coulomb" package="SON40P300X300X80-15N" value="MAX17260SETD+" x="12.2" y="29.4" smashed="yes" rot="MR180">
+<element name="U2" library="MAX17260SETD_coulomb" package="SON40P300X300X80-15N" package3d_urn="urn:adsk.eagle:package:16348021/2" value="MAX17260SETD+" x="12.2" y="29.4" smashed="yes" rot="MR180">
 <attribute name="AVAILABILITY" value="Unavailable" x="12.2" y="29.4" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="DESCRIPTION" value=" Fuel Gauge Li+/LiFePO4 1-Cell 2-Wire Interface 5.1uA 0.4V 14-Pin TDFN-EP Tube " x="12.2" y="29.4" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="MF" value="Maxim Integrated" x="12.2" y="29.4" size="1.778" layer="28" rot="MR180" display="off"/>
@@ -1810,7 +1946,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="PACKAGE" value="TDFN-14 Maxim" x="12.2" y="29.4" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="PRICE" value="None" x="12.2" y="29.4" size="1.778" layer="28" rot="MR180" display="off"/>
 </element>
-<element name="BATTERY1" library="SparkFun-Connectors" package="JST-2-SMD" value="" x="6.3" y="31.6" smashed="yes" rot="MR90">
+<element name="BATTERY1" library="SparkFun-Connectors" package="JST-2-SMD" override_package3d_urn="urn:adsk.eagle:package:16346146/2" override_package_urn="urn:adsk.eagle:footprint:16346147/1" value="" x="6.3" y="31.6" smashed="yes" rot="MR90">
 <attribute name="PROD_ID" value="CONN-11443" x="16.3" y="22.6" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="SF_ID" value="PRT-08612" x="16.3" y="22.6" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="VALUE" x="6.935" y="29.949" size="0.6096" layer="28" font="vector" ratio="20" rot="MR90"/>
@@ -1821,7 +1957,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="POPULATE" value="1" x="2.9" y="31.65" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="URL" value="https://factory.macrofab.com/part/MF-CON-MICROUSB-RIGHT" x="2.9" y="31.65" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="C9" library="MF_Passives" package="C1206" value="10uF" x="5.3" y="38.4" smashed="yes" rot="R180">
+<element name="C9" library="MF_Passives" package="C1206" package3d_urn="urn:adsk.eagle:package:16347921/2" value="10uF" x="5.3" y="38.4" smashed="yes" rot="R180">
 <attribute name="DIELECTRIC" value="" x="5.3" y="38.4" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="HOUSEPART" value="" x="5.3" y="38.4" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="" x="5.3" y="38.4" size="1.778" layer="27" rot="R180" display="off"/>
@@ -1830,7 +1966,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="URL" value="" x="5.3" y="38.4" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VOLTAGE" value="" x="5.3" y="38.4" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="R7" library="MF_Passives" package="R0603" value="2K" x="9.55" y="24.45" smashed="yes" rot="R270">
+<element name="R7" library="MF_Passives" package="R0603" package3d_urn="urn:adsk.eagle:package:16347927/2" value="2K" x="9.55" y="24.45" smashed="yes" rot="R270">
 <attribute name="HOUSEPART" value="" x="9.55" y="24.45" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="" x="9.55" y="24.45" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="POPULATE" value="1" x="9.55" y="24.45" size="1.778" layer="27" rot="R270" display="off"/>
@@ -1839,7 +1975,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="VOLTAGE" value="" x="9.55" y="24.45" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="WATTAGE" value="" x="9.55" y="24.45" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="R8" library="MF_Passives" package="R0603" value="3K" x="18.45" y="25.2" smashed="yes" rot="MR270">
+<element name="R8" library="MF_Passives" package="R0603" package3d_urn="urn:adsk.eagle:package:16347927/2" value="3K" x="18.45" y="25.2" smashed="yes" rot="MR270">
 <attribute name="HOUSEPART" value="" x="18.45" y="25.2" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="MPN" value="" x="18.45" y="25.2" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="POPULATE" value="1" x="18.45" y="25.2" size="1.778" layer="28" rot="MR270" display="off"/>
@@ -1848,7 +1984,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="VOLTAGE" value="" x="18.45" y="25.2" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="WATTAGE" value="" x="18.45" y="25.2" size="1.778" layer="28" rot="MR270" display="off"/>
 </element>
-<element name="C10" library="MF_Passives" package="C0603" value="0.1uF" x="20" y="25.2" smashed="yes" rot="R270">
+<element name="C10" library="MF_Passives" package="C0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="0.1uF" x="20" y="25.2" smashed="yes" rot="R270">
 <attribute name="DIELECTRIC" value="" x="20" y="25.2" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="HOUSEPART" value="" x="20" y="25.2" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="" x="20" y="25.2" size="1.778" layer="27" rot="R270" display="off"/>
@@ -1857,7 +1993,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="URL" value="" x="20" y="25.2" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VOLTAGE" value="" x="20" y="25.2" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="R9" library="MF_Passives" package="R0603" value="560K" x="20" y="22.25" smashed="yes" rot="MR90">
+<element name="R9" library="MF_Passives" package="R0603" package3d_urn="urn:adsk.eagle:package:16347927/2" value="560K" x="20" y="22.25" smashed="yes" rot="MR90">
 <attribute name="HOUSEPART" value="" x="20" y="22.25" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="MPN" value="" x="20" y="22.25" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="POPULATE" value="1" x="20" y="22.25" size="1.778" layer="28" rot="MR90" display="off"/>
@@ -1866,7 +2002,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="VOLTAGE" value="" x="20" y="22.25" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="WATTAGE" value="" x="20" y="22.25" size="1.778" layer="28" rot="MR90" display="off"/>
 </element>
-<element name="R20" library="MF_Passives" package="R0603" value="100K" x="20" y="22.25" smashed="yes" rot="R270">
+<element name="R20" library="MF_Passives" package="R0603" package3d_urn="urn:adsk.eagle:package:16347927/2" value="100K" x="20" y="22.25" smashed="yes" rot="R270">
 <attribute name="HOUSEPART" value="" x="20" y="22.25" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="" x="20" y="22.25" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="POPULATE" value="1" x="20" y="22.25" size="1.778" layer="27" rot="R270" display="off"/>
@@ -1875,7 +2011,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="VOLTAGE" value="" x="20" y="22.25" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="WATTAGE" value="" x="20" y="22.25" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="C11" library="MF_Passives" package="C0603" value="22uF" x="18.45" y="22.25" smashed="yes" rot="MR90">
+<element name="C11" library="MF_Passives" package="C0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="22uF" x="18.45" y="22.25" smashed="yes" rot="MR90">
 <attribute name="DIELECTRIC" value="" x="18.45" y="22.25" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="HOUSEPART" value="" x="18.45" y="22.25" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="MPN" value="" x="18.45" y="22.25" size="1.778" layer="28" rot="MR90" display="off"/>
@@ -1884,7 +2020,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="URL" value="" x="18.45" y="22.25" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="VOLTAGE" value="" x="18.45" y="22.25" size="1.778" layer="28" rot="MR90" display="off"/>
 </element>
-<element name="C12" library="MF_Passives" package="C0603" value="22uF" x="13.8" y="26.45" smashed="yes" rot="R180">
+<element name="C12" library="MF_Passives" package="C0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="22uF" x="13.8" y="26.45" smashed="yes" rot="R180">
 <attribute name="DIELECTRIC" value="" x="13.8" y="26.45" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="HOUSEPART" value="" x="13.8" y="26.45" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="" x="13.8" y="26.45" size="1.778" layer="27" rot="R180" display="off"/>
@@ -1893,13 +2029,13 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="URL" value="" x="13.8" y="26.45" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VOLTAGE" value="" x="13.8" y="26.45" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="D1" library="MF_LEDs" package="LED0603" value="MF-LED-0603-RED" x="0.8" y="24.85" smashed="yes" rot="MR90">
+<element name="D1" library="MF_LEDs" package="LED0603" package3d_urn="urn:adsk.eagle:package:16347970/2" value="MF-LED-0603-RED" x="0.8" y="24.85" smashed="yes" rot="MR90">
 <attribute name="HOUSEPART" value="YES" x="0.8" y="24.85" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="MPN" value="MF-LED-0603-RED" x="0.8" y="24.85" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="POPULATE" value="1" x="0.8" y="24.85" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="URL" value="https://factory.macrofab.com/part/MF-LED-0603-RED" x="0.8" y="24.85" size="1.778" layer="28" rot="MR90" display="off"/>
 </element>
-<element name="R21" library="MF_Passives" package="R0603" value="1K" x="2.5" y="24.95" smashed="yes" rot="MR270">
+<element name="R21" library="MF_Passives" package="R0603" package3d_urn="urn:adsk.eagle:package:16347927/2" value="1K" x="2.5" y="24.95" smashed="yes" rot="MR270">
 <attribute name="HOUSEPART" value="" x="2.5" y="24.95" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="MPN" value="" x="2.5" y="24.95" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="POPULATE" value="1" x="2.5" y="24.95" size="1.778" layer="28" rot="MR270" display="off"/>
@@ -1908,7 +2044,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="VOLTAGE" value="" x="2.5" y="24.95" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="WATTAGE" value="" x="2.5" y="24.95" size="1.778" layer="28" rot="MR270" display="off"/>
 </element>
-<element name="L2" library="LPS4018-472MRB" package="INDP_LPS4018-472MRB" value="3.3uH" x="18.25" y="29" smashed="yes" rot="R180">
+<element name="L2" library="LPS4018-472MRB" package="INDP_LPS4018-472MRB" package3d_urn="urn:adsk.eagle:package:16347982/2" value="3.3uH" x="18.25" y="29" smashed="yes" rot="R180">
 <attribute name="AVAILABILITY" value="Unavailable" x="18.25" y="29" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="DESCRIPTION" value=" Power inductor, shielded, 20/30% tol, SMT, RoHS, lead-free, halogen-free " x="18.25" y="29" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MF" value="Coilcraft" x="18.25" y="29" size="1.778" layer="27" rot="R180" display="off"/>
@@ -1917,31 +2053,31 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="PACKAGE" value="None" x="18.25" y="29" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="PRICE" value="None" x="18.25" y="29" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="L3" library="MF_Passives" package="L1210" value="2.2uH" x="14.6" y="17.8" smashed="yes">
+<element name="L3" library="MF_Passives" package="L1210" package3d_urn="urn:adsk.eagle:package:16347911/2" value="2.2uH" x="14.6" y="17.8" smashed="yes">
 <attribute name="HOUSEPART" value="" x="14.6" y="17.8" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="L1210R2R2MDWIT" x="14.6" y="17.8" size="1.778" layer="27" display="off"/>
 <attribute name="POPULATE" value="" x="14.6" y="17.8" size="1.778" layer="27" display="off"/>
 <attribute name="URL" value="" x="14.6" y="17.8" size="1.778" layer="27" display="off"/>
 </element>
-<element name="L4" library="MF_Passives" package="L1210" value="4.7uH" x="6.9" y="25.25" smashed="yes" rot="R270">
+<element name="L4" library="MF_Passives" package="L1210" package3d_urn="urn:adsk.eagle:package:16347911/2" value="4.7uH" x="6.9" y="25.25" smashed="yes" rot="R270">
 <attribute name="HOUSEPART" value="" x="6.9" y="25.25" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="L1210R4R7MDWIT" x="6.9" y="25.25" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="POPULATE" value="" x="6.9" y="25.25" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="URL" value="" x="6.9" y="25.25" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="L5" library="MF_Passives" package="L1210" value="2.2uH" x="16.95" y="24.4" smashed="yes" rot="R90">
+<element name="L5" library="MF_Passives" package="L1210" package3d_urn="urn:adsk.eagle:package:16347911/2" value="2.2uH" x="16.95" y="24.4" smashed="yes" rot="R90">
 <attribute name="HOUSEPART" value="" x="16.95" y="24.4" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="L1210R2R2MDWIT" x="16.95" y="24.4" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="POPULATE" value="" x="16.95" y="24.4" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="URL" value="" x="16.95" y="24.4" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="L6" library="MF_Passives" package="L1210" value="4.7uH" x="6.9" y="20.6" smashed="yes" rot="R270">
+<element name="L6" library="MF_Passives" package="L1210" package3d_urn="urn:adsk.eagle:package:16347911/2" value="4.7uH" x="6.9" y="20.6" smashed="yes" rot="R270">
 <attribute name="HOUSEPART" value="" x="6.9" y="20.6" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="L1210R4R7MDWIT" x="6.9" y="20.6" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="POPULATE" value="" x="6.9" y="20.6" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="URL" value="" x="6.9" y="20.6" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="R22" library="MF_Passives" package="R0603" value="220K" x="9.55" y="24.45" smashed="yes" rot="MR90">
+<element name="R22" library="MF_Passives" package="R0603" package3d_urn="urn:adsk.eagle:package:16347927/2" value="220K" x="9.55" y="24.45" smashed="yes" rot="MR90">
 <attribute name="HOUSEPART" value="" x="9.55" y="24.45" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="MPN" value="" x="9.55" y="24.45" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="POPULATE" value="1" x="9.55" y="24.45" size="1.778" layer="28" rot="MR90" display="off"/>
@@ -1950,7 +2086,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="VOLTAGE" value="" x="9.55" y="24.45" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="WATTAGE" value="" x="9.55" y="24.45" size="1.778" layer="28" rot="MR90" display="off"/>
 </element>
-<element name="R23" library="MF_Passives" package="R0603" value="680K" x="11.15" y="24.45" smashed="yes" rot="R270">
+<element name="R23" library="MF_Passives" package="R0603" package3d_urn="urn:adsk.eagle:package:16347927/2" value="680K" x="11.15" y="24.45" smashed="yes" rot="R270">
 <attribute name="HOUSEPART" value="" x="11.15" y="24.45" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="" x="11.15" y="24.45" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="POPULATE" value="1" x="11.15" y="24.45" size="1.778" layer="27" rot="R270" display="off"/>
@@ -1959,7 +2095,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="VOLTAGE" value="" x="11.15" y="24.45" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="WATTAGE" value="" x="11.15" y="24.45" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="C13" library="MF_Passives" package="C0603" value="10pF" x="11.15" y="24.45" smashed="yes" rot="MR270">
+<element name="C13" library="MF_Passives" package="C0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="10pF" x="11.15" y="24.45" smashed="yes" rot="MR270">
 <attribute name="DIELECTRIC" value="" x="11.15" y="24.45" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="HOUSEPART" value="" x="11.15" y="24.45" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="MPN" value="" x="11.15" y="24.45" size="1.778" layer="28" rot="MR270" display="off"/>
@@ -1968,7 +2104,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="URL" value="" x="11.15" y="24.45" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="VOLTAGE" value="" x="11.15" y="24.45" size="1.778" layer="28" rot="MR270" display="off"/>
 </element>
-<element name="C16" library="MF_Passives" package="C0603" value="10uF" x="10.25" y="26.75" smashed="yes" rot="MR180">
+<element name="C16" library="MF_Passives" package="C0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="10uF" x="10.25" y="26.75" smashed="yes" rot="MR180">
 <attribute name="DIELECTRIC" value="" x="10.25" y="26.75" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="HOUSEPART" value="" x="10.25" y="26.75" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="MPN" value="" x="10.25" y="26.75" size="1.778" layer="28" rot="MR180" display="off"/>
@@ -1977,7 +2113,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="URL" value="" x="10.25" y="26.75" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="VOLTAGE" value="" x="10.25" y="26.75" size="1.778" layer="28" rot="MR180" display="off"/>
 </element>
-<element name="R24" library="MF_Passives" package="R0603" value="220K" x="11.15" y="21.5" smashed="yes" rot="MR270">
+<element name="R24" library="MF_Passives" package="R0603" package3d_urn="urn:adsk.eagle:package:16347927/2" value="220K" x="11.15" y="21.5" smashed="yes" rot="MR270">
 <attribute name="HOUSEPART" value="" x="11.15" y="21.5" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="MPN" value="" x="11.15" y="21.5" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="POPULATE" value="1" x="11.15" y="21.5" size="1.778" layer="28" rot="MR270" display="off"/>
@@ -1986,7 +2122,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="VOLTAGE" value="" x="11.15" y="21.5" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="WATTAGE" value="" x="11.15" y="21.5" size="1.778" layer="28" rot="MR270" display="off"/>
 </element>
-<element name="R25" library="MF_Passives" package="R0603" value="680K" x="9.55" y="21.5" smashed="yes" rot="R90">
+<element name="R25" library="MF_Passives" package="R0603" package3d_urn="urn:adsk.eagle:package:16347927/2" value="680K" x="9.55" y="21.5" smashed="yes" rot="R90">
 <attribute name="HOUSEPART" value="" x="9.55" y="21.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="9.55" y="21.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="POPULATE" value="1" x="9.55" y="21.5" size="1.778" layer="27" rot="R90" display="off"/>
@@ -1995,7 +2131,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="VOLTAGE" value="" x="9.55" y="21.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="WATTAGE" value="" x="9.55" y="21.5" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="C18" library="MF_Passives" package="C0603" value="10pF" x="9.55" y="21.5" smashed="yes" rot="MR90">
+<element name="C18" library="MF_Passives" package="C0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="10pF" x="9.55" y="21.5" smashed="yes" rot="MR90">
 <attribute name="DIELECTRIC" value="" x="9.55" y="21.5" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="HOUSEPART" value="" x="9.55" y="21.5" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="MPN" value="" x="9.55" y="21.5" size="1.778" layer="28" rot="MR90" display="off"/>
@@ -2004,7 +2140,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="URL" value="" x="9.55" y="21.5" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="VOLTAGE" value="" x="9.55" y="21.5" size="1.778" layer="28" rot="MR90" display="off"/>
 </element>
-<element name="C24" library="MF_Passives" package="C0603" value="10uF" x="10.8" y="19.2" smashed="yes" rot="MR180">
+<element name="C24" library="MF_Passives" package="C0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="10uF" x="10.8" y="19.2" smashed="yes" rot="MR180">
 <attribute name="DIELECTRIC" value="" x="10.8" y="19.2" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="HOUSEPART" value="" x="10.8" y="19.2" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="MPN" value="" x="10.8" y="19.2" size="1.778" layer="28" rot="MR180" display="off"/>
@@ -2013,7 +2149,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="URL" value="" x="10.8" y="19.2" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="VOLTAGE" value="" x="10.8" y="19.2" size="1.778" layer="28" rot="MR180" display="off"/>
 </element>
-<element name="C25" library="MF_Passives" package="C0603" value="1uF" x="13.8" y="24.9" smashed="yes" rot="R180">
+<element name="C25" library="MF_Passives" package="C0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="1uF" x="13.8" y="24.9" smashed="yes" rot="R180">
 <attribute name="DIELECTRIC" value="" x="13.8" y="24.9" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="HOUSEPART" value="" x="13.8" y="24.9" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="" x="13.8" y="24.9" size="1.778" layer="27" rot="R180" display="off"/>
@@ -2022,7 +2158,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="URL" value="" x="13.8" y="24.9" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VOLTAGE" value="" x="13.8" y="24.9" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="C26" library="MF_Passives" package="C0603" value="1uF" x="13.8" y="23.35" smashed="yes" rot="R180">
+<element name="C26" library="MF_Passives" package="C0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="1uF" x="13.8" y="23.35" smashed="yes" rot="R180">
 <attribute name="DIELECTRIC" value="" x="13.8" y="23.35" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="HOUSEPART" value="" x="13.8" y="23.35" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="" x="13.8" y="23.35" size="1.778" layer="27" rot="R180" display="off"/>
@@ -2031,7 +2167,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="URL" value="" x="13.8" y="23.35" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VOLTAGE" value="" x="13.8" y="23.35" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="C27" library="MF_Passives" package="C0603" value="10uF" x="13.8" y="21.8" smashed="yes" rot="R180">
+<element name="C27" library="MF_Passives" package="C0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="10uF" x="13.8" y="21.8" smashed="yes" rot="R180">
 <attribute name="DIELECTRIC" value="" x="13.8" y="21.8" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="HOUSEPART" value="" x="13.8" y="21.8" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="" x="13.8" y="21.8" size="1.778" layer="27" rot="R180" display="off"/>
@@ -2040,7 +2176,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="URL" value="" x="13.8" y="21.8" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VOLTAGE" value="" x="13.8" y="21.8" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="C28" library="MF_Passives" package="C0603" value="10uF" x="13.8" y="20.25" smashed="yes">
+<element name="C28" library="MF_Passives" package="C0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="10uF" x="13.8" y="20.25" smashed="yes">
 <attribute name="DIELECTRIC" value="" x="13.8" y="20.25" size="1.778" layer="27" display="off"/>
 <attribute name="HOUSEPART" value="" x="13.8" y="20.25" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="13.8" y="20.25" size="1.778" layer="27" display="off"/>
@@ -2049,7 +2185,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="URL" value="" x="13.8" y="20.25" size="1.778" layer="27" display="off"/>
 <attribute name="VOLTAGE" value="" x="13.8" y="20.25" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C29" library="MF_Passives" package="C0603" value="22uF" x="20" y="25.2" smashed="yes" rot="MR270">
+<element name="C29" library="MF_Passives" package="C0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="22uF" x="20" y="25.2" smashed="yes" rot="MR270">
 <attribute name="DIELECTRIC" value="" x="20" y="25.2" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="HOUSEPART" value="" x="20" y="25.2" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="MPN" value="" x="20" y="25.2" size="1.778" layer="28" rot="MR270" display="off"/>
@@ -2058,7 +2194,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="URL" value="" x="20" y="25.2" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="VOLTAGE" value="" x="20" y="25.2" size="1.778" layer="28" rot="MR270" display="off"/>
 </element>
-<element name="R26" library="MF_Passives" package="R0603" value="680K" x="20" y="19.3" smashed="yes" rot="MR270">
+<element name="R26" library="MF_Passives" package="R0603" package3d_urn="urn:adsk.eagle:package:16347927/2" value="680K" x="20" y="19.3" smashed="yes" rot="MR270">
 <attribute name="HOUSEPART" value="" x="20" y="19.3" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="MPN" value="" x="20" y="19.3" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="POPULATE" value="1" x="20" y="19.3" size="1.778" layer="28" rot="MR270" display="off"/>
@@ -2067,7 +2203,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="VOLTAGE" value="" x="20" y="19.3" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="WATTAGE" value="" x="20" y="19.3" size="1.778" layer="28" rot="MR270" display="off"/>
 </element>
-<element name="R27" library="MF_Passives" package="R0603" value="220K" x="20" y="19.3" smashed="yes" rot="R90">
+<element name="R27" library="MF_Passives" package="R0603" package3d_urn="urn:adsk.eagle:package:16347927/2" value="220K" x="20" y="19.3" smashed="yes" rot="R90">
 <attribute name="HOUSEPART" value="" x="20" y="19.3" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="20" y="19.3" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="POPULATE" value="1" x="20" y="19.3" size="1.778" layer="27" rot="R90" display="off"/>
@@ -2076,7 +2212,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="VOLTAGE" value="" x="20" y="19.3" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="WATTAGE" value="" x="20" y="19.3" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="C30" library="MF_Passives" package="C0603" value="22uF" x="19.2" y="17.05" smashed="yes" rot="R180">
+<element name="C30" library="MF_Passives" package="C0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="22uF" x="19.2" y="17.05" smashed="yes" rot="R180">
 <attribute name="DIELECTRIC" value="" x="19.2" y="17.05" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="HOUSEPART" value="" x="19.2" y="17.05" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="" x="19.2" y="17.05" size="1.778" layer="27" rot="R180" display="off"/>
@@ -2085,7 +2221,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="URL" value="" x="19.2" y="17.05" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VOLTAGE" value="" x="19.2" y="17.05" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="R28" library="MF_Passives" package="R0603" value="121K" x="19.2" y="17.05" smashed="yes" rot="MR180">
+<element name="R28" library="MF_Passives" package="R0603" package3d_urn="urn:adsk.eagle:package:16347927/2" value="121K" x="19.2" y="17.05" smashed="yes" rot="MR180">
 <attribute name="HOUSEPART" value="" x="19.2" y="17.05" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="MPN" value="" x="19.2" y="17.05" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="POPULATE" value="1" x="19.2" y="17.05" size="1.778" layer="28" rot="MR180" display="off"/>
@@ -2094,7 +2230,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="VOLTAGE" value="" x="19.2" y="17.05" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="WATTAGE" value="" x="19.2" y="17.05" size="1.778" layer="28" rot="MR180" display="off"/>
 </element>
-<element name="C31" library="MF_Passives" package="C0603" value="33pF" x="18.45" y="19.3" smashed="yes" rot="MR270">
+<element name="C31" library="MF_Passives" package="C0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="33pF" x="18.45" y="19.3" smashed="yes" rot="MR270">
 <attribute name="DIELECTRIC" value="" x="18.45" y="19.3" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="HOUSEPART" value="" x="18.45" y="19.3" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="MPN" value="" x="18.45" y="19.3" size="1.778" layer="28" rot="MR270" display="off"/>
@@ -2103,7 +2239,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="URL" value="" x="18.45" y="19.3" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="VOLTAGE" value="" x="18.45" y="19.3" size="1.778" layer="28" rot="MR270" display="off"/>
 </element>
-<element name="R29" library="MF_Passives" package="R0603" value="15K" x="16.2" y="17.05" smashed="yes" rot="MR0">
+<element name="R29" library="MF_Passives" package="R0603" package3d_urn="urn:adsk.eagle:package:16347927/2" value="15K" x="16.2" y="17.05" smashed="yes" rot="MR0">
 <attribute name="HOUSEPART" value="" x="16.2" y="17.05" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="MPN" value="" x="16.2" y="17.05" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="POPULATE" value="1" x="16.2" y="17.05" size="1.778" layer="28" rot="MR0" display="off"/>
@@ -2112,7 +2248,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="VOLTAGE" value="" x="16.2" y="17.05" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="WATTAGE" value="" x="16.2" y="17.05" size="1.778" layer="28" rot="MR0" display="off"/>
 </element>
-<element name="C32" library="MF_Passives" package="C0603" value="330pF" x="18.45" y="19.3" smashed="yes" rot="R270">
+<element name="C32" library="MF_Passives" package="C0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="330pF" x="18.45" y="19.3" smashed="yes" rot="R270">
 <attribute name="DIELECTRIC" value="" x="18.45" y="19.3" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="HOUSEPART" value="" x="18.45" y="19.3" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="" x="18.45" y="19.3" size="1.778" layer="27" rot="R270" display="off"/>
@@ -2121,7 +2257,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="URL" value="" x="18.45" y="19.3" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VOLTAGE" value="" x="18.45" y="19.3" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="C33" library="MF_Passives" package="C0603" value="10pF" x="16.2" y="18.6" smashed="yes" rot="MR0">
+<element name="C33" library="MF_Passives" package="C0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="10pF" x="16.2" y="18.6" smashed="yes" rot="MR0">
 <attribute name="DIELECTRIC" value="" x="16.2" y="18.6" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="HOUSEPART" value="" x="16.2" y="18.6" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="MPN" value="" x="16.2" y="18.6" size="1.778" layer="28" rot="MR0" display="off"/>
@@ -2130,7 +2266,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="URL" value="" x="16.2" y="18.6" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="VOLTAGE" value="" x="16.2" y="18.6" size="1.778" layer="28" rot="MR0" display="off"/>
 </element>
-<element name="C34" library="MF_Passives" package="C0603" value="0.47uF" x="12.8" y="29" smashed="yes">
+<element name="C34" library="MF_Passives" package="C0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="0.47uF" x="12.8" y="29" smashed="yes">
 <attribute name="DIELECTRIC" value="" x="12.8" y="29" size="1.778" layer="27" display="off"/>
 <attribute name="HOUSEPART" value="" x="12.8" y="29" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="12.8" y="29" size="1.778" layer="27" display="off"/>
@@ -2139,7 +2275,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="URL" value="" x="12.8" y="29" size="1.778" layer="27" display="off"/>
 <attribute name="VOLTAGE" value="" x="12.8" y="29" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C35" library="MF_Passives" package="C0603" value="0.1uF" x="12.8" y="30.55" smashed="yes" rot="R180">
+<element name="C35" library="MF_Passives" package="C0603" package3d_urn="urn:adsk.eagle:package:16347923/3" value="0.1uF" x="12.8" y="30.55" smashed="yes" rot="R180">
 <attribute name="DIELECTRIC" value="" x="12.8" y="30.55" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="HOUSEPART" value="" x="12.8" y="30.55" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="" x="12.8" y="30.55" size="1.778" layer="27" rot="R180" display="off"/>
@@ -2148,12 +2284,12 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="URL" value="" x="12.8" y="30.55" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VOLTAGE" value="" x="12.8" y="30.55" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="VREG_MODE" library="jumper" library_urn="urn:adsk.eagle:library:252" package="SJ_2" package3d_urn="urn:adsk.eagle:package:15474/1" value="VREG MODE" x="22.05" y="21.75" smashed="yes" rot="MR90">
+<element name="VREG_MODE" library="jumper" library_urn="urn:adsk.eagle:library:252" package="SJ_2" package3d_urn="urn:adsk.eagle:package:15474/1" override_package3d_urn="urn:adsk.eagle:package:16347991/2" override_package_urn="urn:adsk.eagle:footprint:15439/1" value="VREG MODE" x="22.05" y="21.75" smashed="yes" rot="MR90">
 <attribute name="NAME" x="23.32" y="19.337" size="0.6096" layer="26" ratio="10" rot="MR90"/>
 <attribute name="POPULARITY" value="7" x="22.05" y="21.75" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="VALUE" x="22.05" y="21.6499" size="0.02" layer="28" rot="MR90"/>
 </element>
-<element name="U5" library="DRV2605LTDGSRQ1" package="SOP50P490X110-10N" value="DRV2605LTDGSRQ1" x="36.05" y="20.05" smashed="yes" rot="R180">
+<element name="U5" library="DRV2605LTDGSRQ1" package="SOP50P490X110-10N" package3d_urn="urn:adsk.eagle:package:16348030/2" value="DRV2605LTDGSRQ1" x="36.05" y="20.05" smashed="yes" rot="R180">
 <attribute name="AVAILABILITY" value="Unavailable" x="36.05" y="20.05" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="DESCRIPTION" value=" Haptic Driver for ERM and LRA With Built-In Library and Smart Loop A 10-VSSOP -40 to 105  " x="36.05" y="20.05" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MF" value="Texas Instruments" x="36.05" y="20.05" size="1.778" layer="27" rot="R180" display="off"/>
@@ -2167,7 +2303,7 @@ MAX3223-MAX3243.pdf</description>
 <element name="C37" library="SparkFun-Capacitors" package="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="4.7uF" x="34.45" y="17.5" smashed="yes" rot="R180">
 <attribute name="PROD_ID" value="CAP-08280" x="34.45" y="17.5" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="S1" library="B3U-3000P" package="SW_B3U-3000P" value="B3U-3000P" x="53" y="1.25" smashed="yes" rot="MR0">
+<element name="S1" library="B3U-3000P" package="SW_B3U-3000P" package3d_urn="urn:adsk.eagle:package:16346045/2" override_package3d_urn="urn:adsk.eagle:package:16346036/2" override_package_urn="urn:adsk.eagle:footprint:16346037/1" override_locally_modified="yes" value="B3U-3000P" x="53" y="1.25" smashed="yes" rot="MR0">
 <attribute name="AVAILABILITY" value="Unavailable" x="53" y="1.25" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="DESCRIPTION" value="  Switch Tactile N.O. SPST Button Gull Wing 0.05A 12VDC 1.59N SMD Embossed T/R " x="53" y="1.25" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="MF" value="Omron" x="53" y="1.25" size="1.778" layer="28" rot="MR0" display="off"/>
@@ -2175,7 +2311,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="PACKAGE" value="None" x="53" y="1.25" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="PRICE" value="None" x="53" y="1.25" size="1.778" layer="28" rot="MR0" display="off"/>
 </element>
-<element name="S2" library="B3U-3000P" package="SW_B3U-3000P" value="B3U-3000P" x="53" y="38.75" smashed="yes" rot="MR180">
+<element name="S2" library="B3U-3000P" package="SW_B3U-3000P" package3d_urn="urn:adsk.eagle:package:16346045/2" override_package3d_urn="urn:adsk.eagle:package:16346040/2" override_package_urn="urn:adsk.eagle:footprint:16346041/1" override_locally_modified="yes" value="B3U-3000P" x="53" y="38.75" smashed="yes" rot="MR180">
 <attribute name="AVAILABILITY" value="Unavailable" x="53" y="38.75" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="DESCRIPTION" value="  Switch Tactile N.O. SPST Button Gull Wing 0.05A 12VDC 1.59N SMD Embossed T/R " x="53" y="38.75" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="MF" value="Omron" x="53" y="38.75" size="1.778" layer="28" rot="MR180" display="off"/>
@@ -2183,7 +2319,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="PACKAGE" value="None" x="53" y="38.75" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="PRICE" value="None" x="53" y="38.75" size="1.778" layer="28" rot="MR180" display="off"/>
 </element>
-<element name="S3" library="B3U-3000P" package="SW_B3U-3000P" value="B3U-3000P" x="25" y="38.75" smashed="yes" rot="MR180">
+<element name="S3" library="B3U-3000P" package="SW_B3U-3000P" package3d_urn="urn:adsk.eagle:package:16346045/2" value="B3U-3000P" x="25" y="38.75" smashed="yes" rot="MR180">
 <attribute name="AVAILABILITY" value="Unavailable" x="25" y="38.75" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="DESCRIPTION" value="  Switch Tactile N.O. SPST Button Gull Wing 0.05A 12VDC 1.59N SMD Embossed T/R " x="25" y="38.75" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="MF" value="Omron" x="25" y="38.75" size="1.778" layer="28" rot="MR180" display="off"/>
@@ -2191,7 +2327,7 @@ MAX3223-MAX3243.pdf</description>
 <attribute name="PACKAGE" value="None" x="25" y="38.75" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="PRICE" value="None" x="25" y="38.75" size="1.778" layer="28" rot="MR180" display="off"/>
 </element>
-<element name="S4" library="B3U-3000P" package="SW_B3U-3000P" value="B3U-3000P" x="39" y="38.75" smashed="yes" rot="MR180">
+<element name="S4" library="B3U-3000P" package="SW_B3U-3000P" package3d_urn="urn:adsk.eagle:package:16346045/2" override_package3d_urn="urn:adsk.eagle:package:16346042/2" override_package_urn="urn:adsk.eagle:footprint:16346043/1" override_locally_modified="yes" value="B3U-3000P" x="39" y="38.75" smashed="yes" rot="MR180">
 <attribute name="AVAILABILITY" value="Unavailable" x="39" y="38.75" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="DESCRIPTION" value="  Switch Tactile N.O. SPST Button Gull Wing 0.05A 12VDC 1.59N SMD Embossed T/R " x="39" y="38.75" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="MF" value="Omron" x="39" y="38.75" size="1.778" layer="28" rot="MR180" display="off"/>
@@ -2248,9 +2384,9 @@ MAX3223-MAX3243.pdf</description>
 <element name="C38" library="SparkFun-Capacitors" package="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="10uF" x="20.9" y="9.85" smashed="yes" rot="MR90">
 <attribute name="PROD_ID" value="CAP-07880" x="20.9" y="9.85" size="1.778" layer="28" rot="MR90" display="off"/>
 </element>
-<element name="U7" library="LSM303CTR" package="LGA12R50P_200X200X100" value="LSM303CTR" x="44" y="20" smashed="yes">
+<element name="U7" library="LSM303CTR" package="LGA-12" package3d_urn="urn:adsk.eagle:package:39983/1" override_package3d_urn="urn:adsk.eagle:package:16348711/2" override_package_urn="urn:adsk.eagle:footprint:39901/1" value="LSM303CTR" x="44" y="20" smashed="yes">
 <attribute name="AVAILABILITY" value="Unavailable" x="44" y="20" size="1.778" layer="27" display="off"/>
-<attribute name="DESCRIPTION" value=" MEMS Module, Tri-Axis Accelerometer, Tri-Axis Magnetometer, 2g, 4g, 8g, 16g, LGA, 12, 1.9 V " x="44" y="20" size="1.778" layer="27" display="off"/>
+<attribute name="DESCRIPTION" value=" Accelerometer, Magnetometer, Temperature, 6 Axis Sensor I²C, SPI Output " x="44" y="20" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="STMicroelectronics" x="44" y="20" size="1.778" layer="27" display="off"/>
 <attribute name="MP" value="LSM303CTR" x="44" y="20" size="1.778" layer="27" display="off"/>
 <attribute name="PACKAGE" value="LGA-12 STMicroelectronics" x="44" y="20" size="1.778" layer="27" display="off"/>
@@ -2263,7 +2399,7 @@ MAX3223-MAX3243.pdf</description>
 <element name="C40" library="SparkFun-Capacitors" package="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uF" x="44.7" y="20" smashed="yes" rot="MR270">
 <attribute name="PROD_ID" value="CAP-08280" x="44.7" y="20" size="1.778" layer="28" rot="MR270" display="off"/>
 </element>
-<element name="U9" library="LTC6991CS6TRMPBF" package="DFN" value="LTC6991CDCB#TRMPBF" x="37.5" y="11.3" smashed="yes" rot="R270"/>
+<element name="U9" library="LTC6991CS6TRMPBF" package="DFN" package3d_urn="urn:adsk.eagle:package:16348053/2" value="LTC6991CDCB#TRMPBF" x="37.5" y="11.3" smashed="yes" rot="R270"/>
 <element name="R39" library="SparkFun-Resistors" package="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="750K" x="35.8" y="13" smashed="yes" rot="R270">
 <attribute name="PROD_ID" value="RES-07856" x="35.8" y="13" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
@@ -2273,7 +2409,7 @@ MAX3223-MAX3243.pdf</description>
 <element name="R45" library="SparkFun-Resistors" package="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100K" x="37.5" y="12.25" smashed="yes" rot="MR0">
 <attribute name="PROD_ID" value="RES-07856" x="37.5" y="12.25" size="1.778" layer="28" rot="MR0" display="off"/>
 </element>
-<element name="J9" library="47352-1001" package="MOLEX_47352-1001" value="47352-1001" x="8.15" y="7.7" smashed="yes" rot="R270">
+<element name="J9" library="47352-1001" package="MOLEX_47352-1001" package3d_urn="urn:adsk.eagle:package:16346114/2" value="47352-1001" x="8.15" y="7.7" smashed="yes" rot="R270">
 <attribute name="AVAILABILITY" value="Unavailable" x="8.15" y="7.7" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="DESCRIPTION" value=" 1.10mm Pitch microSD Card Connector, Push-Push Type, with VSS _Supply Voltage Ground_ Detect Switch, Lead-Free " x="8.15" y="7.7" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MF" value="Molex" x="8.15" y="7.7" size="1.778" layer="27" rot="R270" display="off"/>
@@ -2405,7 +2541,6 @@ MAX3223-MAX3243.pdf</description>
 <wire x1="12.2" y1="16.85" x2="11.7" y2="16.85" width="0.508" layer="1"/>
 <wire x1="11" y1="11.25" x2="11" y2="11.9" width="0.508" layer="16"/>
 <wire x1="11" y1="11.9" x2="11.375" y2="12.275" width="0.508" layer="16"/>
-<wire x1="14.3067875" y1="11.145" x2="13.8541875" y2="10.6924" width="0.508" layer="1"/>
 <wire x1="13.8541875" y1="10.6924" x2="12.9576" y2="10.6924" width="0.508" layer="1"/>
 <wire x1="12.9576" y1="10.6924" x2="11.375" y2="12.275" width="0.508" layer="1"/>
 <wire x1="12.55" y1="5.95" x2="13.8541875" y2="7.2541875" width="0.508" layer="1"/>
@@ -2444,7 +2579,6 @@ MAX3223-MAX3243.pdf</description>
 <wire x1="52.85" y1="0.65" x2="50.05" y2="0.65" width="0.3048" layer="1"/>
 <wire x1="50.05" y1="0.65" x2="47.056" y2="3.644" width="0.3048" layer="1"/>
 <wire x1="16.55" y1="10.665" x2="16.55" y2="11.145" width="0.2032" layer="16"/>
-<wire x1="16.55" y1="11" x2="16.55" y2="11.145" width="0.2032" layer="1"/>
 <polygon width="0.508" layer="1">
 <vertex x="10" y="17"/>
 <vertex x="22" y="17"/>
@@ -2486,16 +2620,16 @@ MAX3223-MAX3243.pdf</description>
 <contactref element="C39" pad="1"/>
 <contactref element="U7" pad="2"/>
 <contactref element="U7" pad="3"/>
-<wire x1="44.76" y1="20.25" x2="44.76" y2="20.71" width="0.3048" layer="1"/>
-<wire x1="44.76" y1="20.71" x2="44.8" y2="20.75" width="0.3048" layer="1"/>
-<wire x1="43.24" y1="19.75" x2="43.24" y2="20.25" width="0.3048" layer="1"/>
-<wire x1="43.24" y1="19.75" x2="42.99" y2="20" width="0.3048" layer="1"/>
+<wire x1="44.75" y1="20.25" x2="44.76" y2="20.71" width="0.3048" layer="1"/>
+<wire x1="44.76" y1="20.71" x2="44.75" y2="20.75" width="0.3048" layer="1"/>
+<wire x1="43.25" y1="19.75" x2="43.25" y2="20.25" width="0.3048" layer="1"/>
+<wire x1="43.25" y1="19.75" x2="42.99" y2="20" width="0.3048" layer="1"/>
 <wire x1="41.72854375" y1="20" x2="41.45834375" y2="19.7298" width="0.3048" layer="1"/>
 <via x="41.45834375" y="19.7298" extent="1-16" drill="0.35"/>
 <wire x1="41.45834375" y1="19.7298" x2="42.03814375" y2="19.15" width="0.3048" layer="16"/>
 <wire x1="42.03814375" y1="19.15" x2="43.3" y2="19.15" width="0.3048" layer="16"/>
 <wire x1="42.99" y1="20" x2="41.72854375" y2="20" width="0.3048" layer="1"/>
-<wire x1="44.76" y1="20.25" x2="43.24" y2="20.25" width="0.3048" layer="1"/>
+<wire x1="44.75" y1="20.25" x2="43.25" y2="20.25" width="0.3048" layer="1"/>
 <wire x1="41.45834375" y1="19.7298" x2="40.72854375" y2="19" width="0.2032" layer="1"/>
 <wire x1="40.72854375" y1="19" x2="40.5068" y2="19" width="0.2032" layer="1"/>
 <via x="40.5068" y="19" extent="1-16" drill="0.35"/>
@@ -2943,7 +3077,6 @@ MAX3223-MAX3243.pdf</description>
 <wire x1="32.233" y1="32.58" x2="33.677" y2="34.024" width="0.508" layer="1"/>
 <wire x1="33.677" y1="34.024" x2="37.0658125" y2="34.024" width="0.508" layer="1"/>
 <contactref element="J3" pad="1"/>
-<wire x1="41.45" y1="11.8" x2="41.25" y2="12" width="0.127" layer="1"/>
 <via x="29.25" y="28.6" extent="1-16" drill="0.35"/>
 <wire x1="40.75" y1="7.2" x2="41.25" y2="7.2" width="0.127" layer="1"/>
 <wire x1="41.25" y1="7.2" x2="41.25" y2="7.1089" width="0.6096" layer="1"/>
@@ -3005,7 +3138,6 @@ MAX3223-MAX3243.pdf</description>
 <wire x1="21.6" y1="9" x2="21" y2="8.4" width="0.3048" layer="1"/>
 <wire x1="21" y1="8.4" x2="21" y2="6" width="0.3048" layer="1"/>
 <wire x1="22.25" y1="9" x2="22.1616" y2="8.9116" width="1.016" layer="16"/>
-<wire x1="22.1616" y1="8.9116" x2="22.0724" y2="8.9116" width="1.016" layer="16"/>
 <polygon width="0.2" layer="16" rank="6">
 <vertex x="75" y="40"/>
 <vertex x="0" y="40"/>
@@ -3039,12 +3171,12 @@ MAX3223-MAX3243.pdf</description>
 <wire x1="44.7" y1="20.85" x2="44.8" y2="20.85" width="0.3048" layer="16"/>
 <wire x1="44.8" y1="20.85" x2="45.65" y2="20" width="0.3048" layer="16"/>
 <wire x1="45.65" y1="20" x2="45.4" y2="19.75" width="0.3048" layer="1"/>
-<wire x1="45.4" y1="19.75" x2="44.76" y2="19.75" width="0.3048" layer="1"/>
-<wire x1="44.76" y1="19.75" x2="44.7144" y2="19.7044" width="0.3048" layer="1"/>
-<wire x1="44.7144" y1="19.7044" x2="44.45926875" y2="19.7044" width="0.3048" layer="1"/>
-<wire x1="44.45926875" y1="19.7044" x2="44.2956" y2="19.54073125" width="0.3048" layer="1"/>
-<wire x1="44.2956" y1="19.54073125" x2="44.2956" y2="19.2856" width="0.3048" layer="1"/>
-<wire x1="44.2956" y1="19.2856" x2="44.25" y2="19.24" width="0.3048" layer="1"/>
+<wire x1="45.4" y1="19.75" x2="44.75" y2="19.75" width="0.3048" layer="1"/>
+<wire x1="44.75" y1="19.75" x2="44.7556" y2="19.7544" width="0.3048" layer="1"/>
+<wire x1="44.7556" y1="19.7544" x2="44.45926875" y2="19.7544" width="0.3048" layer="1"/>
+<wire x1="44.45926875" y1="19.7544" x2="44.2456" y2="19.54073125" width="0.3048" layer="1"/>
+<wire x1="44.2456" y1="19.54073125" x2="44.2456" y2="19.2444" width="0.3048" layer="1"/>
+<wire x1="44.25" y1="19.25" x2="44.2456" y2="19.2444" width="0.3048" layer="1"/>
 <via x="42.35" y="18.1" extent="1-16" drill="0.35"/>
 <via x="39.2" y="18.45" extent="1-16" drill="0.35"/>
 <wire x1="2.6" y1="30.6" x2="7.4" y2="30.6" width="0.6096" layer="16"/>
@@ -3558,7 +3690,7 @@ MAX3223-MAX3243.pdf</description>
 <wire x1="25.05" y1="0.354" x2="24.7" y2="0.704" width="0.2" layer="1"/>
 <wire x1="24.7" y1="0.704" x2="24.7" y2="1.15" width="0.2" layer="1"/>
 <contactref element="U7" pad="4"/>
-<wire x1="43.2" y1="19.25" x2="41.58566875" y2="19.25" width="0.1524" layer="1"/>
+<wire x1="43.25" y1="19.25" x2="41.58566875" y2="19.25" width="0.1524" layer="1"/>
 <wire x1="41.58566875" y1="19.25" x2="40.152" y2="17.81633125" width="0.1524" layer="1"/>
 </signal>
 <signal name="I2C_SCL">
@@ -3605,7 +3737,7 @@ MAX3223-MAX3243.pdf</description>
 <wire x1="46.49" y1="31.49" x2="46.49" y2="38.373" width="0.15" layer="1"/>
 <wire x1="42.525" y1="27.525" x2="46.49" y2="31.49" width="0.15" layer="1"/>
 <contactref element="U7" pad="1"/>
-<wire x1="43.2" y1="20.75" x2="41.8" y2="20.75" width="0.1524" layer="1"/>
+<wire x1="43.25" y1="20.75" x2="41.8" y2="20.75" width="0.1524" layer="1"/>
 <wire x1="41.025" y1="19.975" x2="41.8" y2="20.75" width="0.1524" layer="1"/>
 <wire x1="41.8" y1="20.75" x2="41.8" y2="21.56894375" width="0.1524" layer="1"/>
 <wire x1="41.8" y1="21.56894375" x2="39.93274375" y2="23.4362" width="0.1524" layer="1"/>
@@ -3721,7 +3853,7 @@ MAX3223-MAX3243.pdf</description>
 <contactref element="U7" pad="7"/>
 <wire x1="44.8" y1="18.8" x2="43.5794125" y2="17.5794125" width="0.1524" layer="1"/>
 <wire x1="41.0205875" y1="17.5794125" x2="43.5794125" y2="17.5794125" width="0.1524" layer="1"/>
-<wire x1="44.8" y1="18.8" x2="44.8" y2="19.25" width="0.1524" layer="1"/>
+<wire x1="44.8" y1="18.8" x2="44.75" y2="19.25" width="0.1524" layer="1"/>
 </signal>
 <signal name="ACCL2">
 <contactref element="ESP32-PICO-D4" pad="12"/>
@@ -3747,7 +3879,7 @@ MAX3223-MAX3243.pdf</description>
 <wire x1="40.8214" y1="19.6899" x2="40.8214" y2="21.14824375" width="0.15" layer="16"/>
 <wire x1="40.8214" y1="21.14824375" x2="41.27515625" y2="21.602" width="0.15" layer="16"/>
 <wire x1="41.27515625" y1="21.602" x2="43.502" y2="21.602" width="0.15" layer="16"/>
-<wire x1="43.75" y1="21.85" x2="43.75" y2="20.76" width="0.15" layer="1"/>
+<wire x1="43.75" y1="21.85" x2="43.75" y2="20.75" width="0.15" layer="1"/>
 </signal>
 <signal name="MAGDRDY">
 <contactref element="ESP32-PICO-D4" pad="10"/>
@@ -3770,7 +3902,7 @@ MAX3223-MAX3243.pdf</description>
 <via x="47" y="22" extent="1-16" drill="0.35"/>
 <wire x1="47" y1="22" x2="45" y2="22" width="0.127" layer="1"/>
 <wire x1="45" y1="22" x2="44.25" y2="21.25" width="0.127" layer="1"/>
-<wire x1="44.25" y1="21.25" x2="44.25" y2="20.76" width="0.127" layer="1"/>
+<wire x1="44.25" y1="21.25" x2="44.25" y2="20.75" width="0.127" layer="1"/>
 <wire x1="34.39008125" y1="15.7795" x2="46.7795" y2="15.7795" width="0.127" layer="1"/>
 </signal>
 <signal name="LED1">
@@ -4096,7 +4228,6 @@ MAX3223-MAX3243.pdf</description>
 <via x="14.45" y="27.35" extent="1-16" drill="0.35"/>
 <wire x1="14.6" y1="25.935" x2="14.6" y2="27.2" width="0.254" layer="16"/>
 <wire x1="14.6" y1="27.2" x2="14.45" y2="27.35" width="0.254" layer="16"/>
-<wire x1="13.15" y1="26.45" x2="13.05" y2="26.45" width="0.254" layer="1"/>
 <wire x1="20.02" y1="29" x2="20.02" y2="28.02" width="0.6096" layer="1"/>
 <wire x1="17.85" y1="25.85" x2="16.95" y2="25.85" width="0.6096" layer="1"/>
 <wire x1="20.02" y1="28.02" x2="17.85" y2="25.85" width="0.6096" layer="1"/>
@@ -4686,10 +4817,10 @@ MAX3223-MAX3243.pdf</description>
 <contactref element="U7" pad="5"/>
 <contactref element="C40" pad="2"/>
 <via x="43.510728125" y="18.189271875" extent="1-16" drill="0.35"/>
-<wire x1="43.75" y1="19.24" x2="43.6155" y2="19.1055" width="0.127" layer="1"/>
-<wire x1="43.6155" y1="19.1055" x2="43.6155" y2="18.99609375" width="0.127" layer="1"/>
-<wire x1="43.6155" y1="18.99609375" x2="43.510728125" y2="18.891321875" width="0.127" layer="1"/>
-<wire x1="43.510728125" y1="18.891321875" x2="43.510728125" y2="18.189271875" width="0.127" layer="1"/>
+<wire x1="43.75" y1="19.25" x2="43.7155" y2="19.2055" width="0.127" layer="1"/>
+<wire x1="43.7155" y1="19.2055" x2="43.7155" y2="18.99609375" width="0.127" layer="1"/>
+<wire x1="43.7155" y1="18.99609375" x2="43.510728125" y2="18.791321875" width="0.127" layer="1"/>
+<wire x1="43.510728125" y1="18.791321875" x2="43.510728125" y2="18.189271875" width="0.127" layer="1"/>
 <wire x1="43.510728125" y1="18.189271875" x2="43.739271875" y2="18.189271875" width="0.127" layer="16"/>
 <wire x1="43.739271875" y1="18.189271875" x2="44.7" y2="19.15" width="0.127" layer="16"/>
 </signal>
@@ -4843,6 +4974,11 @@ will not be understood (or retained) with this version.
 Since Version 8.3, EAGLE supports the association of 3D packages
 with devices in libraries, schematics, and board files. Those 3D
 packages will not be understood (or retained) with this version.
+</note>
+<note version="9.4" severity="warning">
+Since Version 9.4, EAGLE supports the overriding of 3D packages
+in schematics and board files. Those overridden 3d packages
+will not be understood (or retained) with this version.
 </note>
 </compatibility>
 </eagle>

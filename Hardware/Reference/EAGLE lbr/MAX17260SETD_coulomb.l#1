@@ -58,7 +58,7 @@
 </layers>
 <library>
 <packages>
-<package name="SON40P300X300X80-15N" urn="urn:adsk.eagle:footprint:16348019/1">
+<package name="SON40P300X300X80-15N">
 <rectangle x1="-0.54" y1="-0.73" x2="0.54" y2="0.73" layer="31"/>
 <circle x="-2.445" y="1.2" radius="0.1" width="0.2" layer="21"/>
 <circle x="-2.445" y="1.2" radius="0.1" width="0.2" layer="51"/>
@@ -91,13 +91,6 @@
 <smd name="15" x="0" y="0" dx="1.7" dy="2.3" layer="1" cream="no"/>
 </package>
 </packages>
-<packages3d>
-<package3d name="SON40P300X300X80-15N" urn="urn:adsk.eagle:package:16348021/2" type="model">
-<packageinstances>
-<packageinstance name="SON40P300X300X80-15N"/>
-</packageinstances>
-</package3d>
-</packages3d>
 <symbols>
 <symbol name="MAX17260SETD+">
 <wire x1="-12.7" y1="25.4" x2="12.7" y2="25.4" width="0.41" layer="94"/>
@@ -142,9 +135,6 @@
 <connect gate="G$1" pin="SDA" pad="13"/>
 <connect gate="G$1" pin="TH" pad="1"/>
 </connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:16348021/2"/>
-</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="AVAILABILITY" value="Unavailable"/>
@@ -161,16 +151,4 @@
 </devicesets>
 </library>
 </drawing>
-<compatibility>
-<note version="8.3" severity="warning">
-Since Version 8.3, EAGLE supports URNs for individual library
-assets (packages, symbols, and devices). The URNs of those assets
-will not be understood (or retained) with this version.
-</note>
-<note version="8.3" severity="warning">
-Since Version 8.3, EAGLE supports the association of 3D packages
-with devices in libraries, schematics, and board files. Those 3D
-packages will not be understood (or retained) with this version.
-</note>
-</compatibility>
 </eagle>
